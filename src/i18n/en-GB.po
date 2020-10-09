@@ -21,12 +21,24 @@ msgid "Share"
 msgstr "Share"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "Dexter Stoltenberg"
-msgstr "Dexter Stoltenberg"
+msgid "accuracy: "
+msgstr "accuracy: "
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "Artificial intelligence"
-msgstr "Artificial intelligence"
+msgid "rang: "
+msgstr "rang: "
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "coins: "
+msgstr "coins: "
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "pace: "
+msgstr "pace: "
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "streaks: "
+msgstr "streaks: "
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Back"
