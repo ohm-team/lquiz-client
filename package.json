@@ -8,6 +8,7 @@
     "android": "npm run start -- --android",
     "ios": "npm run start -- --ios",
     "web": "npm run start -- --web",
+    "build-web": "npx expo build:web",
     "test": "jest",
     "lint:check": "npm run lint:prettier:check . && npm run lint:tsc:check && npm run lint:eslint:check .",
     "lint:write": "npm run lint:prettier:write . && npm run lint:eslint:write .",
