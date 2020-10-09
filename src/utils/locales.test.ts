@@ -15,7 +15,7 @@ it("should return en-GB for en", () => {
   expect(findLocale(supportedLocales, "en")).toBe("en-GB");
 });
 
-it("should return en-GB for en-US ", () => {
+it("should return en-GB for en-US", () => {
   expect(findLocale(supportedLocales, "en-US")).toBe("en-GB");
 });
 

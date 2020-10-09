@@ -1,6 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { TargemProvider } from "react-targem";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import translations from "src/i18n/translations.json";
 import { Provider as PaperProvider } from "react-native-paper";
 import {
