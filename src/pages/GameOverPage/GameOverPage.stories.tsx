@@ -16,7 +16,9 @@ export default {
     rangTotal: 10,
     coins: 3210,
     pace: 16.9,
+    paceAvg: 20,
     streaks: 2,
+    streaksMax: 3,
   },
 };
 

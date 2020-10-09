@@ -22,23 +22,27 @@ msgid "Share"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "accuracy: "
+msgid "Statistics"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "rang: "
+msgid "accuracy"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "coins: "
+msgid "coins"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "pace: "
+msgid "rang"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "streaks: "
+msgid "pace"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "streaks"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
