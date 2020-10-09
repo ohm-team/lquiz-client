@@ -21,4 +21,5 @@ export type Question = {
 export type QuestionWithAnswers = {
   question: Question;
   answers: Answer[];
+  id: string;
 };
