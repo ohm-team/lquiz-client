@@ -59,3 +59,14 @@ export const WithQuestionLoading = Template.bind({});
 WithQuestionLoading.args = {
   questionLoadingId: "71",
 };
+
+export const WithCorrectAnswer = Template.bind({});
+WithCorrectAnswer.args = {
+  correctAnswerId: "71",
+};
+
+export const WithIncorrectAnswer = Template.bind({});
+WithIncorrectAnswer.args = {
+  correctAnswerId: "68",
+  incorrectAnswerId: "71",
+};
