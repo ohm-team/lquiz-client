@@ -8,7 +8,7 @@ import { T } from "react-targem";
 const LocalSelector: React.FC<LocalSelectorProps> = ({
   buttonStyle,
 }: LocalSelectorProps) => {
-  const { setSettings, locale } = useSettings();
+  const { setSettings } = useSettings();
   const handleLocaleChange = (localeKey: Locale) => () => {
     setSettings({
       locale: localeKey,

@@ -21,7 +21,6 @@ const AppLayoutInternal: React.FC<AppLayoutInternalProps> = ({
     <PaperProvider>
       <NavigationContainer>
         <TargemProvider locale={locale} translations={translations}>
-
           {children}
           <StatusBar style="auto" />
         </TargemProvider>
