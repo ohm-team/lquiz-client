@@ -16,7 +16,9 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
     currentQuestion,
     setCurrentQuestion,
   ] = useState<QuestionWithAnswers | null>(null);
-  const [correctAnswerId, setCorrectAnswerId] = useState<string | null>(null);
+  const [correctAnswerId, setCorrectAnswerId] = useState<string | undefined>(
+    undefined
+  );
 
   async function fetchData(questionNumber: number) {
     const question = await fetchQuestionByIndex(questionNumber);

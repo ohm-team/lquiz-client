@@ -136,7 +136,7 @@ interface GamePageProps {
   totalQuestionsCount: number;
   isQuestionLoading: boolean;
   questionLoadingId?: string;
-  correctAnswerId?: string | null;
+  correctAnswerId?: string;
   selectedAnswerId?: string;
   question?: Question | null;
   answers?:
