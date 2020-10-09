@@ -16,6 +16,35 @@ msgstr ""
 msgid "Choose language"
 msgstr ""
 
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Back"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Quiz question #"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "out of"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
+#: src/pages/GamePage/GamePage.tsx:
+msgid "in"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "What else do you think my contain number"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Hooray! This is the correct answer!"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Ohh nooo... This is an incorrect answer..."
+msgstr ""
+
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Letz quiz!"
 msgstr ""
