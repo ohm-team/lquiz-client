@@ -1,8 +1,6 @@
 name: "deploy to gh-pages"
 on:
   push:
-    branches:
-      - deploy
 jobs:
   deploy:
     runs-on: ubuntu-18.04
