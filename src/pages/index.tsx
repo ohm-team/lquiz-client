@@ -2,6 +2,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
 import HomePage from "./HomePage";
 import RulesPage from "./RulesPage";
+import GameOverPage from "./GameOverPage";
 
 const Stack = createStackNavigator();
 
@@ -10,6 +11,7 @@ const Pages: React.FC<HomePageProps> = () => {
     <Stack.Navigator initialRouteName="Home" headerMode="none">
       <Stack.Screen name="Home" component={HomePage} />
       <Stack.Screen name="Rules" component={RulesPage} />
+      <Stack.Screen name="GameOverPage" component={GameOverPage} />
     </Stack.Navigator>
   );
 };

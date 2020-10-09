@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: undefined undefined\n"
+"Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "POT-Creation-Date: Fri Oct 09 2020 15:49:36 GMT+0300 (Israel Daylight Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,6 +12,34 @@ msgstr ""
 "Last-Translator: \n"
 "Language: en_US\n"
 
+#: src/components/LocaleSelector/LocaleSelector.tsx:
+msgid "Choose language"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "Share"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "Dexter Stoltenberg"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "Artificial intelligence"
+msgstr ""
+
 #: src/pages/HomePage/HomePage.tsx:
-msgid "Open up App.tsx to start working on your app!"
+msgid "Letz quiz!"
+msgstr ""
+
+#: src/pages/HomePage/HomePage.tsx:
+msgid "Play"
+msgstr ""
+
+#: src/pages/HomePage/HomePage.tsx:
+msgid "Rules"
+msgstr ""
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid "Here are the rules!"
 msgstr ""
