@@ -1,11 +1,37 @@
-import React from "react";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { RootStackRoutes, RootStackRoute } from "../types";
+import React, { useEffect, useState } from "react";
+import { QuestionWithAnswers, RootStackRoute, RootStackRoutes } from "../types";
 import GamePage from "./GamePage";
+import {
+  checkQuestion,
+  fetchQuestionByIndex,
+  QUESTIONS_COUNT,
+} from "./GamePage.service";
 
 const GamePageContainer: React.FC<GamePageContainerProps> = ({
   navigation,
 }: GamePageContainerProps) => {
+  const [currentQuestionNumber] = useState<number>(0);
+  const [
+    currentQuestion,
+    setCurrentQuestion,
+  ] = useState<QuestionWithAnswers | null>(null);
+  const [correctAnswerId, setCorrectAnswerId] = useState<string | null>(null);
+
+  async function fetchData(questionNumber: number) {
+    const question = await fetchQuestionByIndex(questionNumber);
+    setCurrentQuestion(question);
+  }
+
+  async function checkAnswer() {
+    const { correctAnswerId } = await checkQuestion(currentQuestion?.id);
+    setCorrectAnswerId(correctAnswerId);
+  }
+
+  useEffect(() => {
+    fetchData(currentQuestionNumber);
+  }, [currentQuestionNumber]);
+
   const handleLinkButtonClick = (routeName: RootStackRoute) => () => {
     navigation.navigate(routeName);
   };
@@ -13,19 +39,29 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
   const handleAnswerClick = () => {
     // eslint-disable-next-line no-console
     console.log("Answer is clicked!");
+    //const nextQuestionNumber = currentQuestionNumber + 1;
+    checkAnswer();
+    //if (nextQuestionNumber === QUESTIONS_COUNT) {
+    //  navigation.navigate("Home");
+    //} else {
+    //  setCurrentQuestion(null);
+    //  setCurrentQuestionNumber(nextQuestionNumber);
+    //}
   };
 
-  const currentQuestionNumber = 1;
-  const totalQuestionsCount = 20;
-
-  return (
+  return currentQuestion ? (
     <GamePage
-      currentQuestionNumber={currentQuestionNumber}
+      currentQuestionNumber={currentQuestionNumber + 1}
       isQuestionLoading={true}
-      totalQuestionsCount={totalQuestionsCount}
+      question={currentQuestion.question}
+      answers={currentQuestion.answers}
+      totalQuestionsCount={QUESTIONS_COUNT}
+      correctAnswerId={correctAnswerId}
       onBackButtonClick={handleLinkButtonClick("Home")}
       onAnswerClick={handleAnswerClick}
     />
+  ) : (
+    <></>
   );
 };
 

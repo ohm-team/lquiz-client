@@ -1,5 +1,6 @@
 import React from "react";
 import { T } from "react-targem";
+import { Question } from "../types";
 import styles from "./GamePage.styles";
 import {
   Button,
@@ -135,13 +136,9 @@ interface GamePageProps {
   totalQuestionsCount: number;
   isQuestionLoading: boolean;
   questionLoadingId?: string;
-  correctAnswerId?: string;
+  correctAnswerId?: string | null;
   selectedAnswerId?: string;
-  question?: {
-    what: string;
-    count: number;
-    where: string;
-  } | null;
+  question?: Question | null;
   answers?:
     | {
         what: string;
