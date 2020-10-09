@@ -30,11 +30,11 @@ const warningTheme = {
   },
 };
 
-const getButtonTheme = (isCorrect: boolean, isIncorrect: boolean) => {
+const getButtonTheme = (isCorrect: boolean) => {
   if (isCorrect) {
     return successTheme;
   }
-  if (isIncorrect) {
+  if (!isCorrect) {
     return warningTheme;
   }
   return undefined;
@@ -50,7 +50,7 @@ const GamePage: React.FC<GamePageProps> = ({
   onAnswerClick,
   questionLoadingId,
   correctAnswerId,
-  incorrectAnswerId,
+  selectedAnswerId,
 }: GamePageProps) => {
   const RightContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
     <Button onPress={onBackButtonClick}>
@@ -104,10 +104,7 @@ const GamePage: React.FC<GamePageProps> = ({
               mode="contained"
               disabled={questionLoadingId !== undefined}
               loading={questionLoadingId === a.id}
-              theme={getButtonTheme(
-                correctAnswerId === a.id,
-                incorrectAnswerId === a.id
-              )}
+              theme={getButtonTheme(selectedAnswerId === correctAnswerId)}
             >
               {questionLoadingId === a.id ? null : (
                 <>
@@ -118,18 +115,17 @@ const GamePage: React.FC<GamePageProps> = ({
           ))}
         </Card.Actions>
       ) : null}
-      {correctAnswerId && !incorrectAnswerId ? (
+      {correctAnswerId === selectedAnswerId ? (
         // eslint-disable-next-line @typescript-eslint/no-empty-function
         <Snackbar visible onDismiss={() => {}}>
           <T message="Hooray! This is the correct answer!" />
         </Snackbar>
-      ) : null}
-      {incorrectAnswerId ? (
+      ) : (
         // eslint-disable-next-line @typescript-eslint/no-empty-function
         <Snackbar visible onDismiss={() => {}}>
           <T message="Ohh nooo... This is an incorrect answer..." />
         </Snackbar>
-      ) : null}
+      )}
     </Card>
   );
 };
@@ -140,7 +136,7 @@ interface GamePageProps {
   isQuestionLoading: boolean;
   questionLoadingId?: string;
   correctAnswerId?: string;
-  incorrectAnswerId?: string;
+  selectedAnswerId?: string;
   question?: {
     what: string;
     count: number;
