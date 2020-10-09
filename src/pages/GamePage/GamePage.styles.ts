@@ -10,6 +10,7 @@ export default StyleSheet.create({
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
+    marginBottom: 32,
   },
   button: {
     marginTop: 16,
@@ -17,6 +18,12 @@ export default StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 16,
     minWidth: "90%",
+    minHeight: 65,
+    flex: 1,
+    justifyContent: "center",
+  },
+  buttonSuccess: {
+    backgroundColor: "green",
   },
   title: {
     marginTop: 32,
