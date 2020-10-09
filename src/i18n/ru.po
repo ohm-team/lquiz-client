@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: undefined undefined\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"POT-Creation-Date: Fri Oct 09 2020 15:49:36 GMT+0300 (Israel Daylight Time)\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 "
+"&& (n%100<12 || n%100>14) ? 1 : 2);\n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 2.4\n"
+"Last-Translator: \n"
+"Language: ru\n"
+
+#: src/pages/HomePage/HomePage.tsx:
+msgid "Open up App.tsx to start working on your app!"
+msgstr ""

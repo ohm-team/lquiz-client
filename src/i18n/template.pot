@@ -1,0 +1,11 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: undefined undefined\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"POT-Creation-Date: Fri Oct 09 2020 18:54:45 GMT+0300 (Israel Daylight Time)\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/pages/HomePage/HomePage.tsx:
+msgid "Open up App.tsx to start working on your app!"
+msgstr ""
