@@ -3,14 +3,14 @@ import { T } from "react-targem";
 import { Image } from "react-native";
 import styles from "./HomePage.styles";
 import LocalSelector from "src/components/LocaleSelector";
-import { useNavigation } from "@react-navigation/native";
 import { Button, Card, Title, Surface } from "react-native-paper";
 import logo from "./assets/logo.png";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackRoutes, RootStackRoute } from "../types";
 
-const HomePage: React.FC<HomePageProps> = () => {
-  const navigation = useNavigation();
+const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
 
-  const handleLinkButtonClick = (routeName: string) => () => {
+  const handleLinkButtonClick = (routeName: RootStackRoute) => () => {
     navigation.navigate(routeName);
   };
 
@@ -42,6 +42,8 @@ const HomePage: React.FC<HomePageProps> = () => {
     </Card>
   );
 };
-interface HomePageProps {}
+interface HomePageProps {
+  navigation: StackNavigationProp<RootStackRoutes, "Home">;
+}
 
 export default HomePage;
