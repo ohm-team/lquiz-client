@@ -21,24 +21,28 @@ msgid "Share"
 msgstr "Share"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "accuracy: "
-msgstr "accuracy: "
+msgid "Statistics"
+msgstr "Statistics"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "rang: "
-msgstr "rang: "
+msgid "accuracy"
+msgstr "accuracy"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "coins: "
-msgstr "coins: "
+msgid "coins"
+msgstr "coins"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "pace: "
-msgstr "pace: "
+msgid "rang"
+msgstr "rang"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "streaks: "
-msgstr "streaks: "
+msgid "pace"
+msgstr "pace"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "streaks"
+msgstr "streaks"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Back"

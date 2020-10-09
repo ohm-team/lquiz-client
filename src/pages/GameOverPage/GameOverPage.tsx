@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { T } from "react-targem";
-import { Button, Card, Title, Avatar } from "react-native-paper";
+import { Button, Card, Title, Avatar, Text } from "react-native-paper";
+import { ProgressBar, Colors } from "react-native-paper";
 import { Linking } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import styles from "./GameOverPage.styles";
@@ -27,7 +28,9 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
   rangTotal,
   coins,
   pace,
+  paceAvg,
   streaks,
+  streaksMax,
 }) => {
   const RightContent: React.FC<CardTitleAddon> = () => (
     <Button onPress={postOnFacebook}>
@@ -44,12 +47,13 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
     const url = `https://www.facebook.com/sharer/sharer.php?${facebookParameters}`;
     Linking.openURL(url);
   };
-  const accuracy = Math.round(correctAnswered / totalAnswered) * 100;
-
+  const accuracy = Math.round((100 * correctAnswered) / totalAnswered) / 100;
+  const rangStatus = Math.round((100 * rangCurrent) / rangTotal) / 100;
+  const paceStatus = Math.round((100 * pace) / paceAvg) / 100;
   return (
     <Card style={styles.card}>
       <Card.Title
-        title={<T message={userName} />}
+        title={userName}
         subtitle={<T message={userStatus} />}
         left={LeftContent}
         right={RightContent}
@@ -59,18 +63,26 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
         source={{ uri: "https://source.unsplash.com/random?finish" }}
       />
       <Card.Content>
-        <Title style={styles.title}>Statistics:</Title>
-        <T
-          message={`accuracy: ${accuracy}% (${correctAnswered}/${totalAnswered})`}
-        />
+        <Title style={styles.title}>
+          <T message="Statistics" />:
+        </Title>
+        <Text>
+          <T message="accuracy" />: {accuracy * 100}% ({correctAnswered}/
+          {totalAnswered})
+        </Text>
+        <ProgressBar progress={accuracy} color={Colors.red800} />
         <br />
-        <T message={`rang: ${rangCurrent}/${rangTotal}`} />
+        <Text>
+          <T message="coins" />: {coins} (<T message="rang" />: {rangCurrent}/
+          {rangTotal})
+        </Text>
+        <ProgressBar progress={rangStatus} color={Colors.blue800} />
         <br />
-        <T message={`coins: ${coins}`} />
-        <br />
-        <T message={`pace: ${pace}m `} />
-        <br />
-        <T message={`streaks: ${streaks}`} />
+        <Text>
+          <T message="pace" />: {pace}m (<T message="streaks" />: {streaks}/
+          {streaksMax})
+        </Text>
+        <ProgressBar progress={paceStatus} color={Colors.green800} />
       </Card.Content>
     </Card>
   );
@@ -80,6 +92,7 @@ interface GameOverPageProps {
   navigation: StackNavigationProp<RootStackRoutes, "GameOver">;
   facebookShareMessage: string;
   userName: string;
+  /** статус присваиваемый пользователю по результатам конкретного опроса */
   userStatus: string;
   correctAnswered: number;
   totalAnswered: number;
@@ -87,7 +100,9 @@ interface GameOverPageProps {
   rangTotal: number;
   coins: number;
   pace: number;
+  paceAvg: number;
   streaks: number;
+  streaksMax: number;
 }
 
 export default GameOverPage;
