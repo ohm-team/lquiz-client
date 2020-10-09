@@ -13,7 +13,6 @@ export default StyleSheet.create({
     height: "100%",
   },
   cardImageContainer: {
-    marginBottom: "0 !important",
     elevation: 8,
   },
   cardImage: {
