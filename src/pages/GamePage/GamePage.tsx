@@ -1,9 +1,7 @@
 import React from "react";
 import { T } from "react-targem";
 import styles from "./GamePage.styles";
-import { Button, Card, Title, Avatar } from "react-native-paper";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { RootStackRoutes, RootStackRoute } from "../types";
+import { Button, Card, Title, Avatar, ProgressBar } from "react-native-paper";
 
 const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
   <Avatar.Text {...props} label="Q" />
@@ -13,24 +11,39 @@ interface CardTitleAddon {
   size: number;
 }
 
-const GamePage: React.FC<GamePageProps> = ({ navigation }: GamePageProps) => {
-  const RightContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => {
-    const handleLinkButtonClick = (routeName: RootStackRoute) => () => {
-      navigation.navigate(routeName);
-    };
+const GamePage: React.FC<GamePageProps> = ({
+  totalQuestionsCount,
+  currentQuestionNumber,
+  question,
+  answers,
+  isQuestionLoading,
+  onBackButtonClick,
+  onAnswerClick,
+}: GamePageProps) => {
+  const RightContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
+    <Button onPress={onBackButtonClick}>
+      <T message="Back" />
+    </Button>
+  );
 
-    return (
-      <Button onPress={handleLinkButtonClick("Home")}>
-        <T message="Back" />
-      </Button>
-    );
+  const handleAnswerClick = (answerId: string) => () => {
+    onAnswerClick(answerId);
   };
 
   return (
     <Card style={styles.card}>
       <Card.Title
-        title={<T message="Quiz question #1" />}
-        subtitle={<T message="out of 14" />}
+        title={
+          <>
+            <T message={"Quiz question #"} />
+            {currentQuestionNumber}
+          </>
+        }
+        subtitle={
+          <>
+            <T message="out of" /> {totalQuestionsCount}
+          </>
+        }
         left={LeftContent}
         right={RightContent}
       />
@@ -38,32 +51,53 @@ const GamePage: React.FC<GamePageProps> = ({ navigation }: GamePageProps) => {
         accessible={false}
         source={{ uri: "https://source.unsplash.com/random?quiz" }}
       />
-      <Card.Content>
-        <Title style={styles.title}>
-          In 2019 2042 babies were born. What else do you think my contain
-          number 2042?
-        </Title>
-      </Card.Content>
-      <Card.Actions style={styles.buttonsContainer}>
-        <Button style={styles.button} mode="contained">
-          Suicides in Luxembourg county in 2013
-        </Button>
-        <Button style={styles.button} mode="contained">
-          Bottles of beers sold in Aug, 2009
-        </Button>
-        <Button style={styles.button} mode="contained">
-          Students has been graduated from Luxmebourg philharmonie in 2019
-        </Button>
-        <Button style={styles.button} labelStyle={{}} mode="contained">
-          Criminal cases closed in 2010
-        </Button>
-      </Card.Actions>
+      {isQuestionLoading ? <ProgressBar indeterminate /> : null}
+      {question ? (
+        <Card.Content>
+          <Title style={styles.title}>
+            {question.count} {question.what.toLowerCase()} <T message="in" />{" "}
+            {question.where}.{" "}
+            <T message="What else do you think my contain number" />{" "}
+            {question.count}?
+          </Title>
+        </Card.Content>
+      ) : null}
+      {answers ? (
+        <Card.Actions style={styles.buttonsContainer}>
+          {answers.map((a) => (
+            <Button
+              key={a.id}
+              onPress={handleAnswerClick(a.id)}
+              style={styles.button}
+              mode="contained"
+            >
+              {a.what} <T message="in" /> {a.where}
+            </Button>
+          ))}
+        </Card.Actions>
+      ) : null}
     </Card>
   );
 };
 
 interface GamePageProps {
-  navigation: StackNavigationProp<RootStackRoutes, "Game">;
+  currentQuestionNumber: number;
+  totalQuestionsCount: number;
+  isQuestionLoading: boolean;
+  question?: {
+    what: string;
+    count: number;
+    where: string;
+  } | null;
+  answers?:
+    | {
+        what: string;
+        where: string;
+        id: string;
+      }[]
+    | null;
+  onBackButtonClick: () => void;
+  onAnswerClick: (answerId: string) => void;
 }
 
 export default GamePage;
