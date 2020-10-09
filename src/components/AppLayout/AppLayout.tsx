@@ -11,7 +11,6 @@ import {
 } from "src/contexts/SettingsContext";
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
-import logo from "./assets/logo.png";
 
 const AppLayoutInternal: React.FC<AppLayoutInternalProps> = ({
   children,
@@ -22,7 +21,7 @@ const AppLayoutInternal: React.FC<AppLayoutInternalProps> = ({
     <PaperProvider>
       <NavigationContainer>
         <TargemProvider locale={locale} translations={translations}>
-          <img src={logo} alt="logo" width={128} height={128} />
+
           {children}
           <StatusBar style="auto" />
         </TargemProvider>
