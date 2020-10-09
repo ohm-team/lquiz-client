@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sat Oct 10 2020 00:05:03 GMT+0200 (Central European Summer "
+"POT-Creation-Date: Sat Oct 10 2020 00:11:45 GMT+0200 (Central European Summer "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -23,6 +23,27 @@ msgstr ""
 msgid "Artificial intelligence"
 msgstr ""
 
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Back"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Quiz question #"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "out of"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
+#: src/pages/GamePage/GamePage.tsx:
+msgid "in"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "What else do you think my contain number"
+msgstr ""
+
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Letz quiz!"
 msgstr ""
@@ -36,5 +57,13 @@ msgid "Rules"
 msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:
-msgid "Here are the rules!"
+msgid "Within one game, the user is assigned 15 questions."
+msgstr ""
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid "Points are awarded for each correct answer (quiz coins)"
+msgstr ""
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid "After passing all the questions, the general stratistics of the user is formed."
 msgstr ""

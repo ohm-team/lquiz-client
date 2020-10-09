@@ -1,6 +1,6 @@
 {
   "name": "lquiz-client",
-  "description": "An iOS/Andrid/Web client for the Luxembourg Quiz!",
+  "description": "An iOS/Android/Web client for the Luxembourg Quiz!",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -52,7 +52,7 @@
     "@storybook/react": "^6.0.26",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.4",
-    "@types/jest": "^26.0.14",
+    "@types/jest": "26.0.13",
     "@types/react": "~16.9.35",
     "@types/react-dom": "~16.9.8",
     "@types/react-native": "~0.63.2",

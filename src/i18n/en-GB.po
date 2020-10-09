@@ -28,6 +28,27 @@ msgstr "Dexter Stoltenberg"
 msgid "Artificial intelligence"
 msgstr "Artificial intelligence"
 
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Back"
+msgstr "Back"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Quiz question #"
+msgstr "Quiz question #"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "out of"
+msgstr "out of"
+
+#: src/pages/GamePage/GamePage.tsx:
+#: src/pages/GamePage/GamePage.tsx:
+msgid "in"
+msgstr "in"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "What else do you think my contain number"
+msgstr "What else do you think my contain number"
+
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Letz quiz!"
 msgstr "Letz quiz!"
@@ -41,5 +62,13 @@ msgid "Rules"
 msgstr "Rules"
 
 #: src/pages/RulesPage/RulesPage.tsx:
-msgid "Here are the rules!"
-msgstr "Here are the rules!"
+msgid "Within one game, the user is assigned 15 questions."
+msgstr "Within one game, the user is assigned 15 questions."
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid "Points are awarded for each correct answer (quiz coins)"
+msgstr "Points are awarded for each correct answer (quiz coins)"
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid "After passing all the questions, the general stratistics of the user is formed."
+msgstr "After passing all the questions, the general stratistics of the user is formed."
