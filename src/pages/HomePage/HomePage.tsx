@@ -9,7 +9,6 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackRoutes, RootStackRoute } from "../types";
 
 const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
-
   const handleLinkButtonClick = (routeName: RootStackRoute) => () => {
     navigation.navigate(routeName);
   };
