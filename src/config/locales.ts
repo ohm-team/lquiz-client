@@ -14,6 +14,11 @@ export const locales = [
     internationalName: "Russian",
     localName: "Русский",
   },
+  {
+    key: "fr",
+    internationalName: "French",
+    localName: "Française",
+  },
 ] as const;
 
 export type Locale = typeof locales[number]["key"];

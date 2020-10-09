@@ -1,6 +1,6 @@
 import React from "react";
 import { SettingsContextProvider, useSettings } from "./SettingsContext";
-import { render, fireEvent, act } from "__utils__/render";
+import { render, fireEvent } from "__utils__/render";
 import { Locale } from "src/config/locales";
 import AsyncStorage from "@react-native-community/async-storage";
 
