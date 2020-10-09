@@ -7,7 +7,9 @@ const RulesPage: React.FC<RulesPageProps> = () => {
   return (
     <Card style={styles.container}>
       <Paragraph>
-        <T message="Here are the rules!" />
+        <T message="Within one game, the user is assigned 15 questions." />
+        <T message="Points are awarded for each correct answer (quiz coins)" />
+        <T message="After passing all the questions, the general stratistics of the user is formed." />
       </Paragraph>
     </Card>
   );
