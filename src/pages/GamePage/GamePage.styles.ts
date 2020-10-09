@@ -17,6 +17,9 @@ export default StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 16,
     minWidth: "90%",
+    minHeight: 65,
+    flex: 1,
+    justifyContent: "center",
   },
   title: {
     marginTop: 32,

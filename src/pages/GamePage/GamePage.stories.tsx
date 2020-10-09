@@ -54,3 +54,8 @@ WithLoading.args = {
   question: null,
   answers: null,
 };
+
+export const WithQuestionLoading = Template.bind({});
+WithQuestionLoading.args = {
+  questionLoadingId: "71",
+};

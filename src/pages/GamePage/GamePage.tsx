@@ -19,6 +19,7 @@ const GamePage: React.FC<GamePageProps> = ({
   isQuestionLoading,
   onBackButtonClick,
   onAnswerClick,
+  questionLoadingId,
 }: GamePageProps) => {
   const RightContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
     <Button onPress={onBackButtonClick}>
@@ -70,8 +71,14 @@ const GamePage: React.FC<GamePageProps> = ({
               onPress={handleAnswerClick(a.id)}
               style={styles.button}
               mode="contained"
+              disabled={questionLoadingId !== undefined}
+              loading={questionLoadingId === a.id}
             >
-              {a.what} <T message="in" /> {a.where}
+              {questionLoadingId === a.id ? null : (
+                <>
+                  {a.what} <T message="in" /> {a.where}
+                </>
+              )}
             </Button>
           ))}
         </Card.Actions>
@@ -84,6 +91,7 @@ interface GamePageProps {
   currentQuestionNumber: number;
   totalQuestionsCount: number;
   isQuestionLoading: boolean;
+  questionLoadingId?: string;
   question?: {
     what: string;
     count: number;
