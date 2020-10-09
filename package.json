@@ -1,6 +1,6 @@
 {
   "name": "lquiz-client",
-  "description": "An iOS/Andrid/Web client for the Luxembourg Quiz!",
+  "description": "An iOS/Android/Web client for the Luxembourg Quiz!",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
