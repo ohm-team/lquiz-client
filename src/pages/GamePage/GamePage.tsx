@@ -1,7 +1,14 @@
 import React from "react";
 import { T } from "react-targem";
 import styles from "./GamePage.styles";
-import { Button, Card, Title, Avatar, ProgressBar } from "react-native-paper";
+import {
+  Button,
+  Card,
+  Title,
+  Avatar,
+  ProgressBar,
+  Snackbar,
+} from "react-native-paper";
 
 const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
   <Avatar.Text {...props} label="Q" />
@@ -11,6 +18,28 @@ interface CardTitleAddon {
   size: number;
 }
 
+const successTheme = {
+  colors: {
+    primary: "#8BC34A",
+  },
+};
+
+const warningTheme = {
+  colors: {
+    primary: "#FF5722",
+  },
+};
+
+const getButtonTheme = (isCorrect: boolean, isIncorrect: boolean) => {
+  if (isCorrect) {
+    return successTheme;
+  }
+  if (isIncorrect) {
+    return warningTheme;
+  }
+  return undefined;
+};
+
 const GamePage: React.FC<GamePageProps> = ({
   totalQuestionsCount,
   currentQuestionNumber,
@@ -19,6 +48,9 @@ const GamePage: React.FC<GamePageProps> = ({
   isQuestionLoading,
   onBackButtonClick,
   onAnswerClick,
+  questionLoadingId,
+  correctAnswerId,
+  incorrectAnswerId,
 }: GamePageProps) => {
   const RightContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
     <Button onPress={onBackButtonClick}>
@@ -70,11 +102,33 @@ const GamePage: React.FC<GamePageProps> = ({
               onPress={handleAnswerClick(a.id)}
               style={styles.button}
               mode="contained"
+              disabled={questionLoadingId !== undefined}
+              loading={questionLoadingId === a.id}
+              theme={getButtonTheme(
+                correctAnswerId === a.id,
+                incorrectAnswerId === a.id
+              )}
             >
-              {a.what} <T message="in" /> {a.where}
+              {questionLoadingId === a.id ? null : (
+                <>
+                  {a.what} <T message="in" /> {a.where}
+                </>
+              )}
             </Button>
           ))}
         </Card.Actions>
+      ) : null}
+      {correctAnswerId && !incorrectAnswerId ? (
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        <Snackbar visible onDismiss={() => {}}>
+          <T message="Hooray! This is the correct answer!" />
+        </Snackbar>
+      ) : null}
+      {incorrectAnswerId ? (
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        <Snackbar visible onDismiss={() => {}}>
+          <T message="Ohh nooo... This is an incorrect answer..." />
+        </Snackbar>
       ) : null}
     </Card>
   );
@@ -84,6 +138,9 @@ interface GamePageProps {
   currentQuestionNumber: number;
   totalQuestionsCount: number;
   isQuestionLoading: boolean;
+  questionLoadingId?: string;
+  correctAnswerId?: string;
+  incorrectAnswerId?: string;
   question?: {
     what: string;
     count: number;
