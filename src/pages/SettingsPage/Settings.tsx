@@ -6,7 +6,9 @@ import styles from "./Settings.styles";
 
 const Settings: React.FC<SettingsProps> = () => {
   const { nickName, setSettings } = useSettings();
-  const onChangeText = (nickName: string) => setSettings({ nickName });
+  const onChangeText = (nickName: string) => {
+    setSettings({ nickName });
+  };
   return (
     <Card style={styles.container}>
       <Card.Title title={<T message="Settings" />} />
@@ -14,7 +16,7 @@ const Settings: React.FC<SettingsProps> = () => {
         <TextInput
           mode="outlined"
           label="Name"
-          value={nickName}
+          defaultValue={nickName}
           onChangeText={onChangeText}
         />
       </Card.Content>
