@@ -1,6 +1,7 @@
 import React from "react";
+import { Text } from "react-native";
 import { Button } from "react-native-paper";
-import { StyleProp, ViewStyle, TextStyle } from "react-native";
+import styles from "./GamePageAnswer.styles";
 
 const successTheme = {
   colors: {
@@ -17,10 +18,9 @@ const warningTheme = {
 const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
   onAnswerClick,
   id,
-  what,
+  answerStatistics,
+  answerValue,
   isLoading,
-  contentStyle,
-  style,
   isAnyQuestionLoading,
   isSelected,
   isCorrectAnswer,
@@ -45,8 +45,8 @@ const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
   return (
     <Button
       onPress={!isAnswerRevealed ? handleAnswerClick : undefined}
-      style={style}
-      contentStyle={contentStyle}
+      style={styles.button}
+      contentStyle={styles.buttonContent}
       mode="contained"
       disabled={
         isAnyQuestionLoading ||
@@ -55,7 +55,12 @@ const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
       loading={isLoading}
       theme={getTheme()}
     >
-      {isLoading ? null : <>{what.replace("{value}", "")}</>}
+      {isLoading ? null : (
+        <>
+          <Text style={styles.value}>{answerValue}</Text>{" "}
+          <Text style={styles.statistics}>{answerStatistics}</Text>
+        </>
+      )}
     </Button>
   );
 };
@@ -63,14 +68,13 @@ const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
 interface GamePageAnswerProps {
   id: string;
   onAnswerClick: (answerId: string) => void;
-  what: string;
+  answerStatistics: string;
+  answerValue: string;
   isLoading: boolean;
   isAnyQuestionLoading: boolean;
   isAnswerRevealed: boolean;
   isSelected: boolean;
   isCorrectAnswer: boolean;
-  style: StyleProp<ViewStyle>;
-  contentStyle: StyleProp<TextStyle>;
 }
 
 export default GamePageAnswer;

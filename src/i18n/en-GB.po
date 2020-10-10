@@ -41,20 +41,28 @@ msgid "Back"
 msgstr "Back"
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "Quiz question #"
-msgstr "Quiz question #"
+msgid "Quiz question"
+msgstr "Quiz question"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "out of"
 msgstr "out of"
 
 #: src/pages/GamePage/GamePage.tsx:
+msgid "Next question!"
+msgstr "Next question!"
+
+#: src/pages/GamePage/GamePage.tsx:
 msgid "What else do you think my contain number"
 msgstr "What else do you think my contain number"
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "Next question!"
-msgstr "Next question!"
+msgid "Question source"
+msgstr "Question source"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Answer source"
+msgstr "Answer source"
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Letz quiz!"

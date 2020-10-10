@@ -13,16 +13,43 @@ export default StyleSheet.create({
     justifyContent: "center",
     marginBottom: 32,
   },
-  button: {
-    marginTop: 16,
-    marginBottom: 16,
-    minWidth: "90%",
+  coverContainer: {
+    position: "relative",
   },
-  buttonContent: {
-    minHeight: 55,
+  coverButtonContainer: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
+  },
+  nextQuestionButton: {
+    paddingHorizontal: 20,
+    paddingVertical: 10,
   },
   title: {
-    marginTop: 16,
+    marginTop: 5,
+    textAlign: "center",
     marginBottom: 0,
+  },
+  titleStatistics: {
+    marginTop: 16,
+    textAlign: "center",
+    fontStyle: "italic",
+    marginBottom: 0,
+  },
+  sourceLinksContainer: {
+    display: "flex",
+    justifyContent: "flex-end",
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 20,
+  },
+  titleValue: {
+    fontWeight: "bold",
+    fontSize: 22,
   },
 });
