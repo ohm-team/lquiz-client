@@ -76,8 +76,11 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
               <T message="GameOver" />
             </Button>
 
+            <LocalSelector buttonStyle={styles.cardButton} />
+
             {Platform.OS === "web" ? (
               <Button
+                icon="store"
                 mode="outlined"
                 theme={DefaultTheme}
                 onPress={handleDownloadButtonClick}
@@ -86,7 +89,6 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
                 <T message="Download an app" />
               </Button>
             ) : null}
-            <LocalSelector buttonStyle={styles.cardButton} />
           </View>
         </Card.Content>
       </LinearGradient>

@@ -32,3 +32,5 @@ export type QuestionWithAnswers = {
   answers: Answer[];
   id: string;
 };
+
+declare module "react-mobile-store-button";

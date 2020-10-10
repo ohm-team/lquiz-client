@@ -31,6 +31,7 @@
     "@react-navigation/native": "^5.7.6",
     "@react-navigation/stack": "^5.9.3",
     "expo": "~39.0.2",
+    "expo-linear-gradient": "~8.3.0",
     "expo-status-bar": "~1.0.2",
     "gettext-utils": "^2.2.0",
     "patch-package": "^6.2.2",
@@ -44,8 +45,7 @@
     "react-native-safe-area-context": "3.1.4",
     "react-native-screens": "~2.10.1",
     "react-native-web": "~0.13.12",
-    "react-targem": "^1.7.1",
-    "expo-linear-gradient": "~8.3.0"
+    "react-targem": "^1.7.1"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^6.0.26",
