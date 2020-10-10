@@ -4,11 +4,7 @@ import { T } from "react-targem";
 import { Button, Card, Title, Avatar, Text } from "react-native-paper";
 import { ProgressBar, Colors } from "react-native-paper";
 import { Linking } from "react-native";
-import { StackNavigationProp } from "@react-navigation/stack";
 import styles from "./GameOverPage.styles";
-import { RootStackRoutes } from "../types";
-
-const facebookShareURL = "https://aboutreact.com";
 
 const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
   <Avatar.Text {...props} label="Q" />
@@ -20,6 +16,7 @@ interface CardTitleAddon {
 
 const GameOverPage: React.FC<GameOverPageProps> = ({
   facebookShareMessage,
+  facebookShareURL,
   userName,
   userStatus,
   rangCurrent,
@@ -90,13 +87,11 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
 };
 
 interface GameOverPageProps {
-  navigation: StackNavigationProp<RootStackRoutes, "GameOver">;
   facebookShareMessage: string;
+  facebookShareURL: string;
   userName: string;
   /** статус присваиваемый пользователю по результатам конкретного опроса */
   userStatus: string;
-  correctAnswered: number;
-  totalAnswered: number;
   rangCurrent: number;
   rangTotal: number;
   coins: number;
