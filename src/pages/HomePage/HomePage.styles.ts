@@ -20,6 +20,18 @@ export default StyleSheet.create({
     height: "100%",
     position: "absolute",
   },
+  buttonsContainer: {
+    marginTop: 200,
+    alignItems: "center",
+    position: "relative",
+    display: "flex",
+    justifyContent: "center",
+    height: "100%",
+  },
+  linearGradient: {
+    width: "100%",
+    height: "100%",
+  },
   cardImage: {
     width: 370,
     height: "100%",
@@ -30,6 +42,6 @@ export default StyleSheet.create({
     color: "#fff",
   },
   cardButton: {
-    marginBottom: 32,
+    marginBottom: 20,
   },
 });

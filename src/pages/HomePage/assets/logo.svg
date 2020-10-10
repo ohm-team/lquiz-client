@@ -7,7 +7,7 @@
 		<circle id="8ced9073-6c62-4594-8125-71202b2f9af7" cx="250" cy="204" r="30"></circle>
 	</defs>
 	<g id="root" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-		<rect id="background.primary" fill="#625772" x="0" y="0" width="500" height="1000"></rect>
+		
 		<polygon id="shape" fill="url(#linearGradient-1)" opacity=".3" points="225 204 275 204 490 1000 10 1000"></polygon>
 		<g id="shape">
 			<use fill="#FFF" fill-rule="evenodd" xlink:href="#8ced9073-6c62-4594-8125-71202b2f9af7"></use>
