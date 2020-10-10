@@ -17,16 +17,12 @@ interface CardTitleAddon {
 const GameOverPage: React.FC<GameOverPageProps> = ({
   facebookShareMessage,
   facebookShareURL,
-  userName,
   userStatus,
-  rangCurrent,
-  rangTotal,
-  coins,
   pace,
-  paceAvg,
-  streaks,
-  streaksMax,
-  gameResults,
+  accuracy,
+  correctAnswered,
+  totalAnswered,
+  paceStatus,
 }) => {
   const RightContent: React.FC<CardTitleAddon> = () => (
     <Button onPress={postOnFacebook}>
@@ -43,16 +39,11 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
     const url = `https://www.facebook.com/sharer/sharer.php?${facebookParameters}`;
     Linking.openURL(url);
   };
-  const totalAnswered = gameResults.length;
-  const correctAnswered = gameResults.filter(Boolean).length;
-  const accuracy = Math.round((100 * correctAnswered) / totalAnswered) / 100;
-  // const rangStatus = Math.round((100 * rangCurrent) / rangTotal) / 100;
-  const paceStatus = Math.round((100 * pace) / paceAvg) / 100;
   return (
     <Card style={styles.card}>
       <Card.Title
-        title={userName}
-        subtitle={<T message={userStatus} />}
+        title={userStatus}
+        // subtitle={<T message={userStatus} />}
         left={LeftContent}
         right={RightContent}
       />
@@ -70,16 +61,8 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
         </Text>
         <ProgressBar progress={accuracy} color={Colors.red800} />
         <br />
-        {/*<Text>
-          <T message="coins" />: {coins}
-          (<T message="rang" />: {rangCurrent}/{rangTotal})
-        </Text>
-        <ProgressBar progress={rangStatus} color={Colors.blue800} />
-        <br />*/}
         <Text>
           <T message="pace" />: {pace} <T message="seconds" />
-          {/*(<T message="streaks" />: {streaks}/
-          {streaksMax})*/}
         </Text>
         <ProgressBar progress={paceStatus} color={Colors.green800} />
       </Card.Content>
@@ -90,17 +73,13 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
 interface GameOverPageProps {
   facebookShareMessage: string;
   facebookShareURL: string;
-  userName: string;
   /** статус присваиваемый пользователю по результатам конкретного опроса */
   userStatus: string;
-  rangCurrent: number;
-  rangTotal: number;
-  coins: number;
   pace: number;
-  paceAvg: number;
-  streaks: number;
-  streaksMax: number;
-  gameResults: boolean[];
+  accuracy: number;
+  correctAnswered: number;
+  totalAnswered: number;
+  paceStatus: number;
 }
 
 export default GameOverPage;
