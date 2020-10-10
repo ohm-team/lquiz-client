@@ -1,6 +1,6 @@
 # LQuiz
 
-[Website link](https://ohm-team.github.io/lquiz-client/) | [Mobile application link](https://expo.io/@ohm-team/lquiz-client)
+[Website link](https://ohm-team.github.io/lquiz-client/) | [Mobile application link](https://expo.io/@ohm-team/lquiz-client) | [Backend link](https://lquiz-backend.goooseman.ru/)
 
 ### iOS Download instructions
 
