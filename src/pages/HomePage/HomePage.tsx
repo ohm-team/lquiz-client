@@ -64,18 +64,6 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
               <T message="Settings" />
             </Button>
 
-            <Button
-              mode="outlined"
-              theme={DefaultTheme}
-              onPress={handleLinkButtonClick("GameOver", {
-                gameResults: [true, false, true],
-                gamePace: [12.2, 33, 1],
-              })}
-              style={styles.cardButton}
-            >
-              <T message="GameOver" />
-            </Button>
-
             {Platform.OS === "web" ? (
               <Button
                 mode="outlined"
