@@ -72,7 +72,7 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
       if (!stats.ended) throw new Error("no stats for ended");
       if (!stats.isCorrect) throw new Error("no stats from isCorrect");
       const gamePace = stats.started.map((started, index) => {
-        const ended = stats.ended[index];
+        const ended = stats.ended![index];
         return Math.round((ended - started) / 100) / 10;
       });
       navigation.navigate("GameOver", {
