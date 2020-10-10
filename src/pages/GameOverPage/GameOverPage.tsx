@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { T } from "react-targem";
-import { Button, Card, Title, Avatar, Text } from "react-native-paper";
+import { Button, Card, Avatar, Text } from "react-native-paper";
 import { ProgressBar, Colors } from "react-native-paper";
 import styles from "./GameOverPage.styles";
 import { openLinkInNewTab } from "src/utils/native";
@@ -27,14 +27,14 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
                                                      goto,
                                                    }) => {
   const RightContent: React.FC<CardTitleAddon> = () => (
-    <div style={{ display: "flex", flexDirection: "row" }}>
+    <View style={{ display: "flex", flexDirection: "row" }}>
       <Button mode="outlined" onPress={postOnFacebook}>
         <T message="Share"/>
       </Button>
       <Button onPress={goto("Home")}>
         <T message="Home"/>
       </Button>
-    </div>
+    </View>
   );
   const postOnFacebook = () => {
     const facebookParameters = [
