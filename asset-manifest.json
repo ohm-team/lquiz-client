@@ -1,24 +1,24 @@
 {
   "files": {
-    "app.js": "/static/js/app.24366a92.chunk.js",
-    "app.js.map": "/static/js/app.24366a92.chunk.js.map",
-    "runtime~app.js": "/static/js/runtime~app.2e9f1821.js",
-    "runtime~app.js.map": "/static/js/runtime~app.2e9f1821.js.map",
-    "static/js/2.df6b1130.chunk.js": "/static/js/2.df6b1130.chunk.js",
-    "static/js/2.df6b1130.chunk.js.map": "/static/js/2.df6b1130.chunk.js.map",
-    "fonts/MaterialCommunityIcons.ttf": "/./fonts/MaterialCommunityIcons.ttf",
-    "favicon-16.png": "/favicon-16.png",
-    "favicon-32.png": "/favicon-32.png",
-    "favicon.ico": "/favicon.ico",
-    "index.html": "/index.html",
-    "manifest.json": "/manifest.json",
-    "serve.json": "/serve.json",
-    "static/js/2.df6b1130.chunk.js.LICENSE.txt": "/static/js/2.df6b1130.chunk.js.LICENSE.txt",
-    "static/media/logo.png": "/static/media/logo.5041783f.png"
+    "app.js": "/lquiz-client/static/js/app.24366a92.chunk.js",
+    "app.js.map": "/lquiz-client/static/js/app.24366a92.chunk.js.map",
+    "runtime~app.js": "/lquiz-client/static/js/runtime~app.bfca15b6.js",
+    "runtime~app.js.map": "/lquiz-client/static/js/runtime~app.bfca15b6.js.map",
+    "static/js/2.e7c3fcd1.chunk.js": "/lquiz-client/static/js/2.e7c3fcd1.chunk.js",
+    "static/js/2.e7c3fcd1.chunk.js.map": "/lquiz-client/static/js/2.e7c3fcd1.chunk.js.map",
+    "fonts/MaterialCommunityIcons.ttf": "/lquiz-client/./fonts/MaterialCommunityIcons.ttf",
+    "favicon-16.png": "/lquiz-client/favicon-16.png",
+    "favicon-32.png": "/lquiz-client/favicon-32.png",
+    "favicon.ico": "/lquiz-client/favicon.ico",
+    "index.html": "/lquiz-client/index.html",
+    "manifest.json": "/lquiz-client/manifest.json",
+    "serve.json": "/lquiz-client/serve.json",
+    "static/js/2.e7c3fcd1.chunk.js.LICENSE.txt": "/lquiz-client/static/js/2.e7c3fcd1.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/lquiz-client/static/media/logo.5041783f.png"
   },
   "entrypoints": [
-    "static/js/runtime~app.2e9f1821.js",
-    "static/js/2.df6b1130.chunk.js",
+    "static/js/runtime~app.bfca15b6.js",
+    "static/js/2.e7c3fcd1.chunk.js",
     "static/js/app.24366a92.chunk.js"
   ]
 }
