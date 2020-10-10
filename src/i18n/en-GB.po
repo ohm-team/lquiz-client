@@ -21,6 +21,12 @@ msgid "Share"
 msgstr "Share"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
+#: src/pages/RulesPage/RulesPage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Home"
+msgstr "Home"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Statistics"
 msgstr "Statistics"
 
@@ -33,8 +39,8 @@ msgid "pace"
 msgstr "pace"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "seconds"
-msgstr "seconds"
+msgid "seconds per question"
+msgstr "seconds per question"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Back"
@@ -85,11 +91,6 @@ msgstr "GameOver"
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Download an app"
 msgstr "Download an app"
-
-#: src/pages/RulesPage/RulesPage.tsx:
-#: src/pages/SettingsPage/Settings.tsx:
-msgid "Home"
-msgstr "Home"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "Within one game, the user is assigned 15 questions."

@@ -9,6 +9,7 @@ export default StyleSheet.create({
   card: {
     alignSelf: "center",
     minHeight: "100%",
+    minWidth: "100%",
     padding: 20,
     borderRadius: 0,
   },
