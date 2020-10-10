@@ -24,12 +24,11 @@ export const globalTypes = {
   locale: {
     name: "Locale",
     description: "Internationalization locale",
-    defaultValue: "en-GB",
+    defaultValue: "en-US",
     toolbar: {
       icon: "circlehollow",
       items: [
         { value: "en-US", right: "🇺🇸", title: "English (US)" },
-        { value: "en-GB", right: "🇬🇧", title: "English (GB)" },
         { value: "ru", right: "🇷🇺", title: "Русский" },
       ],
     },
