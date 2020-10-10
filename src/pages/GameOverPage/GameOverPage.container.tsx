@@ -2,7 +2,6 @@
 import React from "react";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RouteProp } from "@react-navigation/native";
-import { useSettings } from "src/contexts/SettingsContext";
 import GameOverPage from "./GameOverPage";
 import { RootStackRoutes } from "../types";
 
@@ -13,33 +12,24 @@ const GameOverPageContainer: React.FC<GameOverPageContainerProps> = ({
 }) => {
   const { gameResults, gamePace } = params;
 
-  const { nickName: userName } = useSettings();
-  const facebookShareMessage = `${userName} passeed the quiz with great result`;
-  const userStatus = "Artificial intelligence";
-
-  const rangCurrent = 1;
-  const rangTotal = 10;
-  const coins = 3210;
-
   const pace =
     Math.round((gamePace.reduce((v, a) => v + a, 0) / gamePace.length) * 10) /
     10;
   const paceAvg = 20;
-  const streaks = 2;
-  const streaksMax = 3;
+  const totalAnswered = gameResults.length;
+  const correctAnswered = gameResults.filter(Boolean).length;
+  const accuracy = Math.round((100 * correctAnswered) / totalAnswered) / 100;
+  const paceStatus = Math.round((100 * pace) / paceAvg) / 100;
+  const facebookShareMessage = `My Luxembourg knoweledge is ${correctAnswered}/${totalAnswered}. Try it out to test your skills!`;
   const props = {
-    gameResults,
     facebookShareMessage,
     facebookShareURL,
-    userName,
-    userStatus,
-    rangCurrent,
-    rangTotal,
-    coins,
+    accuracy,
+    userStatus: "Artificial intelligence",
+    paceStatus,
     pace,
-    paceAvg,
-    streaks,
-    streaksMax,
+    totalAnswered,
+    correctAnswered,
   };
 
   return <GameOverPage {...props} />;
