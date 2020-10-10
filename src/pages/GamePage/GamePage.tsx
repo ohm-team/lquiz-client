@@ -2,7 +2,14 @@ import React from "react";
 import { T } from "react-targem";
 import { Question, Answer } from "../types";
 import styles from "./GamePage.styles";
-import { Button, Card, Title, Avatar, ProgressBar } from "react-native-paper";
+import {
+  Button,
+  Card,
+  Title,
+  Avatar,
+  ProgressBar,
+  Paragraph,
+} from "react-native-paper";
 import GamePageAnswer from "./GamePageAnswer";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ScrollView, View } from "react-native";
@@ -101,6 +108,17 @@ const GamePage: React.FC<GamePageProps> = ({
                 />
               ))}
             </Card.Actions>
+          ) : null}
+          {isNextButtonVisible ? (
+            <View style={styles.sourceLinksContainer}>
+              <Paragraph>Are you sure?</Paragraph>
+              <Button>
+                <T message="Question source" />
+              </Button>
+              <Button>
+                <T message="Answer source" />
+              </Button>
+            </View>
           ) : null}
         </SafeAreaView>
       </Card>

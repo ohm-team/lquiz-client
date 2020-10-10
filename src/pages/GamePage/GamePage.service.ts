@@ -1,15 +1,19 @@
 import { QuestionWithAnswers } from "../types";
 import { MOCK } from "./GamePage.mock";
 
+interface BackendQuestion {
+  question: {
+    what: string;
+    value: number;
+    correctAnswerIndex: number;
+    url: string;
+    answerUrl: string;
+  };
+  answers: string[];
+}
+
 export const transformQuestion = (
-  q: {
-    question: {
-      what: string;
-      value: number;
-      correctAnswerIndex: number;
-    };
-    answers: string[];
-  },
+  q: BackendQuestion,
   i: number
 ): QuestionWithAnswers => {
   return {
@@ -18,6 +22,8 @@ export const transformQuestion = (
       value: q.question.value,
       imgSrc: `https://source.unsplash.com/random?quiz&version=${i}`,
       correctAnswerId: q.question.correctAnswerIndex.toString(),
+      url: q.question.url,
+      answerUrl: q.question.answerUrl,
     },
     id: i.toString(),
     answers: q.answers.map((a, id) => ({
