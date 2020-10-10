@@ -1,20 +1,12 @@
 import React from "react";
 import { ScrollView, View } from "react-native";
-import {
-  Avatar,
-  Button,
-  Card,
-  ProgressBar,
-  Text,
-  Title,
-} from "react-native-paper";
+import { Avatar, Button, Card, ProgressBar, Text, Title } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { T } from "react-targem";
-import ThemeToggler from "../../components/ThemeToggler";
+import { openLinkInNewTab } from "src/utils/native";
 import { Answer, Question } from "../types";
 import styles from "./GamePage.styles";
 import GamePageAnswer from "./GamePageAnswer";
-import { openLinkInNewTab } from "src/utils/native";
 
 const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
   <Avatar.Text {...props} label="Q"/>
@@ -40,7 +32,6 @@ const GamePage: React.FC<GamePageProps> = ({
                                            }: GamePageProps) => {
   const RightContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
     <View style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
-      <ThemeToggler/>
       <Button onPress={onBackButtonClick}>
         <T message="Back"/>
       </Button>
