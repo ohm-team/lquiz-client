@@ -1,7 +1,7 @@
 import React from "react";
 import { locales, Locale } from "src/config/locales";
 import { useSettings } from "src/contexts/SettingsContext";
-import { Button, Menu } from "react-native-paper";
+import { Button, DefaultTheme, Menu } from "react-native-paper";
 import { StyleProp, ViewStyle } from "react-native";
 import { T } from "react-targem";
 
@@ -25,7 +25,12 @@ const LocalSelector: React.FC<LocalSelectorProps> = ({
       visible={visible}
       onDismiss={closeMenu}
       anchor={
-        <Button style={buttonStyle} mode="outlined" onPress={openMenu}>
+        <Button
+          style={buttonStyle}
+          mode="outlined"
+          theme={DefaultTheme}
+          onPress={openMenu}
+        >
           <T message="Choose language" />
         </Button>
       }
