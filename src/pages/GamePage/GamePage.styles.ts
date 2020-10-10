@@ -34,4 +34,11 @@ export default StyleSheet.create({
     marginTop: 16,
     marginBottom: 0,
   },
+  sourceLinksContainer: {
+    display: "flex",
+    justifyContent: "flex-end",
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 20,
+  },
 });

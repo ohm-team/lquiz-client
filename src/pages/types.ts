@@ -19,6 +19,8 @@ export type Question = {
   what: string;
   imgSrc: string;
   value: number;
+  url: string;
+  answerUrl: string;
   correctAnswerId: string;
 };
 
