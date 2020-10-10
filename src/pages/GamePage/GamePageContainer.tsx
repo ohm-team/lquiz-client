@@ -31,7 +31,10 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
   }
 
   async function checkAnswer() {
-    const { correctAnswerId } = await checkQuestion(currentQuestion?.id);
+    if (!currentQuestion) {
+      throw new Error("There is no current question");
+    }
+    const { correctAnswerId } = await checkQuestion(currentQuestion.id);
     setCorrectAnswerId(correctAnswerId);
   }
 
