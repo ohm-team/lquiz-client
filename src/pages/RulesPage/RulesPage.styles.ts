@@ -8,7 +8,12 @@ export default StyleSheet.create({
   },
   card: {
     alignSelf: "center",
+    minHeight: "100%",
     padding: 20,
+    borderRadius: 0,
+  },
+  content: {
+    marginTop: 20,
   },
   header: {
     fontSize: 30,
