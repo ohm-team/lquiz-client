@@ -31,7 +31,7 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
     setCurrentQuestion(question);
   }
 
-  async function checkAnswer() {
+  async function checkAnswer(selectedAnswerId: string) {
     if (!currentQuestion) {
       throw new Error("There is no current question");
     }
@@ -61,7 +61,7 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
 
   const handleAnswerClick = (id: string) => {
     setSelectedAnswerId(id);
-    checkAnswer();
+    checkAnswer(id);
   };
 
   const handleNextButtonClick = () => {
@@ -75,7 +75,6 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
         const ended = stats.ended[index];
         return Math.round((ended - started) / 100) / 10;
       });
-      // console.log('f', stats);
       navigation.navigate("GameOver", {
         gameResults: stats.isCorrect,
         gamePace,
