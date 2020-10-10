@@ -7,6 +7,7 @@ export const MOCK: QuestionWithAnswers[] = [
       what: "Babies were born",
       where: "2019",
       count: 2042,
+      imgSrc: `https://source.unsplash.com/random?quiz&version=1}`,
     },
     answers: [
       {
@@ -37,6 +38,7 @@ export const MOCK: QuestionWithAnswers[] = [
       what: "Water level was",
       where: "1993",
       count: 22,
+      imgSrc: "https://source.unsplash.com/random?quiz&version=2",
     },
     answers: [
       {

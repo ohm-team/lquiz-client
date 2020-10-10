@@ -17,18 +17,12 @@ export default StyleSheet.create({
     marginTop: 16,
     marginBottom: 16,
     minWidth: "90%",
-    minHeight: 65,
   },
   buttonContent: {
-    paddingTop: 16,
-    paddingBottom: 16,
-    minHeight: 65,
-  },
-  buttonSuccess: {
-    backgroundColor: "green",
+    minHeight: 55,
   },
   title: {
-    marginTop: 32,
-    marginBottom: 8,
+    marginTop: 16,
+    marginBottom: 0,
   },
 });

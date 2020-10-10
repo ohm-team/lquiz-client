@@ -54,20 +54,25 @@ const GamePage: React.FC<GamePageProps> = ({
             left={LeftContent}
             right={RightContent}
           />
-          <Card.Cover
-            accessible={false}
-            source={{ uri: "https://source.unsplash.com/random?quiz" }}
-          />
+
           {isQuestionLoading ? <ProgressBar indeterminate /> : null}
           {question ? (
-            <Card.Content>
-              <Title style={styles.title}>
-                {question.count} {question.what.toLowerCase()}{" "}
-                <T message="in" /> {question.where}.{" "}
-                <T message="What else do you think my contain number" />{" "}
-                {question.count}?
-              </Title>
-            </Card.Content>
+            <>
+              <Card.Cover
+                accessible={false}
+                source={{
+                  uri: question.imgSrc,
+                }}
+              />
+              <Card.Content>
+                <Title style={styles.title}>
+                  {question.count} {question.what.toLowerCase()}{" "}
+                  <T message="in" /> {question.where}.{" "}
+                  <T message="What else do you think my contain number" />{" "}
+                  {question.count}?
+                </Title>
+              </Card.Content>
+            </>
           ) : null}
           {answers ? (
             <Card.Actions style={styles.buttonsContainer}>
