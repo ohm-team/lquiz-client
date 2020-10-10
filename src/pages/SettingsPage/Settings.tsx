@@ -9,7 +9,7 @@ import { RootStackRoutes, RootStackRoute } from "../types";
 import { View } from "react-native";
 
 const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
-  <Avatar.Text {...props} label="R" />
+  <Avatar.Text {...props} label="S" />
 );
 
 interface CardTitleAddon {
@@ -38,13 +38,15 @@ const Settings: React.FC<SettingsProps> = ({ navigation }: SettingsProps) => {
     <Card style={styles.container}>
       <SafeAreaView>
         <Card.Title
-          title={<T message="Rules" />}
+          title={<T message="Settings" />}
           left={LeftContent}
           right={RightAddon}
         />
         <Card.Content style={styles.content}>
           <View style={styles.switchContainer}>
-            <Paragraph>Is dark theme?</Paragraph>
+            <Paragraph>
+              <T message="Dark theme?" />
+            </Paragraph>
             <Switch
               accessibilityRole="switch"
               accessibilityLabel={t("Toggle dark theme")}
