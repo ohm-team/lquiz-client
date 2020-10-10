@@ -5,6 +5,7 @@ export default StyleSheet.create({
     marginTop: 16,
     marginBottom: 16,
     minWidth: "90%",
+    maxWidth: "100%",
   },
   buttonContent: {
     minHeight: 55,
