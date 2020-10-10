@@ -86,10 +86,6 @@ msgid "Settings"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
-msgid "GameOver"
-msgstr ""
-
-#: src/pages/HomePage/HomePage.tsx:
 msgid "Download an app"
 msgstr ""
 
