@@ -7,6 +7,11 @@ export default StyleSheet.create({
     width: "100%",
     borderRadius: 0,
   },
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    minHeight: "100%",
+  },
   buttonsContainer: {
     display: "flex",
     flexWrap: "wrap",
