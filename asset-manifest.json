@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/lquiz-client/static/js/app.8d97f4b9.chunk.js",
-    "app.js.map": "/lquiz-client/static/js/app.8d97f4b9.chunk.js.map",
+    "app.js": "/lquiz-client/static/js/app.4b30d3ba.chunk.js",
+    "app.js.map": "/lquiz-client/static/js/app.4b30d3ba.chunk.js.map",
     "runtime~app.js": "/lquiz-client/static/js/runtime~app.bfca15b6.js",
     "runtime~app.js.map": "/lquiz-client/static/js/runtime~app.bfca15b6.js.map",
     "static/js/2.a314285a.chunk.js": "/lquiz-client/static/js/2.a314285a.chunk.js",
@@ -19,6 +19,6 @@
   "entrypoints": [
     "static/js/runtime~app.bfca15b6.js",
     "static/js/2.a314285a.chunk.js",
-    "static/js/app.8d97f4b9.chunk.js"
+    "static/js/app.4b30d3ba.chunk.js"
   ]
 }
