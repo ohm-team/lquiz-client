@@ -8,15 +8,13 @@ export type RootStackRoute = keyof RootStackRoutes;
 
 export type Answer = {
   what: string;
-  where: string;
   id: string;
 };
 
 export type Question = {
   what: string;
-  where: string;
   imgSrc: string;
-  count: string | number;
+  value: number;
 };
 
 export type QuestionWithAnswers = {

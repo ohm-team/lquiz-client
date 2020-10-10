@@ -4,30 +4,26 @@ export const MOCK: QuestionWithAnswers[] = [
   {
     id: "q-1",
     question: {
-      what: "Babies were born",
-      where: "2019",
-      count: 2042,
+      what: "{value} people died on road in 1991",
+      value: 2042,
       imgSrc: `https://source.unsplash.com/random?quiz&version=1}`,
     },
     answers: [
       {
-        what: "Suicides in Luxembourg county",
-        where: "2013",
+        what: "{value} people died on road in 1991",
         id: "1",
       },
       {
-        what: "Bottles of beers sold",
-        where: "Aug, 2009",
+        what: "{value} Cyclists died on road in 2018",
         id: "2",
       },
       {
-        what: "Students has been graduated from Luxmebourg philharmonie",
-        where: "2019",
+        what:
+          "{value} people were injuried from Other types of accidents in 1991",
         id: "3",
       },
       {
-        what: "Criminal cases closed",
-        where: "2010",
+        what: "{value} 4 wheel passengers died on road in 2019",
         id: "4",
       },
     ],
@@ -35,31 +31,27 @@ export const MOCK: QuestionWithAnswers[] = [
   {
     id: "q-2",
     question: {
-      what: "Water level was",
-      where: "1993",
-      count: 22,
+      what: "{value} people died on road in 1991",
+      value: 22,
       imgSrc: "https://source.unsplash.com/random?quiz&version=2",
     },
     answers: [
       {
-        what: "Biggest bird weight",
-        where: "ever",
-        id: "5",
+        what: "{value} people died on road in 1991",
+        id: "1",
       },
       {
-        what: "Amount of pigs",
-        where: "2001",
-        id: "6",
+        what: "{value} Cyclists died on road in 2018",
+        id: "2",
       },
       {
-        what: "Girls were born",
-        where: "2003",
-        id: "7",
+        what:
+          "{value} people were injuried from Other types of accidents in 1991",
+        id: "3",
       },
       {
-        what: "COVID cases",
-        where: "2019",
-        id: "8",
+        what: "{value} 4 wheel passengers died on road in 2019",
+        id: "4",
       },
     ],
   },

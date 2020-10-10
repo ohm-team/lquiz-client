@@ -29,11 +29,6 @@ msgid "out of"
 msgstr "out of"
 
 #: src/pages/GamePage/GamePage.tsx:
-#: src/pages/GamePage/GamePageAnswer/GamePageAnswer.tsx:
-msgid "in"
-msgstr "in"
-
-#: src/pages/GamePage/GamePage.tsx:
 msgid "What else do you think my contain number"
 msgstr "What else do you think my contain number"
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { T } from "react-targem";
-import { Question } from "../types";
+import { Question, Answer } from "../types";
 import styles from "./GamePage.styles";
 import { Button, Card, Title, Avatar, ProgressBar } from "react-native-paper";
 import GamePageAnswer from "./GamePageAnswer";
@@ -66,10 +66,9 @@ const GamePage: React.FC<GamePageProps> = ({
               />
               <Card.Content>
                 <Title style={styles.title}>
-                  {question.count} {question.what.toLowerCase()}{" "}
-                  <T message="in" /> {question.where}.{" "}
+                  {question.what.replace("{value}", question.value.toString())}.{" "}
                   <T message="What else do you think my contain number" />{" "}
-                  {question.count}?
+                  {question.value}?
                 </Title>
               </Card.Content>
             </>
@@ -117,13 +116,7 @@ interface GamePageProps {
   selectedAnswerId?: string;
   isNextButtonVisible: boolean;
   question?: Question | null;
-  answers?:
-    | {
-        what: string;
-        where: string;
-        id: string;
-      }[]
-    | null;
+  answers?: Answer[] | null;
   onBackButtonClick: () => void;
   onAnswerClick: (answerId: string) => void;
   onNextButtonClick: () => void;
