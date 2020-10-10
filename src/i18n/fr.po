@@ -2,9 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sat Oct 10 2020 13:05:26 GMT+0300 (Israel Daylight Time)\n"
+"POT-Creation-Date: Fri Oct 09 2020 18:54:45 GMT+0300 (Israel Daylight Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 2.4\n"
+"Last-Translator: \n"
+"Language: fr\n"
 
 #: src/components/LocaleSelector/LocaleSelector.tsx:
 msgid "Choose language"
@@ -45,11 +51,6 @@ msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Rules"
-msgstr ""
-
-#: src/pages/HomePage/HomePage.tsx:
-#: src/pages/SettingsPage/Settings.tsx:
-msgid "Settings"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:

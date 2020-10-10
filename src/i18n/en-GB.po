@@ -2,72 +2,73 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sat Oct 10 2020 13:05:26 GMT+0300 (Israel Daylight Time)\n"
+"POT-Creation-Date: Fri Oct 09 2020 15:49:36 GMT+0300 (Israel Daylight Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 2.4\n"
+"Last-Translator: \n"
+"Language: en_GB\n"
 
 #: src/components/LocaleSelector/LocaleSelector.tsx:
 msgid "Choose language"
-msgstr ""
+msgstr "Choose language"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Back"
-msgstr ""
+msgstr "Back"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Quiz question #"
-msgstr ""
+msgstr "Quiz question #"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "out of"
-msgstr ""
+msgstr "out of"
 
 #: src/pages/GamePage/GamePage.tsx:
 #: src/pages/GamePage/GamePageAnswer/GamePageAnswer.tsx:
 msgid "in"
-msgstr ""
+msgstr "in"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "What else do you think my contain number"
-msgstr ""
+msgstr "What else do you think my contain number"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Next question!"
-msgstr ""
+msgstr "Next question!"
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Letz quiz!"
-msgstr ""
+msgstr "Letz quiz!"
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Play"
-msgstr ""
+msgstr "Play"
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Rules"
-msgstr ""
-
-#: src/pages/HomePage/HomePage.tsx:
-#: src/pages/SettingsPage/Settings.tsx:
-msgid "Settings"
-msgstr ""
+msgstr "Rules"
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Download an app"
-msgstr ""
+msgstr "Download an app"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "Within one game, the user is assigned 15 questions."
-msgstr ""
+msgstr "Within one game, the user is assigned 15 questions."
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "Points are awarded for each correct answer (quiz coins)"
-msgstr ""
+msgstr "Points are awarded for each correct answer (quiz coins)"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "After passing all the questions, the general stratistics of the user is formed."
-msgstr ""
+msgstr "After passing all the questions, the general stratistics of the user is formed."
