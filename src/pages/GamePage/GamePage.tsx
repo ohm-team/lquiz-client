@@ -4,7 +4,6 @@ import {
   Avatar,
   Button,
   Card,
-  Paragraph,
   ProgressBar,
   Text,
   Title,
@@ -75,6 +74,7 @@ const GamePage: React.FC<GamePageProps> = ({
                     uri: question.imgSrc,
                   }}
                 />
+
                 {isNextButtonVisible ? (
                   <View style={styles.coverButtonContainer}>
                     <Button
@@ -84,6 +84,26 @@ const GamePage: React.FC<GamePageProps> = ({
                     >
                       <T message="Next question!" />
                     </Button>
+                    <View style={styles.sourceLinksContainer}>
+                      <Button>
+                        <Text
+                          accessibilityRole="link"
+                          target="_blank"
+                          href={"https://" + question?.url}
+                        >
+                          <T message="Question source" />
+                        </Text>
+                      </Button>
+                      <Button>
+                        <Text
+                          accessibilityRole="link"
+                          target="_blank"
+                          href={"https://" + question?.answerUrl}
+                        >
+                          <T message="Answer source" />
+                        </Text>
+                      </Button>
+                    </View>
                   </View>
                 ) : null}
               </View>
@@ -121,17 +141,6 @@ const GamePage: React.FC<GamePageProps> = ({
                 />
               ))}
             </Card.Actions>
-          ) : null}
-          {isNextButtonVisible ? (
-            <View style={styles.sourceLinksContainer}>
-              <Paragraph>Are you sure?</Paragraph>
-              <Button>
-                <T message="Question source" />
-              </Button>
-              <Button>
-                <T message="Answer source" />
-              </Button>
-            </View>
           ) : null}
         </SafeAreaView>
       </Card>
