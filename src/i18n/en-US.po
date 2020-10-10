@@ -78,11 +78,11 @@ msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
 #: src/pages/RulesPage/RulesPage.tsx:
-#: src/pages/SettingsPage/Settings.tsx:
 msgid "Rules"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
 msgid "Settings"
 msgstr ""
 
@@ -109,6 +109,10 @@ msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "After passing all the questions, the general stratistics of the user is formed."
+msgstr ""
+
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Dark theme?"
 msgstr ""
 
 #: src/pages/SettingsPage/Settings.tsx:
