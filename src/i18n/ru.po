@@ -62,15 +62,15 @@ msgid "Next question!"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "What else do you think my contain number"
-msgstr ""
-
-#: src/pages/GamePage/GamePage.tsx:
 msgid "Question source"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Answer source"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "What else do you think my contain number"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
@@ -82,6 +82,7 @@ msgid "Play"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
+#: src/pages/RulesPage/RulesPage.tsx:
 msgid "Rules"
 msgstr ""
 
