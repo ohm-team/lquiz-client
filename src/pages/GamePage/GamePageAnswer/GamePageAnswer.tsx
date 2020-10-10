@@ -1,5 +1,4 @@
 import React from "react";
-import { T } from "react-targem";
 import { Button } from "react-native-paper";
 import { StyleProp, ViewStyle, TextStyle } from "react-native";
 
@@ -19,7 +18,6 @@ const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
   onAnswerClick,
   id,
   what,
-  where,
   isLoading,
   contentStyle,
   style,
@@ -57,11 +55,7 @@ const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
       loading={isLoading}
       theme={getTheme()}
     >
-      {isLoading ? null : (
-        <>
-          {what} <T message="in" /> {where}
-        </>
-      )}
+      {isLoading ? null : <>{what.replace("{value}", "")}</>}
     </Button>
   );
 };
@@ -70,7 +64,6 @@ interface GamePageAnswerProps {
   id: string;
   onAnswerClick: (answerId: string) => void;
   what: string;
-  where: string;
   isLoading: boolean;
   isAnyQuestionLoading: boolean;
   isAnswerRevealed: boolean;
