@@ -41,6 +41,13 @@ export default StyleSheet.create({
     fontStyle: "italic",
     marginBottom: 0,
   },
+  sourceLinksContainer: {
+    display: "flex",
+    justifyContent: "flex-end",
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 20,
+  },
   titleValue: {
     fontWeight: "bold",
     fontSize: 22
