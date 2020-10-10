@@ -26,7 +26,6 @@ export default StyleSheet.create({
     position: "relative",
     display: "flex",
     justifyContent: "center",
-    height: "100%",
   },
   linearGradient: {
     width: "100%",
@@ -43,5 +42,10 @@ export default StyleSheet.create({
   },
   cardButton: {
     marginBottom: 20,
+  },
+  themeToggler: {
+    position: "absolute",
+    top: "14%",
+    left: 165,
   },
 });
