@@ -126,8 +126,6 @@ const GamePage: React.FC<GamePageProps> = ({
               {answers.map((a) => (
                 <GamePageAnswer
                   key={a.id}
-                  answerValue={a.answerValue}
-                  answerStatistics={a.answerStatistics}
                   onAnswerClick={onAnswerClick}
                   isLoading={questionLoadingId === a.id}
                   isAnyQuestionLoading={questionLoadingId !== undefined}
