@@ -37,6 +37,7 @@ export default StyleSheet.create({
   },
   titleStatistics: {
     marginTop: 16,
+    fontSize: 15,
     textAlign: "center",
     fontStyle: "italic",
     marginBottom: 0,
