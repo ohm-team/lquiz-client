@@ -41,14 +41,6 @@ msgstr ""
 msgid "Next question!"
 msgstr ""
 
-#: src/pages/GamePage/GamePage.tsx:
-msgid "Hooray! This is the correct answer!"
-msgstr ""
-
-#: src/pages/GamePage/GamePage.tsx:
-msgid "Ohh nooo... This is an incorrect answer..."
-msgstr ""
-
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Letz quiz!"
 msgstr ""
