@@ -12,6 +12,9 @@ export default StyleSheet.create({
     padding: 20,
     borderRadius: 0,
   },
+  content: {
+    marginTop: 20,
+  },
   header: {
     fontSize: 30,
     lineHeight: 30,

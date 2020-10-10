@@ -4,7 +4,11 @@ import { TargemProvider } from "react-targem";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import translations from "src/i18n/translations.json";
-import { Provider as PaperProvider } from "react-native-paper";
+import {
+  Provider as PaperProvider,
+  DarkTheme,
+  DefaultTheme,
+} from "react-native-paper";
 import {
   SettingsContextProvider,
   useSettings,
@@ -16,11 +20,11 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 const AppLayoutInternal: React.FC<AppLayoutInternalProps> = ({
   children,
 }: AppLayoutInternalProps) => {
-  const { locale } = useSettings();
+  const { locale, theme } = useSettings();
 
   return (
     <SafeAreaProvider>
-      <PaperProvider>
+      <PaperProvider theme={theme === "dark" ? DarkTheme : DefaultTheme}>
         <NavigationContainer>
           <TargemProvider locale={locale} translations={translations}>
             {children}

@@ -74,20 +74,16 @@ msgid "What else do you think my contain number"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
-msgid "Letz quiz!"
-msgstr ""
-
-#: src/pages/HomePage/HomePage.tsx:
 msgid "Play"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
 #: src/pages/RulesPage/RulesPage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
 msgid "Rules"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
-#: src/pages/SettingsPage/Settings.tsx:
 msgid "Settings"
 msgstr ""
 
@@ -100,6 +96,7 @@ msgid "Download an app"
 msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
 msgid "Home"
 msgstr ""
 
@@ -113,4 +110,8 @@ msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "After passing all the questions, the general stratistics of the user is formed."
+msgstr ""
+
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Toggle dark theme"
 msgstr ""
