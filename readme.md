@@ -1,6 +1,15 @@
 # LQuiz
 
-[Production link](https://ohm-team.github.io/lquiz-client/)
+[Website link](https://ohm-team.github.io/lquiz-client/) | [Mobile application link](https://expo.io/@ohm-team/lquiz-client)
+
+### iOS Download instructions
+
+Unfortunately, we are not able to publish the application to the AppStore because of time restrictions. But you can use Expo Client to test the app on your phone!
+
+- Downlaod Expo Client from AppStore
+- Open Profile -> Sign in
+- Login as ohm-team (ask us for the credentials)
+- Open the app from Projects tab
 
 В планах:
 

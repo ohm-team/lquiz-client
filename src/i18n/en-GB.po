@@ -61,6 +61,10 @@ msgstr "Play"
 msgid "Rules"
 msgstr "Rules"
 
+#: src/pages/HomePage/HomePage.tsx:
+msgid "Download an app"
+msgstr "Download an app"
+
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "Within one game, the user is assigned 15 questions."
 msgstr "Within one game, the user is assigned 15 questions."
