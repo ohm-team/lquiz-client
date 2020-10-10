@@ -30,7 +30,7 @@ const transformQuestion = (
 export const MOCK: QuestionWithAnswers[] = require("./questions.json").questions.map(
   transformQuestion
 );
-export const QUESTIONS_COUNT = 20;
+export const QUESTIONS_COUNT = 5;
 
 export const fetchQuestionByIndex = async (
   index: number

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-native-paper";
-import { StyleProp, ViewStyle, TextStyle } from "react-native";
+import styles from "./GamePageAnswer.styles";
 
 const successTheme = {
   colors: {
@@ -19,8 +19,6 @@ const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
   id,
   what,
   isLoading,
-  contentStyle,
-  style,
   isAnyQuestionLoading,
   isSelected,
   isCorrectAnswer,
@@ -45,8 +43,8 @@ const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
   return (
     <Button
       onPress={!isAnswerRevealed ? handleAnswerClick : undefined}
-      style={style}
-      contentStyle={contentStyle}
+      style={styles.button}
+      contentStyle={styles.buttonContent}
       mode="contained"
       disabled={
         isAnyQuestionLoading ||
@@ -69,8 +67,6 @@ interface GamePageAnswerProps {
   isAnswerRevealed: boolean;
   isSelected: boolean;
   isCorrectAnswer: boolean;
-  style: StyleProp<ViewStyle>;
-  contentStyle: StyleProp<TextStyle>;
 }
 
 export default GamePageAnswer;
