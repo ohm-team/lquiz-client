@@ -1,31 +1,66 @@
 import React from "react";
-import { TextInput, Card } from "react-native-paper";
+import { Card, Switch, Paragraph, Button, Avatar } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { T } from "react-targem";
+import { T, useLocale } from "react-targem";
 import { useSettings } from "src/contexts/SettingsContext";
 import styles from "./Settings.styles";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackRoutes, RootStackRoute } from "../types";
+import { View } from "react-native";
 
-const Settings: React.FC<SettingsProps> = () => {
-  const { nickName, setSettings } = useSettings();
-  const onChangeText = (nickName: string) => {
-    setSettings({ nickName });
+const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
+  <Avatar.Text {...props} label="S" />
+);
+
+interface CardTitleAddon {
+  size: number;
+}
+
+const Settings: React.FC<SettingsProps> = ({ navigation }: SettingsProps) => {
+  const { theme, setSettings } = useSettings();
+  const handleThemeChange = (isDark: boolean) => {
+    setSettings({ theme: isDark ? "dark" : "default" });
   };
+
+  const handleLinkButtonClick = (routeName: RootStackRoute) => () => {
+    navigation.navigate(routeName);
+  };
+
+  const RightAddon = () => (
+    <Button mode="outlined" onPress={handleLinkButtonClick("Home")}>
+      <T message="Home" />
+    </Button>
+  );
+
+  const { t } = useLocale();
+
   return (
     <Card style={styles.container}>
       <SafeAreaView>
-        <Card.Title title={<T message="Settings" />} />
-        <Card.Content>
-          <TextInput
-            mode="outlined"
-            label="Name"
-            defaultValue={nickName}
-            onChangeText={onChangeText}
-          />
+        <Card.Title
+          title={<T message="Settings" />}
+          left={LeftContent}
+          right={RightAddon}
+        />
+        <Card.Content style={styles.content}>
+          <View style={styles.switchContainer}>
+            <Paragraph>
+              <T message="Dark theme?" />
+            </Paragraph>
+            <Switch
+              accessibilityRole="switch"
+              accessibilityLabel={t("Toggle dark theme")}
+              value={theme === "dark"}
+              onValueChange={handleThemeChange}
+            />
+          </View>
         </Card.Content>
       </SafeAreaView>
     </Card>
   );
 };
-interface SettingsProps {}
+interface SettingsProps {
+  navigation: StackNavigationProp<RootStackRoutes, "Settings">;
+}
 
 export default Settings;
