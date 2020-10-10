@@ -1,30 +1,81 @@
-import React from "react";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { RootStackRoutes, RootStackRoute } from "../types";
+import React, { useEffect, useState } from "react";
+import { QuestionWithAnswers, RootStackRoute, RootStackRoutes } from "../types";
 import GamePage from "./GamePage";
+import {
+  checkQuestion,
+  fetchQuestionByIndex,
+  QUESTIONS_COUNT,
+} from "./GamePage.service";
 
 const GamePageContainer: React.FC<GamePageContainerProps> = ({
   navigation,
 }: GamePageContainerProps) => {
+  const [currentQuestionNumber, setCurrentQuestionNumber] = useState<number>(0);
+  const [currentQuestion, setCurrentQuestion] = useState<
+    QuestionWithAnswers | undefined
+  >(undefined);
+  const [correctAnswerId, setCorrectAnswerId] = useState<string | undefined>(
+    undefined
+  );
+  const [selectedAnswerId, setSelectedAnswerId] = useState<
+    string | undefined
+  >();
+  const [isQuestionLoading, setIsQuestionLoading] = useState<boolean>(false);
+
+  async function fetchData(questionNumber: number) {
+    setIsQuestionLoading(true);
+    const question = await fetchQuestionByIndex(questionNumber);
+    setIsQuestionLoading(false);
+    setCurrentQuestion(question);
+  }
+
+  async function checkAnswer() {
+    if (!currentQuestion) {
+      throw new Error("There is no current question");
+    }
+    const { correctAnswerId } = await checkQuestion(currentQuestion.id);
+    setCorrectAnswerId(correctAnswerId);
+  }
+
+  useEffect(() => {
+    fetchData(currentQuestionNumber);
+  }, [currentQuestionNumber]);
+
   const handleLinkButtonClick = (routeName: RootStackRoute) => () => {
     navigation.navigate(routeName);
   };
 
-  const handleAnswerClick = () => {
-    // eslint-disable-next-line no-console
-    console.log("Answer is clicked!");
+  const handleAnswerClick = (id: string) => {
+    setSelectedAnswerId(id);
+    checkAnswer();
   };
 
-  const currentQuestionNumber = 1;
-  const totalQuestionsCount = 20;
+  const handleNextButtonClick = () => {
+    const nextQuestionNumber = currentQuestionNumber + 1;
+    if (nextQuestionNumber === QUESTIONS_COUNT) {
+      navigation.navigate("Home");
+      return;
+    }
+    setCorrectAnswerId(undefined);
+    setSelectedAnswerId(undefined);
+    setCurrentQuestion(undefined);
+    setCurrentQuestionNumber(nextQuestionNumber);
+  };
 
   return (
     <GamePage
-      currentQuestionNumber={currentQuestionNumber}
-      isQuestionLoading={true}
-      totalQuestionsCount={totalQuestionsCount}
+      currentQuestionNumber={currentQuestionNumber + 1}
+      isQuestionLoading={isQuestionLoading}
+      question={currentQuestion?.question}
+      answers={currentQuestion?.answers}
+      totalQuestionsCount={QUESTIONS_COUNT}
+      correctAnswerId={correctAnswerId}
       onBackButtonClick={handleLinkButtonClick("Home")}
       onAnswerClick={handleAnswerClick}
+      selectedAnswerId={selectedAnswerId}
+      isNextButtonVisible={Boolean(correctAnswerId)}
+      onNextButtonClick={handleNextButtonClick}
     />
   );
 };

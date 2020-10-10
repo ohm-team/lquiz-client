@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sat Oct 10 2020 09:21:16 GMT+0300 (Israel Daylight Time)\n"
+"POT-Creation-Date: Sat Oct 10 2020 08:32:27 GMT+0300 (Israel Daylight Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -23,12 +23,16 @@ msgid "out of"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-#: src/pages/GamePage/GamePage.tsx:
+#: src/pages/GamePage/GamePageAnswer/GamePageAnswer.tsx:
 msgid "in"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "What else do you think my contain number"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Next question!"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:

@@ -30,12 +30,16 @@ msgid "out of"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-#: src/pages/GamePage/GamePage.tsx:
+#: src/pages/GamePage/GamePageAnswer/GamePageAnswer.tsx:
 msgid "in"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "What else do you think my contain number"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Next question!"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
