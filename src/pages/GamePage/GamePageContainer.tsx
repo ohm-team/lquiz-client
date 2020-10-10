@@ -12,10 +12,9 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
   navigation,
 }: GamePageContainerProps) => {
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState<number>(0);
-  const [
-    currentQuestion,
-    setCurrentQuestion,
-  ] = useState<QuestionWithAnswers | null>(null);
+  const [currentQuestion, setCurrentQuestion] = useState<
+    QuestionWithAnswers | undefined
+  >(undefined);
   const [correctAnswerId, setCorrectAnswerId] = useState<string | undefined>(
     undefined
   );
@@ -47,12 +46,6 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
   const handleAnswerClick = (id: string) => {
     setSelectedAnswerId(id);
     checkAnswer();
-    //if (nextQuestionNumber === QUESTIONS_COUNT) {
-    //  navigation.navigate("Home");
-    //} else {
-    //  setCurrentQuestion(null);
-    //  setCurrentQuestionNumber(nextQuestionNumber);
-    //}
   };
 
   const handleNextButtonClick = () => {
@@ -61,7 +54,9 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
       navigation.navigate("Home");
       return;
     }
-    setCurrentQuestion(null);
+    setCorrectAnswerId(undefined);
+    setSelectedAnswerId(undefined);
+    setCurrentQuestion(undefined);
     setCurrentQuestionNumber(nextQuestionNumber);
   };
 
