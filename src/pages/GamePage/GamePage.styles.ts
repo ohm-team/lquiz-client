@@ -42,6 +42,12 @@ export default StyleSheet.create({
     marginBottom: 0,
   },
   sourceLinksContainer: {
+    position: "absolute",
+    bottom: 0,
+    backgroundColor: "rgba(255,255,255,.7)",
+    borderRadius: 5,
+    paddingLeft: 10,
+    paddingRight: 10,
     display: "flex",
     justifyContent: "flex-end",
     flexDirection: "row",
