@@ -13,6 +13,7 @@ import { T } from "react-targem";
 import { Answer, Question } from "../types";
 import styles from "./GamePage.styles";
 import GamePageAnswer from "./GamePageAnswer";
+import { openLinkInNewTab } from "src/utils/native";
 
 const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
   <Avatar.Text {...props} label="Q" />
@@ -41,6 +42,14 @@ const GamePage: React.FC<GamePageProps> = ({
       <T message="Back" />
     </Button>
   );
+
+  const handleQuestionSourceLinkClick = () => {
+    openLinkInNewTab(question!.url);
+  };
+
+  const handleAnswerSourceLinkClick = () => {
+    openLinkInNewTab(question!.answerUrl);
+  };
 
   const [whatStart, whatEnd] = (question?.whatValue || "").split("{value}");
 
@@ -85,23 +94,11 @@ const GamePage: React.FC<GamePageProps> = ({
                       <T message="Next question!" />
                     </Button>
                     <View style={styles.sourceLinksContainer}>
-                      <Button>
-                        <Text
-                          accessibilityRole="link"
-                          target="_blank"
-                          href={"https://" + question?.url}
-                        >
-                          <T message="Question source" />
-                        </Text>
+                      <Button onPress={handleQuestionSourceLinkClick}>
+                        <T message="Question source" />
                       </Button>
-                      <Button>
-                        <Text
-                          accessibilityRole="link"
-                          target="_blank"
-                          href={"https://" + question?.answerUrl}
-                        >
-                          <T message="Answer source" />
-                        </Text>
+                      <Button onPress={handleAnswerSourceLinkClick}>
+                        <T message="Answer source" />
                       </Button>
                     </View>
                   </View>

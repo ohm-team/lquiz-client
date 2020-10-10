@@ -1,6 +1,6 @@
 import { StackNavigationProp } from "@react-navigation/stack";
 import React from "react";
-import { Image, View, Platform, Linking } from "react-native";
+import { Image, View, Platform } from "react-native";
 import { Button, Card, DefaultTheme } from "react-native-paper";
 import { T } from "react-targem";
 import LocalSelector from "src/components/LocaleSelector";
@@ -8,6 +8,7 @@ import { RootStackRoute, RootStackRoutes } from "../types";
 import logo from "./assets/logo.png";
 import styles from "./HomePage.styles";
 import { LinearGradient } from "expo-linear-gradient";
+import { openLinkInNewTab } from "src/utils/native";
 
 const MOBILE_APPLICATION_LINK = "https://expo.io/@ohm-team/lquiz-client";
 
@@ -20,7 +21,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
   };
 
   const handleDownloadButtonClick = () => {
-    Linking.openURL(MOBILE_APPLICATION_LINK);
+    openLinkInNewTab(MOBILE_APPLICATION_LINK);
   };
 
   return (

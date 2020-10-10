@@ -3,8 +3,8 @@ import React from "react";
 import { T } from "react-targem";
 import { Button, Card, Title, Avatar, Text } from "react-native-paper";
 import { ProgressBar, Colors } from "react-native-paper";
-import { Linking } from "react-native";
 import styles from "./GameOverPage.styles";
+import { openLinkInNewTab } from "src/utils/native";
 
 const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
   <Avatar.Text {...props} label="Q" />
@@ -41,7 +41,7 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
       .map(([key, value]) => `${key}=${encodeURI(value)}`)
       .join("&");
     const url = `https://www.facebook.com/sharer/sharer.php?${facebookParameters}`;
-    Linking.openURL(url);
+    openLinkInNewTab(url);
   };
   const totalAnswered = gameResults.length;
   const correctAnswered = gameResults.filter(Boolean).length;
