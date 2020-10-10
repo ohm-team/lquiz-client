@@ -54,7 +54,7 @@ const GamePage: React.FC<GamePageProps> = ({
   const [whatStart, whatEnd] = (question?.whatValue || "").split("{value}");
 
   return (
-    <ScrollView>
+    <ScrollView contentContainerStyle={styles.container}>
       <Card style={styles.card}>
         <SafeAreaView>
           <Card.Title
