@@ -7,13 +7,14 @@ import LocalSelector from "src/components/LocaleSelector";
 import { RootStackRoute, RootStackRoutes } from "../types";
 import logo from "./assets/logo.png";
 import styles from "./HomePage.styles";
+import { LinearGradient } from "expo-linear-gradient";
 
 const MOBILE_APPLICATION_LINK = "https://expo.io/@ohm-team/lquiz-client";
 
 const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
   const handleLinkButtonClick = (
     routeName: RootStackRoute,
-    args?: any
+    args?: any,
   ) => () => {
     navigation.navigate(routeName, args);
   };
@@ -24,61 +25,65 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
 
   return (
     <Card style={styles.card}>
-      <Card.Content style={styles.cardContent}>
-        <View style={styles.cardImageContainer}>
-          <Image source={logo} style={styles.cardImage} />
-        </View>
-        <Title style={styles.cardTitle}>
-          <T message="Letz quiz!" />
-        </Title>
-        <Button
-          mode="contained"
-          theme={DefaultTheme}
-          onPress={handleLinkButtonClick("Game")}
-          style={styles.cardButton}
-        >
-          <T message="Play" />
-        </Button>
-        <Button
-          mode="outlined"
-          theme={DefaultTheme}
-          onPress={handleLinkButtonClick("Rules")}
-          style={styles.cardButton}
-        >
-          <T message="Rules" />
-        </Button>
-        <Button
-          mode="outlined"
-          theme={DefaultTheme}
-          onPress={handleLinkButtonClick("Settings")}
-          style={styles.cardButton}
-        >
-          <T message="Settings" />
-        </Button>
+      <LinearGradient colors={["#625772", "#9585ae", "#322c3c"]} locations={[0, 0.18, 1]} style={styles.linearGradient}>
+        <Card.Content style={styles.cardContent}>
+          <View style={styles.cardImageContainer}>
+            <Image source={logo} style={styles.cardImage}/>
+          </View>
+          {/*<Title style={styles.cardTitle}>*/}
+          {/*  <T message="Letz quiz!"/>*/}
+          {/*</Title>*/}
+          <View style={styles.buttonsContainer}>
+            <Button
+              mode="contained"
+              theme={DefaultTheme}
+              onPress={handleLinkButtonClick("Game")}
+              style={styles.cardButton}
+            >
+              <T message="Play"/>
+            </Button>
+            <Button
+              mode="outlined"
+              theme={DefaultTheme}
+              onPress={handleLinkButtonClick("Rules")}
+              style={styles.cardButton}
+            >
+              <T message="Rules"/>
+            </Button>
+            <Button
+              mode="outlined"
+              theme={DefaultTheme}
+              onPress={handleLinkButtonClick("Settings")}
+              style={styles.cardButton}
+            >
+              <T message="Settings"/>
+            </Button>
 
-        <Button
-          mode="outlined"
-          theme={DefaultTheme}
-          onPress={handleLinkButtonClick("GameOver", {
-            gameResults: [true, false, true],
-          })}
-          style={styles.cardButton}
-        >
-          <T message="GameOver" />
-        </Button>
+            <Button
+              mode="outlined"
+              theme={DefaultTheme}
+              onPress={handleLinkButtonClick("GameOver", {
+                gameResults: [true, false, true],
+              })}
+              style={styles.cardButton}
+            >
+              <T message="GameOver"/>
+            </Button>
 
-        {Platform.OS === "web" ? (
-          <Button
-            mode="outlined"
-            theme={DefaultTheme}
-            onPress={handleDownloadButtonClick}
-            style={styles.cardButton}
-          >
-            <T message="Download an app" />
-          </Button>
-        ) : null}
-        <LocalSelector buttonStyle={styles.cardButton} />
-      </Card.Content>
+            {Platform.OS === "web" ? (
+              <Button
+                mode="outlined"
+                theme={DefaultTheme}
+                onPress={handleDownloadButtonClick}
+                style={styles.cardButton}
+              >
+                <T message="Download an app"/>
+              </Button>
+            ) : null}
+            <LocalSelector buttonStyle={styles.cardButton}/>
+          </View>
+        </Card.Content>
+      </LinearGradient>
     </Card>
   );
 };
