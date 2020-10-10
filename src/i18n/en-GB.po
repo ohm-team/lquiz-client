@@ -29,20 +29,12 @@ msgid "accuracy"
 msgstr "accuracy"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "coins"
-msgstr "coins"
-
-#: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "rang"
-msgstr "rang"
-
-#: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "pace"
 msgstr "pace"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "streaks"
-msgstr "streaks"
+msgid "seconds"
+msgstr "seconds"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Back"

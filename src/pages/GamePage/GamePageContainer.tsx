@@ -22,6 +22,7 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
     string | undefined
   >();
   const [isQuestionLoading, setIsQuestionLoading] = useState<boolean>(false);
+  const [stats, setStats] = useState<Stats>();
 
   async function fetchData(questionNumber: number) {
     setIsQuestionLoading(true);
@@ -36,9 +37,21 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
     }
     const { correctAnswerId } = await checkQuestion(currentQuestion.id);
     setCorrectAnswerId(correctAnswerId);
+    setStats((stats) => {
+      const ended = [...(stats?.ended || [])];
+      const isCorrect = [...(stats?.isCorrect || [])];
+      ended[currentQuestionNumber] = Date.now();
+      isCorrect[currentQuestionNumber] = correctAnswerId === selectedAnswerId;
+      return { ...(stats || {}), ended, isCorrect };
+    });
   }
 
   useEffect(() => {
+    setStats((stats) => {
+      const started = [...(stats?.started || [])];
+      started[currentQuestionNumber] = Date.now();
+      return { ...(stats || {}), started };
+    });
     fetchData(currentQuestionNumber);
   }, [currentQuestionNumber]);
 
@@ -54,8 +67,18 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
   const handleNextButtonClick = () => {
     const nextQuestionNumber = currentQuestionNumber + 1;
     if (nextQuestionNumber === QUESTIONS_COUNT) {
+      if (!stats) throw new Error("no stats");
+      if (!stats.started) throw new Error("no stats for started");
+      if (!stats.ended) throw new Error("no stats for ended");
+      if (!stats.isCorrect) throw new Error("no stats from isCorrect");
+      const gamePace = stats.started.map((started, index) => {
+        const ended = stats.ended[index];
+        return Math.round((ended - started) / 100) / 10;
+      });
+      // console.log('f', stats);
       navigation.navigate("GameOver", {
-        gameResults: [true, false, true, false, false, false],
+        gameResults: stats.isCorrect,
+        gamePace,
       });
       return;
     }
@@ -84,6 +107,12 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
 
 interface GamePageContainerProps {
   navigation: StackNavigationProp<RootStackRoutes, "Game">;
+}
+
+interface Stats {
+  started?: number[];
+  ended?: number[];
+  isCorrect?: boolean[];
 }
 
 export default GamePageContainer;

@@ -46,7 +46,7 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
   const totalAnswered = gameResults.length;
   const correctAnswered = gameResults.filter(Boolean).length;
   const accuracy = Math.round((100 * correctAnswered) / totalAnswered) / 100;
-  const rangStatus = Math.round((100 * rangCurrent) / rangTotal) / 100;
+  // const rangStatus = Math.round((100 * rangCurrent) / rangTotal) / 100;
   const paceStatus = Math.round((100 * pace) / paceAvg) / 100;
   return (
     <Card style={styles.card}>
@@ -70,15 +70,16 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
         </Text>
         <ProgressBar progress={accuracy} color={Colors.red800} />
         <br />
-        <Text>
-          <T message="coins" />: {coins} (<T message="rang" />: {rangCurrent}/
-          {rangTotal})
+        {/*<Text>
+          <T message="coins" />: {coins}
+          (<T message="rang" />: {rangCurrent}/{rangTotal})
         </Text>
         <ProgressBar progress={rangStatus} color={Colors.blue800} />
-        <br />
+        <br />*/}
         <Text>
-          <T message="pace" />: {pace}m (<T message="streaks" />: {streaks}/
-          {streaksMax})
+          <T message="pace" />: {pace} <T message="seconds" />
+          {/*(<T message="streaks" />: {streaks}/
+          {streaksMax})*/}
         </Text>
         <ProgressBar progress={paceStatus} color={Colors.green800} />
       </Card.Content>

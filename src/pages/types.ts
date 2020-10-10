@@ -4,6 +4,7 @@ export type RootStackRoutes = {
   Game: undefined;
   GameOver: {
     gameResults: boolean[];
+    gamePace: number[];
   };
   Settings: undefined;
 };
