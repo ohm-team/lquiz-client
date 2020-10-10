@@ -19,11 +19,11 @@ msgstr "Выбрать язык"
 
 #: src/components/ThemeToggler/ThemeToggler.tsx:
 msgid "Dark theme?"
-msgstr ""
+msgstr "Темная тема,"
 
 #: src/components/ThemeToggler/ThemeToggler.tsx:
 msgid "Toggle dark theme"
-msgstr ""
+msgstr "Переключить тему"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Share"
@@ -39,95 +39,102 @@ msgstr "Домой"
 msgid ""
 "Congratulations! You know literally EVERYTHING about Luxembourg! How did you "
 "achieve it? "
-msgstr ""
+msgstr "Поздравляем! Вы знаете буквально ВСЕ про Люксембург! Как вы этого достигли?"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "Wow! Looks like you have been reading datasets from https://data.public.lu for "
 "a long time!"
-msgstr ""
+msgstr "Вау! Похоже вы в свобоное время читали датасеты с https://data.public.lu! "
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "Great job! More then a half answers are correct! It's more than a luck, its "
 "your great erudition!"
 msgstr ""
+"Отличная работа! Больше половины правильно! Это больше, чем удача, это "
+"великолепная эрудиция!"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "You know something about Luxembourg, and today you learned a bit more, isn't it "
 "great?"
 msgstr ""
+"Вы кое-что знаете о Люксембурге и сегодня узнали еще немного, не прекрасно ли "
+"это?"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Not your day :( Or maybe our alorithms created an extra-hard quiz? Try again!"
 msgstr ""
+"Не ваш день :( Или надо алгоритмы создали экстра-сложный кваиз? Попробуйте еще "
+"раз!"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Accuracy"
-msgstr ""
+msgstr "Точность"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Pace"
-msgstr ""
+msgstr "Скорочть"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "seconds per question"
-msgstr ""
+msgstr "секунд на вопрос"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Quiz question"
-msgstr ""
+msgstr "Вопросы"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "out of"
-msgstr ""
+msgstr "из"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Next question!"
-msgstr ""
+msgstr "Следующий вопрос!"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Question source"
-msgstr ""
+msgstr "Источник вопроса"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Answer source"
-msgstr ""
+msgstr "Источник ответа"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "What else do you think my contain number"
-msgstr ""
+msgstr "Что еще может содержать число"
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Play"
-msgstr ""
+msgstr "Играть"
 
 #: src/pages/HomePage/HomePage.tsx:
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "Rules"
-msgstr ""
+msgstr "Правила"
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Download an app"
-msgstr ""
+msgstr "Скачать приложение"
 
 #: src/pages/RulesPage/RulesPage.tsx:
-msgid "Within one game, the user is assigned 15 questions."
-msgstr ""
+msgid ""
+"Within one game, you are assigned few questions based on open Luxembourg "
+"statistics from https://data.public.lu/"
+msgstr "В игре будет предложено ответить на несколько вопросов, основанных на Люксембургской статистике, взятой с сайта https://data.public.lu"
 
 #: src/pages/RulesPage/RulesPage.tsx:
-msgid "Points are awarded for each correct answer (quiz coins)"
-msgstr ""
-
-#: src/pages/RulesPage/RulesPage.tsx:
-msgid "After passing all the questions, the general stratistics of the user is formed."
-msgstr ""
+msgid ""
+"You can measure how well you and your friends know random facts! And maybe "
+"learn something new (we don't guarantee that this information would be useful "
+":))"
+msgstr "Можно оценить как хорошо вы и ваши друзья знаете случайные факты! И, может, узнаете что-то новое (мы не гарантируем, что эта информация будет полезной :))"
 
 #: src/pages/SettingsPage/Settings.tsx:
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"

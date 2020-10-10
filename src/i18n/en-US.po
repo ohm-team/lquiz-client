@@ -116,15 +116,16 @@ msgid "Download an app"
 msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:
-msgid "Within one game, the user is assigned 15 questions."
+msgid ""
+"Within one game, you are assigned few questions based on open Luxembourg "
+"statistics from https://data.public.lu/"
 msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:
-msgid "Points are awarded for each correct answer (quiz coins)"
-msgstr ""
-
-#: src/pages/RulesPage/RulesPage.tsx:
-msgid "After passing all the questions, the general stratistics of the user is formed."
+msgid ""
+"You can measure how well you and your friends know random facts! And maybe "
+"learn something new (we don't guarantee that this information would be useful "
+":))"
 msgstr ""
 
 #: src/pages/SettingsPage/Settings.tsx:

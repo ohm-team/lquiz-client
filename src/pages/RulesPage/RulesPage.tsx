@@ -39,13 +39,10 @@ const RulesPage: React.FC<RulesPageProps> = ({
           />
           <Card.Content style={styles.content}>
             <Paragraph style={styles.text}>
-              <T message="Within one game, the user is assigned 15 questions." />
+              <T message="Within one game, you are assigned few questions based on open Luxembourg statistics from https://data.public.lu/" />
             </Paragraph>
             <Paragraph>
-              <T message="Points are awarded for each correct answer (quiz coins)" />
-            </Paragraph>
-            <Paragraph>
-              <T message="After passing all the questions, the general stratistics of the user is formed." />
+              <T message="You can measure how well you and your friends know random facts! And maybe learn something new (we don't guarantee that this information would be useful :))" />
             </Paragraph>
           </Card.Content>
         </SafeAreaView>
