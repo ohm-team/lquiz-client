@@ -5,7 +5,7 @@ import styles from "./GamePage.styles";
 import { Button, Card, Title, Avatar, ProgressBar } from "react-native-paper";
 import GamePageAnswer from "./GamePageAnswer";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 
 const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
   <Avatar.Text {...props} label="Q" />
@@ -58,12 +58,25 @@ const GamePage: React.FC<GamePageProps> = ({
           {isQuestionLoading ? <ProgressBar indeterminate /> : null}
           {question ? (
             <>
-              <Card.Cover
-                accessible={false}
-                source={{
-                  uri: question.imgSrc,
-                }}
-              />
+              <View style={styles.coverContainer}>
+                <Card.Cover
+                  accessible={false}
+                  source={{
+                    uri: question.imgSrc,
+                  }}
+                />
+                {isNextButtonVisible ? (
+                  <View style={styles.coverButtonContainer}>
+                    <Button
+                      style={styles.nextQuestionButton}
+                      mode="contained"
+                      onPress={onNextButtonClick}
+                    >
+                      <T message="Next question!" />
+                    </Button>
+                  </View>
+                ) : null}
+              </View>
               <Card.Content>
                 <Title style={styles.title}>
                   {question.what.replace("{value}", question.value.toString())}.{" "}
@@ -79,8 +92,6 @@ const GamePage: React.FC<GamePageProps> = ({
                 <GamePageAnswer
                   key={a.id}
                   onAnswerClick={onAnswerClick}
-                  style={styles.button}
-                  contentStyle={styles.buttonContent}
                   isLoading={questionLoadingId === a.id}
                   isAnyQuestionLoading={questionLoadingId !== undefined}
                   isSelected={selectedAnswerId === a.id}
@@ -89,16 +100,6 @@ const GamePage: React.FC<GamePageProps> = ({
                   {...a}
                 />
               ))}
-              {isNextButtonVisible ? (
-                <Button
-                  mode="outlined"
-                  style={styles.button}
-                  contentStyle={styles.buttonContent}
-                  onPress={onNextButtonClick}
-                >
-                  <T message="Next question!" />
-                </Button>
-              ) : null}
             </Card.Actions>
           ) : null}
         </SafeAreaView>
