@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sat Oct 10 2020 19:49:59 GMT+0300 (Israel Daylight Time)\n"
+"POT-Creation-Date: Sat Oct 10 2020 20:20:29 GMT+0300 (Israel Daylight Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -67,20 +67,16 @@ msgid "What else do you think my contain number"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
-msgid "Letz quiz!"
-msgstr ""
-
-#: src/pages/HomePage/HomePage.tsx:
 msgid "Play"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
 #: src/pages/RulesPage/RulesPage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
 msgid "Rules"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
-#: src/pages/SettingsPage/Settings.tsx:
 msgid "Settings"
 msgstr ""
 
@@ -93,6 +89,7 @@ msgid "Download an app"
 msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
 msgid "Home"
 msgstr ""
 
@@ -106,4 +103,8 @@ msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "After passing all the questions, the general stratistics of the user is formed."
+msgstr ""
+
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Toggle dark theme"
 msgstr ""

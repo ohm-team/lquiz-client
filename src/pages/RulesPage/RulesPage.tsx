@@ -1,12 +1,6 @@
 import { StackNavigationProp } from "@react-navigation/stack";
 import React from "react";
-import {
-  Button,
-  Card,
-  DefaultTheme,
-  Paragraph,
-  Avatar,
-} from "react-native-paper";
+import { Button, Card, Paragraph, Avatar } from "react-native-paper";
 import { T } from "react-targem";
 import { RootStackRoute, RootStackRoutes } from "../types";
 import styles from "./RulesPage.styles";
@@ -29,11 +23,7 @@ const RulesPage: React.FC<RulesPageProps> = ({
   };
 
   const RightAddon = () => (
-    <Button
-      theme={DefaultTheme}
-      mode="outlined"
-      onPress={handleLinkButtonClick("Home")}
-    >
+    <Button mode="outlined" onPress={handleLinkButtonClick("Home")}>
       <T message="Home" />
     </Button>
   );
@@ -47,7 +37,7 @@ const RulesPage: React.FC<RulesPageProps> = ({
             left={LeftContent}
             right={RightAddon}
           />
-          <Card.Content>
+          <Card.Content style={styles.content}>
             <Paragraph style={styles.text}>
               <T message="Within one game, the user is assigned 15 questions." />
             </Paragraph>
