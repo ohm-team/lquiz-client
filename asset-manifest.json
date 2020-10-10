@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/lquiz-client/static/js/app.423bb2f4.chunk.js",
-    "app.js.map": "/lquiz-client/static/js/app.423bb2f4.chunk.js.map",
+    "app.js": "/lquiz-client/static/js/app.ebc8c840.chunk.js",
+    "app.js.map": "/lquiz-client/static/js/app.ebc8c840.chunk.js.map",
     "runtime~app.js": "/lquiz-client/static/js/runtime~app.bfca15b6.js",
     "runtime~app.js.map": "/lquiz-client/static/js/runtime~app.bfca15b6.js.map",
-    "static/js/2.1f1358be.chunk.js": "/lquiz-client/static/js/2.1f1358be.chunk.js",
-    "static/js/2.1f1358be.chunk.js.map": "/lquiz-client/static/js/2.1f1358be.chunk.js.map",
+    "static/js/2.163efae1.chunk.js": "/lquiz-client/static/js/2.163efae1.chunk.js",
+    "static/js/2.163efae1.chunk.js.map": "/lquiz-client/static/js/2.163efae1.chunk.js.map",
     "fonts/MaterialCommunityIcons.ttf": "/lquiz-client/./fonts/MaterialCommunityIcons.ttf",
     "favicon-16.png": "/lquiz-client/favicon-16.png",
     "favicon-32.png": "/lquiz-client/favicon-32.png",
@@ -13,13 +13,13 @@
     "index.html": "/lquiz-client/index.html",
     "manifest.json": "/lquiz-client/manifest.json",
     "serve.json": "/lquiz-client/serve.json",
-    "static/js/2.1f1358be.chunk.js.LICENSE.txt": "/lquiz-client/static/js/2.1f1358be.chunk.js.LICENSE.txt",
+    "static/js/2.163efae1.chunk.js.LICENSE.txt": "/lquiz-client/static/js/2.163efae1.chunk.js.LICENSE.txt",
     "static/media/logo.png": "/lquiz-client/static/media/logo.d5818779.png",
     "static/media/logo_dark.png": "/lquiz-client/static/media/logo_dark.fcb399cb.png"
   },
   "entrypoints": [
     "static/js/runtime~app.bfca15b6.js",
-    "static/js/2.1f1358be.chunk.js",
-    "static/js/app.423bb2f4.chunk.js"
+    "static/js/2.163efae1.chunk.js",
+    "static/js/app.ebc8c840.chunk.js"
   ]
 }
