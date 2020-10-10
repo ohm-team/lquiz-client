@@ -14,79 +14,79 @@ msgstr ""
 "Language: ru\n"
 
 #: src/components/LocaleSelector/LocaleSelector.tsx:
-msgid "Choose language"
+msgid "Выбрать язык"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "Share"
+msgid "Поделиться"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 #: src/pages/RulesPage/RulesPage.tsx:
 #: src/pages/SettingsPage/Settings.tsx:
-msgid "Home"
+msgid "Домой"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "Statistics"
+msgid "Статистика"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "accuracy"
+msgid "Точность"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "pace"
+msgid "Скорость"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "seconds per question"
+msgid "секунд на вопрос"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "Back"
+msgid "Назад"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "Quiz question"
+msgid "Вопрос"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "out of"
+msgid "из"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "Next question!"
+msgid "Следующий вопрос!"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "Question source"
+msgid "Источник вопроса"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "Answer source"
+msgid "Источник ответа"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "What else do you think my contain number"
+msgid "Что еще, как думаешь, может содержать число"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
-msgid "Play"
+msgid "Играть"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
 #: src/pages/RulesPage/RulesPage.tsx:
-msgid "Rules"
+msgid "Правила"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
 #: src/pages/SettingsPage/Settings.tsx:
-msgid "Settings"
+msgid "Настройки"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
-msgid "Download an app"
+msgid "Скачать приложение"
 msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:
@@ -102,9 +102,9 @@ msgid "After passing all the questions, the general stratistics of the user is f
 msgstr ""
 
 #: src/pages/SettingsPage/Settings.tsx:
-msgid "Dark theme?"
+msgid "Темная тема?"
 msgstr ""
 
 #: src/pages/SettingsPage/Settings.tsx:
-msgid "Toggle dark theme"
+msgid "Переключить тему на темную"
 msgstr ""
