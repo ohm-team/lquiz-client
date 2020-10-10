@@ -9,6 +9,7 @@
     "ios": "npm run start -- --ios",
     "web": "npm run start -- --web",
     "build-web": "expo build:web",
+    "prebuild-web": "npm run intl:generate-json",
     "test": "jest",
     "lint:check": "npm run lint:prettier:check . && npm run lint:tsc:check && npm run lint:eslint:check .",
     "lint:write": "npm run lint:prettier:write . && npm run lint:eslint:write .",
