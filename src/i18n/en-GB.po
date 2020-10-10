@@ -16,6 +16,35 @@ msgstr ""
 msgid "Choose language"
 msgstr "Choose language"
 
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Back"
+msgstr "Back"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Quiz question #"
+msgstr "Quiz question #"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "out of"
+msgstr "out of"
+
+#: src/pages/GamePage/GamePage.tsx:
+#: src/pages/GamePage/GamePage.tsx:
+msgid "in"
+msgstr "in"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "What else do you think my contain number"
+msgstr "What else do you think my contain number"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Hooray! This is the correct answer!"
+msgstr "Hooray! This is the correct answer!"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Ohh nooo... This is an incorrect answer..."
+msgstr "Ohh nooo... This is an incorrect answer..."
+
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Letz quiz!"
 msgstr "Letz quiz!"
@@ -39,3 +68,7 @@ msgstr "Points are awarded for each correct answer (quiz coins)"
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "After passing all the questions, the general stratistics of the user is formed."
 msgstr "After passing all the questions, the general stratistics of the user is formed."
+
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Settings"
+msgstr "Settings"
