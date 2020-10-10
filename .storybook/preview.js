@@ -9,7 +9,7 @@ import {
   DarkTheme,
 } from "react-native-paper";
 
-const IS_DARK_THEME = false;
+const IS_DARK_THEME = true;
 
 export const parameters = {
   // https://storybook.js.org/docs/react/essentials/controls#show-full-documentation-for-each-property
