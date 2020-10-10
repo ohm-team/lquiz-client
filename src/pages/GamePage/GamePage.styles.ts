@@ -31,7 +31,14 @@ export default StyleSheet.create({
     paddingVertical: 10,
   },
   title: {
+    marginTop: 5,
+    textAlign: "center",
+    marginBottom: 0,
+  },
+  titleStatistics: {
     marginTop: 16,
+    textAlign: "center",
+    fontStyle: "italic",
     marginBottom: 0,
   },
   sourceLinksContainer: {
@@ -40,5 +47,9 @@ export default StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 20,
+  },
+  titleValue: {
+    fontWeight: "bold",
+    fontSize: 22
   },
 });

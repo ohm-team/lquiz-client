@@ -9,4 +9,8 @@ export default StyleSheet.create({
   buttonContent: {
     minHeight: 55,
   },
+  statistics: {
+    fontStyle: "italic",
+  },
+  value: {},
 });
