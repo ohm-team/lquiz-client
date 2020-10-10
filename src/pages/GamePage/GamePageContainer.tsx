@@ -44,7 +44,6 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
 
   const handleLinkButtonClick = (routeName: RootStackRoute) => () => {
     navigation.navigate(routeName);
-    navigation.navigate("GameOver", { gameResults: [true] });
   };
 
   const handleAnswerClick = (id: string) => {
@@ -55,7 +54,9 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
   const handleNextButtonClick = () => {
     const nextQuestionNumber = currentQuestionNumber + 1;
     if (nextQuestionNumber === QUESTIONS_COUNT) {
-      navigation.navigate("Home");
+      navigation.navigate("GameOver", {
+        gameResults: [true, false, true, false, false, false],
+      });
       return;
     }
     setCorrectAnswerId(undefined);
