@@ -69,6 +69,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
               theme={DefaultTheme}
               onPress={handleLinkButtonClick("GameOver", {
                 gameResults: [true, false, true],
+                gamePace: [12.2, 33, 1],
               })}
               style={styles.cardButton}
             >
