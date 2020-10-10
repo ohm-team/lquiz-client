@@ -1,12 +1,12 @@
-import React from "react";
-import { T } from "react-targem";
-import { Image } from "react-native";
-import styles from "./HomePage.styles";
-import LocalSelector from "src/components/LocaleSelector";
-import { Button, Card, Title, Surface } from "react-native-paper";
-import logo from "./assets/logo.png";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { RootStackRoutes, RootStackRoute } from "../types";
+import React from "react";
+import { Image, View } from "react-native";
+import { Button, Card, DefaultTheme, Title } from "react-native-paper";
+import { T } from "react-targem";
+import LocalSelector from "src/components/LocaleSelector";
+import { RootStackRoute, RootStackRoutes } from "../types";
+import logo from "./assets/logo.png";
+import styles from "./HomePage.styles";
 
 const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
   const handleLinkButtonClick = (routeName: RootStackRoute) => () => {
@@ -16,14 +16,15 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
   return (
     <Card style={styles.card}>
       <Card.Content style={styles.cardContent}>
-        <Surface style={styles.cardImageContainer}>
+        <View style={styles.cardImageContainer}>
           <Image source={logo} style={styles.cardImage} />
-        </Surface>
+        </View>
         <Title style={styles.cardTitle}>
           <T message="Letz quiz!" />
         </Title>
         <Button
           mode="contained"
+          theme={DefaultTheme}
           onPress={handleLinkButtonClick("Game")}
           style={styles.cardButton}
         >
@@ -31,6 +32,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
         </Button>
         <Button
           mode="outlined"
+          theme={DefaultTheme}
           onPress={handleLinkButtonClick("Rules")}
           style={styles.cardButton}
         >
@@ -41,6 +43,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
     </Card>
   );
 };
+
 interface HomePageProps {
   navigation: StackNavigationProp<RootStackRoutes, "Home">;
 }

@@ -40,6 +40,7 @@ export default {
   argTypes: {
     onBackButtonClick: { action: "onBackButtonClick" },
     onAnswerClick: { action: "onAnswerClick" },
+    onNextButtonClick: { action: "onNextButtonClick" },
   },
 };
 
@@ -53,4 +54,23 @@ WithLoading.args = {
   isQuestionLoading: true,
   question: null,
   answers: null,
+};
+
+export const WithQuestionLoading = Template.bind({});
+WithQuestionLoading.args = {
+  questionLoadingId: "71",
+};
+
+export const WithCorrectAnswer = Template.bind({});
+WithCorrectAnswer.args = {
+  correctAnswerId: "71",
+  selectedAnswerId: "71",
+  isNextButtonVisible: true,
+};
+
+export const WithIncorrectAnswer = Template.bind({});
+WithIncorrectAnswer.args = {
+  correctAnswerId: "68",
+  selectedAnswerId: "71",
+  isNextButtonVisible: true,
 };
