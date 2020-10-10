@@ -1,12 +1,16 @@
-<svg viewBox="0 0 500 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg_null">
+<svg viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg_null">
 	<defs>
+		<mask id="myMask">
+		<!-- Everything under a white pixel will be visible -->
+		<rect x="20%" y="10%" width="60%" height="60%" fill="white" />
+		</mask>
 		<linearGradient x1="50%" y1="0%" x2="50%" y2="90%" id="linearGradient-1">
 			<stop stop-color="#FFF" offset="0%"></stop>
 			<stop stop-color="#FFF" stop-opacity="0" offset="100%"></stop>
 		</linearGradient>
 		<circle id="8ced9073-6c62-4594-8125-71202b2f9af7" cx="250" cy="204" r="30"></circle>
 	</defs>
-	<g id="root" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+	<g id="root" stroke="none" stroke-width="1" fill="none" mask="url(#myMask)" fill-rule="evenodd">
 		<rect id="background.primary" fill="#625772" x="0" y="0" width="500" height="1000"></rect>
 		<polygon id="shape" fill="url(#linearGradient-1)" opacity=".3" points="225 204 275 204 490 1000 10 1000"></polygon>
 		<g id="shape">
@@ -17,9 +21,6 @@
 		<path d="M325 204l-150 0c0 -41.5 33.579 -75.143 75 -75.143c41.421 0 75 33.643 75 75.143zm-78 -204l6 0l0 128.857l-6 0l0 -128.857z" id="shape.secondary" fill="#f9a1bc"></path>
 		<g id="Group" transform="translate(40.000000, 280.000000)">
 			<rect id="Rectangle-14" x="0" y="0" width="420" height="80"/>
-			<text id="headerText" font-family="Monaco" font-size="80" font-weight="400" line-spacing="80" fill="#FFF" data-text-alignment="C" font-style="normal">
-				<tspan x="102" y="66.5">LQuiz</tspan>
-			</text>
 		</g>
 	</g>
 </svg>
