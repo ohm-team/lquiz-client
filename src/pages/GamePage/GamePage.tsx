@@ -1,6 +1,6 @@
 import React from "react";
 import { ScrollView, View } from "react-native";
-import { Avatar, Button, Card, Text, ProgressBar, Title } from "react-native-paper";
+import { Avatar, Button, Card, Paragraph, ProgressBar, Text, Title } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { T } from "react-targem";
 import { Answer, Question } from "../types";
@@ -35,7 +35,7 @@ const GamePage: React.FC<GamePageProps> = ({
     </Button>
   );
 
-  const [whatStart, whatEnd] = (question?.whatValue||'').split("{value}");
+  const [whatStart, whatEnd] = (question?.whatValue || "").split("{value}");
 
   return (
     <ScrollView>
@@ -106,6 +106,17 @@ const GamePage: React.FC<GamePageProps> = ({
                 />
               ))}
             </Card.Actions>
+          ) : null}
+          {isNextButtonVisible ? (
+            <View style={styles.sourceLinksContainer}>
+              <Paragraph>Are you sure?</Paragraph>
+              <Button>
+                <T message="Question source"/>
+              </Button>
+              <Button>
+                <T message="Answer source"/>
+              </Button>
+            </View>
           ) : null}
         </SafeAreaView>
       </Card>

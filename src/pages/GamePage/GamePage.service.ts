@@ -1,16 +1,21 @@
 import { QuestionWithAnswers } from "../types";
+import { MOCK } from "./GamePage.mock";
 
-const transformQuestion = (
-  q: {
-    question: {
-      whatStatistics: string;
-      whatValue: string;
-      value: number;
-      correctAnswerIndex: number;
-    };
-    answers: { answerStatistics: string, answerValue: string }[];
-  },
-  i: number,
+interface BackendQuestion {
+  question: {
+    whatStatistics: string;
+    whatValue: string;
+    value: number;
+    correctAnswerIndex: number;
+    url: string;
+    answerUrl: string;
+  };
+  answers: { answerStatistics: string, answerValue: string }[];
+}
+
+export const transformQuestion = (
+  q: BackendQuestion,
+  i: number
 ): QuestionWithAnswers => {
   return {
     question: {
@@ -19,6 +24,8 @@ const transformQuestion = (
       value: q.question.value,
       imgSrc: `https://source.unsplash.com/random?quiz&version=${i}`,
       correctAnswerId: q.question.correctAnswerIndex.toString(),
+      url: q.question.url,
+      answerUrl: q.question.answerUrl,
     },
     id: i.toString(),
     answers: q.answers.map((a, id) => ({
@@ -29,11 +36,9 @@ const transformQuestion = (
   };
 };
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-export const MOCK: QuestionWithAnswers[] = require("./questions.json").questions.map(
-  transformQuestion,
-);
 export const QUESTIONS_COUNT = 5;
+
+let questionsCache: QuestionWithAnswers[];
 
 export const fetchQuestionByIndex = async (
   index: number,
@@ -43,8 +48,11 @@ export const fetchQuestionByIndex = async (
       reject("No such question");
       return;
     }
+    if (!questionsCache) {
+      questionsCache = MOCK.map(transformQuestion);
+    }
     setTimeout(() => {
-      resolve(MOCK[index % MOCK.length]);
+      resolve(questionsCache[index]);
     }, 1500);
   });
 };
@@ -53,7 +61,11 @@ export const fetchQuestionByIndex = async (
 export const checkQuestion = async (
   questionId: string,
 ): Promise<{ correctAnswerId: string }> => {
+  const question = questionsCache.find((q) => q.id === questionId);
+  if (!question) {
+    throw new Error("No such question");
+  }
   return {
-    correctAnswerId: MOCK[parseInt(questionId)].question.correctAnswerId,
+    correctAnswerId: question.question.correctAnswerId,
   };
 };
