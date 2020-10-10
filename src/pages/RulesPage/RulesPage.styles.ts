@@ -10,7 +10,7 @@ export default StyleSheet.create({
   },
   header: {
     fontSize: 30,
-    marginBottom: 20
+    marginBottom: 20,
   },
   text: {
     fontSize: 15,
