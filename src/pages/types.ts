@@ -12,14 +12,18 @@ export type RootStackRoutes = {
 export type RootStackRoute = keyof RootStackRoutes;
 
 export type Answer = {
-  what: string;
+  answerValue: string;
+  answerStatistics: string;
   id: string;
 };
 
 export type Question = {
-  what: string;
+  whatStatistics: string;
+  whatValue: string;
   imgSrc: string;
   value: number;
+  url: string;
+  answerUrl: string;
   correctAnswerId: string;
 };
 

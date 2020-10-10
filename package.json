@@ -22,7 +22,8 @@
     "intl:update-po": "gettext-utils export-strings --default-locale=en-GB && git add src/i18n/*.po*",
     "intl:generate-json": "gettext-utils import-strings",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "cross-env NODE_ENV=test build-storybook -c .storybook"
+    "build-storybook": "cross-env NODE_ENV=test build-storybook -c .storybook",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
@@ -32,7 +33,7 @@
     "expo": "~39.0.2",
     "expo-status-bar": "~1.0.2",
     "gettext-utils": "^2.2.0",
-    "random-name": "^0.1.2",
+    "patch-package": "^6.2.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",

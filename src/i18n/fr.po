@@ -41,7 +41,7 @@ msgid "Back"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "Quiz question #"
+msgid "Quiz question"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
@@ -49,11 +49,19 @@ msgid "out of"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
+msgid "Next question!"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
 msgid "What else do you think my contain number"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "Next question!"
+msgid "Question source"
+msgstr ""
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Answer source"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:

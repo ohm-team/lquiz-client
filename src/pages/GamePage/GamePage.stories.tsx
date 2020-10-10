@@ -1,7 +1,10 @@
 import React from "react";
 import { Story } from "@storybook/react";
 import GamePage from "./GamePage";
-import { MOCK } from "./GamePage.service";
+import { MOCK } from "./GamePage.mock";
+import { transformQuestion } from "./GamePage.service";
+
+const transformedQuestion = transformQuestion(MOCK[0], 0);
 
 export default {
   title: "pages/GamePage",
@@ -10,8 +13,8 @@ export default {
     currentQuestionNumber: 3,
     totalQuestionsCount: 20,
     isQuestionLoading: false,
-    question: MOCK[1].question,
-    answers: MOCK[1].answers,
+    question: transformedQuestion.question,
+    answers: transformedQuestion.answers,
   },
   argTypes: {
     onBackButtonClick: { action: "onBackButtonClick" },
@@ -34,19 +37,19 @@ WithLoading.args = {
 
 export const WithQuestionLoading = Template.bind({});
 WithQuestionLoading.args = {
-  questionLoadingId: "71",
+  questionLoadingId: "1",
 };
 
 export const WithCorrectAnswer = Template.bind({});
 WithCorrectAnswer.args = {
-  correctAnswerId: "71",
-  selectedAnswerId: "71",
+  correctAnswerId: "1",
+  selectedAnswerId: "1",
   isNextButtonVisible: true,
 };
 
 export const WithIncorrectAnswer = Template.bind({});
 WithIncorrectAnswer.args = {
-  correctAnswerId: "68",
-  selectedAnswerId: "71",
+  correctAnswerId: "2",
+  selectedAnswerId: "1",
   isNextButtonVisible: true,
 };

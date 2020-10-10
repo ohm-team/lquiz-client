@@ -1,11 +1,19 @@
 import React from "react";
-import { T } from "react-targem";
-import { Question, Answer } from "../types";
-import styles from "./GamePage.styles";
-import { Button, Card, Title, Avatar, ProgressBar } from "react-native-paper";
-import GamePageAnswer from "./GamePageAnswer";
+import { ScrollView, View } from "react-native";
+import {
+  Avatar,
+  Button,
+  Card,
+  Paragraph,
+  ProgressBar,
+  Text,
+  Title,
+} from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { ScrollView } from "react-native";
+import { T } from "react-targem";
+import { Answer, Question } from "../types";
+import styles from "./GamePage.styles";
+import GamePageAnswer from "./GamePageAnswer";
 
 const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
   <Avatar.Text {...props} label="Q" />
@@ -35,6 +43,8 @@ const GamePage: React.FC<GamePageProps> = ({
     </Button>
   );
 
+  const [whatStart, whatEnd] = (question?.whatValue || "").split("{value}");
+
   return (
     <ScrollView>
       <Card style={styles.card}>
@@ -42,13 +52,13 @@ const GamePage: React.FC<GamePageProps> = ({
           <Card.Title
             title={
               <>
-                <T message={"Quiz question #"} />
-                {currentQuestionNumber}
+                <T message={"Quiz question"} />
               </>
             }
             subtitle={
               <>
-                <T message="out of" /> {totalQuestionsCount}
+                {currentQuestionNumber} <T message="out of" />{" "}
+                {totalQuestionsCount}
               </>
             }
             left={LeftContent}
@@ -58,17 +68,38 @@ const GamePage: React.FC<GamePageProps> = ({
           {isQuestionLoading ? <ProgressBar indeterminate /> : null}
           {question ? (
             <>
-              <Card.Cover
-                accessible={false}
-                source={{
-                  uri: question.imgSrc,
-                }}
-              />
+              <View style={styles.coverContainer}>
+                <Card.Cover
+                  accessible={false}
+                  source={{
+                    uri: question.imgSrc,
+                  }}
+                />
+                {isNextButtonVisible ? (
+                  <View style={styles.coverButtonContainer}>
+                    <Button
+                      style={styles.nextQuestionButton}
+                      mode="contained"
+                      onPress={onNextButtonClick}
+                    >
+                      <T message="Next question!" />
+                    </Button>
+                  </View>
+                ) : null}
+              </View>
               <Card.Content>
+                <Title style={styles.titleStatistics}>
+                  {question.whatStatistics}
+                </Title>
                 <Title style={styles.title}>
-                  {question.what.replace("{value}", question.value.toString())}.{" "}
+                  {whatStart}
+                  <Text style={styles.titleValue}>{question.value}</Text>
+                  {whatEnd}.{" "}
                   <T message="What else do you think my contain number" />{" "}
-                  {question.value}?
+                  <Text style={styles.titleValue}>
+                    {question.value.toString()}
+                  </Text>
+                  ?
                 </Title>
               </Card.Content>
             </>
@@ -78,9 +109,9 @@ const GamePage: React.FC<GamePageProps> = ({
               {answers.map((a) => (
                 <GamePageAnswer
                   key={a.id}
+                  answerValue={a.answerValue}
+                  answerStatistics={a.answerStatistics}
                   onAnswerClick={onAnswerClick}
-                  style={styles.button}
-                  contentStyle={styles.buttonContent}
                   isLoading={questionLoadingId === a.id}
                   isAnyQuestionLoading={questionLoadingId !== undefined}
                   isSelected={selectedAnswerId === a.id}
@@ -89,17 +120,18 @@ const GamePage: React.FC<GamePageProps> = ({
                   {...a}
                 />
               ))}
-              {isNextButtonVisible ? (
-                <Button
-                  mode="outlined"
-                  style={styles.button}
-                  contentStyle={styles.buttonContent}
-                  onPress={onNextButtonClick}
-                >
-                  <T message="Next question!" />
-                </Button>
-              ) : null}
             </Card.Actions>
+          ) : null}
+          {isNextButtonVisible ? (
+            <View style={styles.sourceLinksContainer}>
+              <Paragraph>Are you sure?</Paragraph>
+              <Button>
+                <T message="Question source" />
+              </Button>
+              <Button>
+                <T message="Answer source" />
+              </Button>
+            </View>
           ) : null}
         </SafeAreaView>
       </Card>
