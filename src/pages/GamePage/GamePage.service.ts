@@ -10,7 +10,7 @@ interface BackendQuestion {
     url: string;
     answerUrl: string;
   };
-  answers: { answerStatistics: string, answerValue: string }[];
+  answers: { answerStatistics: string; answerValue: string }[];
 }
 
 export const transformQuestion = (
@@ -41,7 +41,7 @@ export const QUESTIONS_COUNT = 5;
 let questionsCache: QuestionWithAnswers[];
 
 export const fetchQuestionByIndex = async (
-  index: number,
+  index: number
 ): Promise<QuestionWithAnswers> => {
   return new Promise((resolve, reject) => {
     if (index > QUESTIONS_COUNT) {
@@ -59,7 +59,7 @@ export const fetchQuestionByIndex = async (
 
 // eslint-disable-next-line
 export const checkQuestion = async (
-  questionId: string,
+  questionId: string
 ): Promise<{ correctAnswerId: string }> => {
   const question = questionsCache.find((q) => q.id === questionId);
   if (!question) {
