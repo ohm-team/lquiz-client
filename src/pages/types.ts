@@ -15,6 +15,7 @@ export type Question = {
   what: string;
   imgSrc: string;
   value: number;
+  correctAnswerId: string;
 };
 
 export type QuestionWithAnswers = {
