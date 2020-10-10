@@ -1,5 +1,4 @@
 import { QuestionWithAnswers } from "../types";
-import { MOCK } from "./GamePage.mock";
 
 interface BackendQuestion {
   question: {
@@ -36,20 +35,40 @@ export const transformQuestion = (
   };
 };
 
-export const QUESTIONS_COUNT = 1;
+export const QUESTIONS_COUNT = 5;
 
 let questionsCache: QuestionWithAnswers[];
 
+const fetchAllQuizQuestions = async (
+  questionsCount: number,
+  locale: string
+) => {
+  const response = await fetch(
+    `https://lquiz-backend.goooseman.ru/generate_questions?count=${questionsCount}&locale=${locale}`,
+    {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    }
+  );
+  const { questions } = await response.json();
+
+  return Promise.resolve(questions.map(transformQuestion));
+};
+
 export const fetchQuestionByIndex = async (
-  index: number
+  index: number,
+  locale = "en-EN"
 ): Promise<QuestionWithAnswers> => {
+  if (!questionsCache) {
+    questionsCache = await fetchAllQuizQuestions(QUESTIONS_COUNT, locale);
+  }
   return new Promise((resolve, reject) => {
     if (index > QUESTIONS_COUNT) {
       reject("No such question");
       return;
-    }
-    if (!questionsCache) {
-      questionsCache = MOCK.map(transformQuestion);
     }
     setTimeout(() => {
       resolve(questionsCache[index]);

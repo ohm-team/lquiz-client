@@ -1,5 +1,6 @@
 import { StackNavigationProp } from "@react-navigation/stack";
 import React, { useEffect, useState } from "react";
+import { useSettings } from "../../contexts/SettingsContext";
 import { QuestionWithAnswers, RootStackRoute, RootStackRoutes } from "../types";
 import GamePage from "./GamePage";
 import {
@@ -23,10 +24,11 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
   >();
   const [isQuestionLoading, setIsQuestionLoading] = useState<boolean>(false);
   const [stats, setStats] = useState<Stats>();
+  const { locale } = useSettings();
 
   async function fetchData(questionNumber: number) {
     setIsQuestionLoading(true);
-    const question = await fetchQuestionByIndex(questionNumber);
+    const question = await fetchQuestionByIndex(questionNumber, locale);
     setIsQuestionLoading(false);
     setCurrentQuestion(question);
   }
