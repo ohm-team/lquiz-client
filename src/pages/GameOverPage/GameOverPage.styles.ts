@@ -22,4 +22,26 @@ export default StyleSheet.create({
     marginTop: 32,
     marginBottom: 8,
   },
-});
+  progressBar: {
+    height: 5,
+    transform: [{ scaleX: 1 }, { scaleY: 4 }, { translateY: 3 }],
+    opacity: 1,
+    borderRadius: 10,
+    marginBottom: 20,
+  },
+  text: {
+    fontSize: 20,
+    textAlign: "center",
+  },
+  feedback: {
+    fontSize: 30,
+    textAlign: "center",
+    marginBottom: 50
+  },
+  content: {
+    paddingTop: 50,
+    paddingLeft: 50,
+    paddingRight: 50,
+  },
+})
+;
