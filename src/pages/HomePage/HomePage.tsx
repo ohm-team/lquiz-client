@@ -1,7 +1,7 @@
 import { StackNavigationProp } from "@react-navigation/stack";
 import React from "react";
 import { Image, View, Platform, Linking } from "react-native";
-import { Button, Card, DefaultTheme, Title } from "react-native-paper";
+import { Button, Card, DefaultTheme } from "react-native-paper";
 import { T } from "react-targem";
 import LocalSelector from "src/components/LocaleSelector";
 import { RootStackRoute, RootStackRoutes } from "../types";
@@ -14,7 +14,7 @@ const MOBILE_APPLICATION_LINK = "https://expo.io/@ohm-team/lquiz-client";
 const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
   const handleLinkButtonClick = (
     routeName: RootStackRoute,
-    args?: any,
+    args?: any
   ) => () => {
     navigation.navigate(routeName, args);
   };
@@ -25,10 +25,14 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
 
   return (
     <Card style={styles.card}>
-      <LinearGradient colors={["#625772", "#9585ae", "#322c3c"]} locations={[0, 0.18, 1]} style={styles.linearGradient}>
+      <LinearGradient
+        colors={["#625772", "#9585ae", "#322c3c"]}
+        locations={[0, 0.18, 1]}
+        style={styles.linearGradient}
+      >
         <Card.Content style={styles.cardContent}>
           <View style={styles.cardImageContainer}>
-            <Image source={logo} style={styles.cardImage}/>
+            <Image source={logo} style={styles.cardImage} />
           </View>
           {/*<Title style={styles.cardTitle}>*/}
           {/*  <T message="Letz quiz!"/>*/}
@@ -40,7 +44,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
               onPress={handleLinkButtonClick("Game")}
               style={styles.cardButton}
             >
-              <T message="Play"/>
+              <T message="Play" />
             </Button>
             <Button
               mode="outlined"
@@ -48,7 +52,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
               onPress={handleLinkButtonClick("Rules")}
               style={styles.cardButton}
             >
-              <T message="Rules"/>
+              <T message="Rules" />
             </Button>
             <Button
               mode="outlined"
@@ -56,7 +60,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
               onPress={handleLinkButtonClick("Settings")}
               style={styles.cardButton}
             >
-              <T message="Settings"/>
+              <T message="Settings" />
             </Button>
 
             <Button
@@ -67,7 +71,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
               })}
               style={styles.cardButton}
             >
-              <T message="GameOver"/>
+              <T message="GameOver" />
             </Button>
 
             {Platform.OS === "web" ? (
@@ -77,10 +81,10 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
                 onPress={handleDownloadButtonClick}
                 style={styles.cardButton}
               >
-                <T message="Download an app"/>
+                <T message="Download an app" />
               </Button>
             ) : null}
-            <LocalSelector buttonStyle={styles.cardButton}/>
+            <LocalSelector buttonStyle={styles.cardButton} />
           </View>
         </Card.Content>
       </LinearGradient>
