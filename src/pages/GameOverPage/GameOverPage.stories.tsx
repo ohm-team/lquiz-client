@@ -19,6 +19,7 @@ export default {
     paceAvg: 20,
     streaks: 2,
     streaksMax: 3,
+    gameResults: [true, true, false, false, false, false, true],
   },
 };
 

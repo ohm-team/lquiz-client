@@ -22,8 +22,6 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
   facebookShareMessage,
   userName,
   userStatus,
-  correctAnswered,
-  totalAnswered,
   rangCurrent,
   rangTotal,
   coins,
@@ -31,6 +29,7 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
   paceAvg,
   streaks,
   streaksMax,
+  gameResults,
 }) => {
   const RightContent: React.FC<CardTitleAddon> = () => (
     <Button onPress={postOnFacebook}>
@@ -47,6 +46,8 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
     const url = `https://www.facebook.com/sharer/sharer.php?${facebookParameters}`;
     Linking.openURL(url);
   };
+  const totalAnswered = gameResults.length;
+  const correctAnswered = gameResults.filter(Boolean).length;
   const accuracy = Math.round((100 * correctAnswered) / totalAnswered) / 100;
   const rangStatus = Math.round((100 * rangCurrent) / rangTotal) / 100;
   const paceStatus = Math.round((100 * pace) / paceAvg) / 100;
@@ -103,6 +104,7 @@ interface GameOverPageProps {
   paceAvg: number;
   streaks: number;
   streaksMax: number;
+  gameResults: boolean[];
 }
 
 export default GameOverPage;
