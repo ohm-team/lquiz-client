@@ -3,13 +3,14 @@ import { MOCK } from "./GamePage.mock";
 
 interface BackendQuestion {
   question: {
-    what: string;
+    whatStatistics: string;
+    whatValue: string;
     value: number;
     correctAnswerIndex: number;
     url: string;
     answerUrl: string;
   };
-  answers: string[];
+  answers: { answerStatistics: string, answerValue: string }[];
 }
 
 export const transformQuestion = (
@@ -18,7 +19,8 @@ export const transformQuestion = (
 ): QuestionWithAnswers => {
   return {
     question: {
-      what: q.question.what,
+      whatStatistics: q.question.whatStatistics,
+      whatValue: q.question.whatValue,
       value: q.question.value,
       imgSrc: `https://source.unsplash.com/random?quiz&version=${i}`,
       correctAnswerId: q.question.correctAnswerIndex.toString(),
@@ -27,7 +29,8 @@ export const transformQuestion = (
     },
     id: i.toString(),
     answers: q.answers.map((a, id) => ({
-      what: a,
+      answerStatistics: a.answerStatistics,
+      answerValue: a.answerValue,
       id: id.toString(),
     })),
   };
@@ -38,7 +41,7 @@ export const QUESTIONS_COUNT = 5;
 let questionsCache: QuestionWithAnswers[];
 
 export const fetchQuestionByIndex = async (
-  index: number
+  index: number,
 ): Promise<QuestionWithAnswers> => {
   return new Promise((resolve, reject) => {
     if (index > QUESTIONS_COUNT) {
@@ -56,7 +59,7 @@ export const fetchQuestionByIndex = async (
 
 // eslint-disable-next-line
 export const checkQuestion = async (
-  questionId: string
+  questionId: string,
 ): Promise<{ correctAnswerId: string }> => {
   const question = questionsCache.find((q) => q.id === questionId);
   if (!question) {
