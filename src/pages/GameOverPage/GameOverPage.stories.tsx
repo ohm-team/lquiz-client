@@ -6,20 +6,14 @@ export default {
   title: "pages/GameOverPage",
   component: GameOverPage,
   args: {
+    facebookShareURL: "https://ohm-team.github.io/lquiz-client/",
     facebookShareMessage:
-      "Hello Guys, This is a testing of facebook share example",
-    userName: "Dexter Stoltenberg",
+      "My Luxembourg knoweledge is 13/20. Try it out to test your skills!",
     userStatus: "Artificial intelligence",
-    correctAnswered: 6,
-    totalAnswered: 15,
-    rangCurrent: 1,
-    rangTotal: 10,
-    coins: 3210,
+    correctAnswered: 13,
+    totalAnswered: 20,
     pace: 16.9,
-    paceAvg: 20,
-    streaks: 2,
-    streaksMax: 3,
-    gameResults: [true, true, false, false, false, false, true],
+    accuracy: 0.612,
   },
 };
 
