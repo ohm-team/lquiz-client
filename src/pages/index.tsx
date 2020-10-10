@@ -4,6 +4,7 @@ import HomePage from "./HomePage";
 import RulesPage from "./RulesPage";
 import GameOverPage from "./GameOverPage";
 import GamePage from "./GamePage";
+import SettingsPage from "./SettingsPage";
 
 const Stack = createStackNavigator();
 
@@ -14,6 +15,7 @@ const Pages: React.FC<HomePageProps> = () => {
       <Stack.Screen name="Rules" component={RulesPage} />
       <Stack.Screen name="GameOverPage" component={GameOverPage} />
       <Stack.Screen name="Game" component={GamePage} />
+      <Stack.Screen name="Settings" component={SettingsPage} />
     </Stack.Navigator>
   );
 };
