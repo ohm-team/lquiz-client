@@ -10,6 +10,7 @@ import {
   ProgressBar,
   Snackbar,
 } from "react-native-paper";
+import GamePageAnswer from "./GamePageAnswer";
 
 const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
   <Avatar.Text {...props} label="Q" />
@@ -18,28 +19,6 @@ const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
 interface CardTitleAddon {
   size: number;
 }
-
-const successTheme = {
-  colors: {
-    primary: "#8BC34A",
-  },
-};
-
-const warningTheme = {
-  colors: {
-    primary: "#FF5722",
-  },
-};
-
-const getButtonTheme = (isCorrect: boolean) => {
-  if (isCorrect) {
-    return successTheme;
-  }
-  if (!isCorrect) {
-    return warningTheme;
-  }
-  return undefined;
-};
 
 const GamePage: React.FC<GamePageProps> = ({
   totalQuestionsCount,
@@ -52,16 +31,14 @@ const GamePage: React.FC<GamePageProps> = ({
   questionLoadingId,
   correctAnswerId,
   selectedAnswerId,
+  isNextButtonVisible,
+  onNextButtonClick,
 }: GamePageProps) => {
   const RightContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
     <Button onPress={onBackButtonClick}>
       <T message="Back" />
     </Button>
   );
-
-  const handleAnswerClick = (answerId: string) => () => {
-    onAnswerClick(answerId);
-  };
 
   return (
     <Card style={styles.card}>
@@ -98,31 +75,39 @@ const GamePage: React.FC<GamePageProps> = ({
       {answers ? (
         <Card.Actions style={styles.buttonsContainer}>
           {answers.map((a) => (
-            <Button
+            <GamePageAnswer
               key={a.id}
-              onPress={handleAnswerClick(a.id)}
+              onAnswerClick={onAnswerClick}
               style={styles.button}
               contentStyle={styles.buttonContent}
-              mode="contained"
-              disabled={questionLoadingId !== undefined}
-              loading={questionLoadingId === a.id}
-              theme={getButtonTheme(selectedAnswerId === correctAnswerId)}
-            >
-              {questionLoadingId === a.id ? null : (
-                <>
-                  {a.what} <T message="in" /> {a.where}
-                </>
-              )}
-            </Button>
+              isLoading={questionLoadingId === a.id}
+              isDisabled={questionLoadingId !== undefined}
+              isSelected={selectedAnswerId === a.id}
+              isCorrectAnswer={a.id === correctAnswerId}
+              {...a}
+            />
           ))}
+          {isNextButtonVisible ? (
+            <Button
+              mode="outlined"
+              style={styles.button}
+              contentStyle={styles.buttonContent}
+              onPress={onNextButtonClick}
+            >
+              <T message="Next question!" />
+            </Button>
+          ) : null}
         </Card.Actions>
       ) : null}
+
       {selectedAnswerId ? (
         correctAnswerId === selectedAnswerId ? (
-          // eslint-disable-next-line @typescript-eslint/no-empty-function
-          <Snackbar visible onDismiss={() => {}}>
-            <T message="Hooray! This is the correct answer!" />
-          </Snackbar>
+          <>
+            {/* eslint-disable-next-line @typescript-eslint/no-empty-function */}
+            <Snackbar visible onDismiss={() => {}}>
+              <T message="Hooray! This is the correct answer!" />
+            </Snackbar>
+          </>
         ) : (
           // eslint-disable-next-line @typescript-eslint/no-empty-function
           <Snackbar visible onDismiss={() => {}}>
@@ -141,6 +126,7 @@ interface GamePageProps {
   questionLoadingId?: string;
   correctAnswerId?: string;
   selectedAnswerId?: string;
+  isNextButtonVisible?: boolean;
   question?: Question | null;
   answers?:
     | {
@@ -151,6 +137,7 @@ interface GamePageProps {
     | null;
   onBackButtonClick: () => void;
   onAnswerClick: (answerId: string) => void;
+  onNextButtonClick: () => void;
 }
 
 export default GamePage;

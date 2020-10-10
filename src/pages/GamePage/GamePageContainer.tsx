@@ -19,6 +19,9 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
   const [correctAnswerId, setCorrectAnswerId] = useState<string | undefined>(
     undefined
   );
+  const [selectedAnswerId, setSelectedAnswerId] = useState<
+    string | undefined
+  >();
 
   async function fetchData(questionNumber: number) {
     const question = await fetchQuestionByIndex(questionNumber);
@@ -38,9 +41,10 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
     navigation.navigate(routeName);
   };
 
-  const handleAnswerClick = () => {
+  const handleAnswerClick = (id: string) => {
     // eslint-disable-next-line no-console
-    console.log("Answer is clicked!");
+    console.log("Answer is clicked!", id);
+    setSelectedAnswerId(id);
     //const nextQuestionNumber = currentQuestionNumber + 1;
     checkAnswer();
     //if (nextQuestionNumber === QUESTIONS_COUNT) {
@@ -61,6 +65,8 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
       correctAnswerId={correctAnswerId}
       onBackButtonClick={handleLinkButtonClick("Home")}
       onAnswerClick={handleAnswerClick}
+      selectedAnswerId={selectedAnswerId}
+      isNextButtonVisible={Boolean(correctAnswerId)}
     />
   ) : (
     <></>
