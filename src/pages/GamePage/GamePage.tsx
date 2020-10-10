@@ -42,13 +42,13 @@ const GamePage: React.FC<GamePageProps> = ({
           <Card.Title
             title={
               <>
-                <T message={"Quiz question #"} />
-                {currentQuestionNumber}
+                <T message={"Quiz question"} />
               </>
             }
             subtitle={
               <>
-                <T message="out of" /> {totalQuestionsCount}
+                {currentQuestionNumber} <T message="out of" />{" "}
+                {totalQuestionsCount}
               </>
             }
             left={LeftContent}
