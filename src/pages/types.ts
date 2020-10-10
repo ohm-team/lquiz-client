@@ -2,6 +2,7 @@ export type RootStackRoutes = {
   Home: undefined;
   Rules: undefined;
   Game: undefined;
+  Settings: undefined;
 };
 
 export type RootStackRoute = keyof RootStackRoutes;

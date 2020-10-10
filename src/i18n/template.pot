@@ -2,7 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sat Oct 10 2020 08:32:27 GMT+0300 (Israel Daylight Time)\n"
+"POT-Creation-Date: Sat Oct 10 2020 11:51:52 GMT+0200 (Central European Summer "
+"Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -55,6 +56,11 @@ msgstr ""
 msgid "Rules"
 msgstr ""
 
+#: src/pages/HomePage/HomePage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Settings"
+msgstr ""
+
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "Within one game, the user is assigned 15 questions."
 msgstr ""
@@ -65,8 +71,4 @@ msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "After passing all the questions, the general stratistics of the user is formed."
-msgstr ""
-
-#: src/pages/SettingsPage/Settings.tsx:
-msgid "Settings"
 msgstr ""

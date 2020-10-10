@@ -38,6 +38,14 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
         >
           <T message="Rules" />
         </Button>
+        <Button
+          mode="outlined"
+          theme={DefaultTheme}
+          onPress={handleLinkButtonClick("Settings")}
+          style={styles.cardButton}
+        >
+          <T message="Settings" />
+        </Button>
         <LocalSelector buttonStyle={styles.cardButton} />
       </Card.Content>
     </Card>

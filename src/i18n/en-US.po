@@ -61,6 +61,11 @@ msgstr ""
 msgid "Rules"
 msgstr ""
 
+#: src/pages/HomePage/HomePage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Settings"
+msgstr ""
+
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "Within one game, the user is assigned 15 questions."
 msgstr ""
@@ -71,8 +76,4 @@ msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "After passing all the questions, the general stratistics of the user is formed."
-msgstr ""
-
-#: src/pages/SettingsPage/Settings.tsx:
-msgid "Settings"
 msgstr ""
