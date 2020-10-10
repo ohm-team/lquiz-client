@@ -15,6 +15,7 @@ export type Answer = {
 export type Question = {
   what: string;
   where: string;
+  imgSrc: string;
   count: string | number;
 };
 
