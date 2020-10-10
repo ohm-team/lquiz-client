@@ -1,11 +1,22 @@
 import React, { useContext } from "react";
-import random from "random-name";
 import { defaultThemeName, ThemeName } from "src/config/themes";
 import { Locale, locales } from "src/config/locales";
 import { getBrowserLocale } from "src/utils/locales";
 import AsyncStorage from "@react-native-community/async-storage";
 
 const LOCAL_STORAGE_KEY = "settings";
+
+const getRandomInt = (min: number, max: number) => {
+  return min + Math.floor(Math.random() * (max - min + 1));
+};
+
+const getRandomName = () => {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const names: string[] = require("./names.json");
+
+  const name = names[getRandomInt(0, names.length - 1)];
+  return name;
+};
 
 interface SettingsContextProviderState {
   locale: Locale;
@@ -24,7 +35,7 @@ const getInitialValues = (): SettingsContextProviderState => ({
     locales.map((l) => l.key),
     locales[0].key
   ),
-  nickName: random.first(),
+  nickName: getRandomName(),
 });
 
 const SettingsContext = React.createContext<SettingsContext>({
