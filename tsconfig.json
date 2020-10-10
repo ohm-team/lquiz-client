@@ -8,7 +8,7 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "strict": true,
-    "baseUrl": ".",
-    "typeRoots": ["typings"]
-  }
+    "baseUrl": "."
+  },
+  "include": ["src/*/*"]
 }

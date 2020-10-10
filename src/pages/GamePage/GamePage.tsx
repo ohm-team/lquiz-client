@@ -1,5 +1,6 @@
 import React from "react";
 import { T } from "react-targem";
+import { Question } from "../types";
 import styles from "./GamePage.styles";
 import {
   Button,
@@ -9,6 +10,8 @@ import {
   ProgressBar,
   Snackbar,
 } from "react-native-paper";
+import GamePageAnswer from "./GamePageAnswer";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
   <Avatar.Text {...props} label="Q" />
@@ -17,28 +20,6 @@ const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
 interface CardTitleAddon {
   size: number;
 }
-
-const successTheme = {
-  colors: {
-    primary: "#8BC34A",
-  },
-};
-
-const warningTheme = {
-  colors: {
-    primary: "#FF5722",
-  },
-};
-
-const getButtonTheme = (isCorrect: boolean, isIncorrect: boolean) => {
-  if (isCorrect) {
-    return successTheme;
-  }
-  if (isIncorrect) {
-    return warningTheme;
-  }
-  return undefined;
-};
 
 const GamePage: React.FC<GamePageProps> = ({
   totalQuestionsCount,
@@ -50,7 +31,9 @@ const GamePage: React.FC<GamePageProps> = ({
   onAnswerClick,
   questionLoadingId,
   correctAnswerId,
-  incorrectAnswerId,
+  selectedAnswerId,
+  isNextButtonVisible,
+  onNextButtonClick,
 }: GamePageProps) => {
   const RightContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
     <Button onPress={onBackButtonClick}>
@@ -58,78 +41,84 @@ const GamePage: React.FC<GamePageProps> = ({
     </Button>
   );
 
-  const handleAnswerClick = (answerId: string) => () => {
-    onAnswerClick(answerId);
-  };
-
   return (
     <Card style={styles.card}>
-      <Card.Title
-        title={
-          <>
-            <T message={"Quiz question #"} />
-            {currentQuestionNumber}
-          </>
-        }
-        subtitle={
-          <>
-            <T message="out of" /> {totalQuestionsCount}
-          </>
-        }
-        left={LeftContent}
-        right={RightContent}
-      />
-      <Card.Cover
-        accessible={false}
-        source={{ uri: "https://source.unsplash.com/random?quiz" }}
-      />
-      {isQuestionLoading ? <ProgressBar indeterminate /> : null}
-      {question ? (
-        <Card.Content>
-          <Title style={styles.title}>
-            {question.count} {question.what.toLowerCase()} <T message="in" />{" "}
-            {question.where}.{" "}
-            <T message="What else do you think my contain number" />{" "}
-            {question.count}?
-          </Title>
-        </Card.Content>
-      ) : null}
-      {answers ? (
-        <Card.Actions style={styles.buttonsContainer}>
-          {answers.map((a) => (
-            <Button
-              key={a.id}
-              onPress={handleAnswerClick(a.id)}
-              style={styles.button}
-              mode="contained"
-              disabled={questionLoadingId !== undefined}
-              loading={questionLoadingId === a.id}
-              theme={getButtonTheme(
-                correctAnswerId === a.id,
-                incorrectAnswerId === a.id
-              )}
-            >
-              {questionLoadingId === a.id ? null : (
-                <>
-                  {a.what} <T message="in" /> {a.where}
-                </>
-              )}
-            </Button>
-          ))}
-        </Card.Actions>
-      ) : null}
-      {correctAnswerId && !incorrectAnswerId ? (
-        // eslint-disable-next-line @typescript-eslint/no-empty-function
-        <Snackbar visible onDismiss={() => {}}>
-          <T message="Hooray! This is the correct answer!" />
-        </Snackbar>
-      ) : null}
-      {incorrectAnswerId ? (
-        // eslint-disable-next-line @typescript-eslint/no-empty-function
-        <Snackbar visible onDismiss={() => {}}>
-          <T message="Ohh nooo... This is an incorrect answer..." />
-        </Snackbar>
-      ) : null}
+      <SafeAreaView>
+        <Card.Title
+          title={
+            <>
+              <T message={"Quiz question #"} />
+              {currentQuestionNumber}
+            </>
+          }
+          subtitle={
+            <>
+              <T message="out of" /> {totalQuestionsCount}
+            </>
+          }
+          left={LeftContent}
+          right={RightContent}
+        />
+        <Card.Cover
+          accessible={false}
+          source={{ uri: "https://source.unsplash.com/random?quiz" }}
+        />
+        {isQuestionLoading ? <ProgressBar indeterminate /> : null}
+        {question ? (
+          <Card.Content>
+            <Title style={styles.title}>
+              {question.count} {question.what.toLowerCase()} <T message="in" />{" "}
+              {question.where}.{" "}
+              <T message="What else do you think my contain number" />{" "}
+              {question.count}?
+            </Title>
+          </Card.Content>
+        ) : null}
+        {answers ? (
+          <Card.Actions style={styles.buttonsContainer}>
+            {answers.map((a) => (
+              <GamePageAnswer
+                key={a.id}
+                onAnswerClick={onAnswerClick}
+                style={styles.button}
+                contentStyle={styles.buttonContent}
+                isLoading={questionLoadingId === a.id}
+                isAnyQuestionLoading={questionLoadingId !== undefined}
+                isSelected={selectedAnswerId === a.id}
+                isCorrectAnswer={a.id === correctAnswerId}
+                isAnswerRevealed={isNextButtonVisible}
+                {...a}
+              />
+            ))}
+            {isNextButtonVisible ? (
+              <Button
+                mode="outlined"
+                style={styles.button}
+                contentStyle={styles.buttonContent}
+                onPress={onNextButtonClick}
+              >
+                <T message="Next question!" />
+              </Button>
+            ) : null}
+          </Card.Actions>
+        ) : null}
+
+        {selectedAnswerId ? (
+          correctAnswerId === selectedAnswerId ? (
+            <>
+              {/* eslint-disable-next-line @typescript-eslint/no-empty-function */}
+              <Snackbar visible onDismiss={() => {}}>
+                <T message="Hooray! This is the correct answer!" />
+              </Snackbar>
+            </>
+          ) : (
+            // eslint-disable-next-line @typescript-eslint/no-empty-function
+            <Snackbar visible onDismiss={() => {}}>
+              <T message="Ohh nooo... This is an incorrect answer..." />
+            </Snackbar>
+          )
+        ) : null}
+      </SafeAreaView>
     </Card>
   );
 };
@@ -140,12 +129,9 @@ interface GamePageProps {
   isQuestionLoading: boolean;
   questionLoadingId?: string;
   correctAnswerId?: string;
-  incorrectAnswerId?: string;
-  question?: {
-    what: string;
-    count: number;
-    where: string;
-  } | null;
+  selectedAnswerId?: string;
+  isNextButtonVisible: boolean;
+  question?: Question | null;
   answers?:
     | {
         what: string;
@@ -155,6 +141,7 @@ interface GamePageProps {
     | null;
   onBackButtonClick: () => void;
   onAnswerClick: (answerId: string) => void;
+  onNextButtonClick: () => void;
 }
 
 export default GamePage;

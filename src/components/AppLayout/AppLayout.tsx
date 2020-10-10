@@ -11,6 +11,7 @@ import {
 } from "src/contexts/SettingsContext";
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const AppLayoutInternal: React.FC<AppLayoutInternalProps> = ({
   children,
@@ -18,14 +19,16 @@ const AppLayoutInternal: React.FC<AppLayoutInternalProps> = ({
   const { locale } = useSettings();
 
   return (
-    <PaperProvider>
-      <NavigationContainer>
-        <TargemProvider locale={locale} translations={translations}>
-          {children}
-          <StatusBar style="auto" />
-        </TargemProvider>
-      </NavigationContainer>
-    </PaperProvider>
+    <SafeAreaProvider>
+      <PaperProvider>
+        <NavigationContainer>
+          <TargemProvider locale={locale} translations={translations}>
+            {children}
+            <StatusBar style="auto" />
+          </TargemProvider>
+        </NavigationContainer>
+      </PaperProvider>
+    </SafeAreaProvider>
   );
 };
 interface AppLayoutInternalProps extends React.PropsWithChildren<{}> {}
