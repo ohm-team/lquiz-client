@@ -116,17 +116,19 @@ const GamePage: React.FC<GamePageProps> = ({
           ))}
         </Card.Actions>
       ) : null}
-      {correctAnswerId === selectedAnswerId ? (
-        // eslint-disable-next-line @typescript-eslint/no-empty-function
-        <Snackbar visible onDismiss={() => {}}>
-          <T message="Hooray! This is the correct answer!" />
-        </Snackbar>
-      ) : (
-        // eslint-disable-next-line @typescript-eslint/no-empty-function
-        <Snackbar visible onDismiss={() => {}}>
-          <T message="Ohh nooo... This is an incorrect answer..." />
-        </Snackbar>
-      )}
+      {selectedAnswerId ? (
+        correctAnswerId === selectedAnswerId ? (
+          // eslint-disable-next-line @typescript-eslint/no-empty-function
+          <Snackbar visible onDismiss={() => {}}>
+            <T message="Hooray! This is the correct answer!" />
+          </Snackbar>
+        ) : (
+          // eslint-disable-next-line @typescript-eslint/no-empty-function
+          <Snackbar visible onDismiss={() => {}}>
+            <T message="Ohh nooo... This is an incorrect answer..." />
+          </Snackbar>
+        )
+      ) : null}
     </Card>
   );
 };
