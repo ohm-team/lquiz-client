@@ -8,14 +8,28 @@ import SettingsPage from "./SettingsPage";
 
 const Stack = createStackNavigator();
 
+const screenOptions = { animationEnabled: true };
+
 const Pages: React.FC<HomePageProps> = () => {
   return (
-    <Stack.Navigator initialRouteName="Home" headerMode="none">
-      <Stack.Screen name="Home" component={HomePage} />
-      <Stack.Screen name="Rules" component={RulesPage} />
-      <Stack.Screen name="GameOver" component={GameOverPage} />
-      <Stack.Screen name="Game" component={GamePage} />
-      <Stack.Screen name="Settings" component={SettingsPage} />
+    <Stack.Navigator headerMode="none" initialRouteName="Home">
+      <Stack.Screen options={screenOptions} name="Home" component={HomePage} />
+      <Stack.Screen
+        options={screenOptions}
+        name="Rules"
+        component={RulesPage}
+      />
+      <Stack.Screen
+        options={screenOptions}
+        name="GameOver"
+        component={GameOverPage}
+      />
+      <Stack.Screen options={screenOptions} name="Game" component={GamePage} />
+      <Stack.Screen
+        options={screenOptions}
+        name="Settings"
+        component={SettingsPage}
+      />
     </Stack.Navigator>
   );
 };
