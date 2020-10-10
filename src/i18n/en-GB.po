@@ -41,14 +41,6 @@ msgstr "What else do you think my contain number"
 msgid "Next question!"
 msgstr "Next question!"
 
-#: src/pages/GamePage/GamePage.tsx:
-msgid "Hooray! This is the correct answer!"
-msgstr "Hooray! This is the correct answer!"
-
-#: src/pages/GamePage/GamePage.tsx:
-msgid "Ohh nooo... This is an incorrect answer..."
-msgstr "Ohh nooo... This is an incorrect answer..."
-
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Letz quiz!"
 msgstr "Letz quiz!"

@@ -2,14 +2,7 @@ import React from "react";
 import { T } from "react-targem";
 import { Question } from "../types";
 import styles from "./GamePage.styles";
-import {
-  Button,
-  Card,
-  Title,
-  Avatar,
-  ProgressBar,
-  Snackbar,
-} from "react-native-paper";
+import { Button, Card, Title, Avatar, ProgressBar } from "react-native-paper";
 import GamePageAnswer from "./GamePageAnswer";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ScrollView } from "react-native";
@@ -103,22 +96,6 @@ const GamePage: React.FC<GamePageProps> = ({
                 </Button>
               ) : null}
             </Card.Actions>
-          ) : null}
-
-          {selectedAnswerId ? (
-            correctAnswerId === selectedAnswerId ? (
-              <>
-                {/* eslint-disable-next-line @typescript-eslint/no-empty-function */}
-                <Snackbar visible onDismiss={() => {}}>
-                  <T message="Hooray! This is the correct answer!" />
-                </Snackbar>
-              </>
-            ) : (
-              // eslint-disable-next-line @typescript-eslint/no-empty-function
-              <Snackbar visible onDismiss={() => {}}>
-                <T message="Ohh nooo... This is an incorrect answer..." />
-              </Snackbar>
-            )
           ) : null}
         </SafeAreaView>
       </Card>
