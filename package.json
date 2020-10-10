@@ -19,7 +19,7 @@
     "lint:tsc:check": "tsc --noEmit",
     "lint:eslint:check": "eslint --ext .ts,.tsx --ignore-path .gitignore",
     "lint:eslint:write": "eslint --ext .ts,.tsx --ignore-path .gitignore --fix",
-    "intl:update-po": "gettext-utils export-strings --default-locale=en-GB && git add src/i18n/*.po*",
+    "intl:update-po": "gettext-utils export-strings --default-locale=en-US && git add src/i18n/*.po*",
     "intl:generate-json": "gettext-utils import-strings",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "cross-env NODE_ENV=test build-storybook -c .storybook",

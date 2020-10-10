@@ -1,10 +1,5 @@
 export const locales = [
   {
-    key: "en-GB",
-    internationalName: "English (GB)",
-    localName: "English (GB)",
-  },
-  {
     key: "en-US",
     internationalName: "English (US)",
     localName: "English (US)",
