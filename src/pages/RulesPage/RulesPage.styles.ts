@@ -2,7 +2,11 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
-    paddingTop: 30,
+    flex: 1,
+    justifyContent: "center",
+    minHeight: "100%",
+  },
+  card: {
     alignSelf: "center",
     padding: 20,
   },
@@ -10,6 +14,7 @@ export default StyleSheet.create({
     fontSize: 30,
     marginBottom: 20,
     color: "#fff",
+    marginTop: 20,
   },
   text: {
     fontSize: 15,
