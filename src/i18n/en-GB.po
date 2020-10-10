@@ -16,6 +16,34 @@ msgstr ""
 msgid "Choose language"
 msgstr "Choose language"
 
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "Share"
+msgstr "Share"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "Statistics"
+msgstr "Statistics"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "accuracy"
+msgstr "accuracy"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "coins"
+msgstr "coins"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "rang"
+msgstr "rang"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "pace"
+msgstr "pace"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "streaks"
+msgstr "streaks"
+
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Back"
 msgstr "Back"
@@ -47,6 +75,15 @@ msgstr "Play"
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Rules"
 msgstr "Rules"
+
+#: src/pages/HomePage/HomePage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Settings"
+msgstr "Settings"
+
+#: src/pages/HomePage/HomePage.tsx:
+msgid "GameOver"
+msgstr "GameOver"
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Download an app"

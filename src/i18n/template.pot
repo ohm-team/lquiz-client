@@ -2,12 +2,41 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sat Oct 10 2020 16:29:49 GMT+0300 (Israel Daylight Time)\n"
+"POT-Creation-Date: Sat Oct 10 2020 15:30:49 GMT+0200 (Central European Summer "
+"Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/components/LocaleSelector/LocaleSelector.tsx:
 msgid "Choose language"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "Share"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "Statistics"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "accuracy"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "coins"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "rang"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "pace"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "streaks"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
@@ -40,6 +69,15 @@ msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Rules"
+msgstr ""
+
+#: src/pages/HomePage/HomePage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Settings"
+msgstr ""
+
+#: src/pages/HomePage/HomePage.tsx:
+msgid "GameOver"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
