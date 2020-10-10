@@ -1,6 +1,7 @@
 import { QuestionWithAnswers } from "../types";
+import { MOCK } from "./GamePage.mock";
 
-const transformQuestion = (
+export const transformQuestion = (
   q: {
     question: {
       what: string;
@@ -26,11 +27,9 @@ const transformQuestion = (
   };
 };
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-export const MOCK: QuestionWithAnswers[] = require("./questions.json").questions.map(
-  transformQuestion
-);
 export const QUESTIONS_COUNT = 5;
+
+let questionsCache: QuestionWithAnswers[];
 
 export const fetchQuestionByIndex = async (
   index: number
@@ -40,8 +39,11 @@ export const fetchQuestionByIndex = async (
       reject("No such question");
       return;
     }
+    if (!questionsCache) {
+      questionsCache = MOCK.map(transformQuestion);
+    }
     setTimeout(() => {
-      resolve(MOCK[index % MOCK.length]);
+      resolve(questionsCache[index]);
     }, 1500);
   });
 };
@@ -50,7 +52,11 @@ export const fetchQuestionByIndex = async (
 export const checkQuestion = async (
   questionId: string
 ): Promise<{ correctAnswerId: string }> => {
+  const question = questionsCache.find((q) => q.id === questionId);
+  if (!question) {
+    throw new Error("No such question");
+  }
   return {
-    correctAnswerId: MOCK[parseInt(questionId)].question.correctAnswerId,
+    correctAnswerId: question.question.correctAnswerId,
   };
 };
