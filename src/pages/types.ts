@@ -2,7 +2,9 @@ export type RootStackRoutes = {
   Home: undefined;
   Rules: undefined;
   Game: undefined;
-  GameOver: undefined;
+  GameOver: {
+    gameResults: boolean[];
+  };
 };
 
 export type RootStackRoute = keyof RootStackRoutes;

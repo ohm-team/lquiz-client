@@ -44,6 +44,7 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
 
   const handleLinkButtonClick = (routeName: RootStackRoute) => () => {
     navigation.navigate(routeName);
+    navigation.navigate("GameOver", { gameResults: [true] });
   };
 
   const handleAnswerClick = (id: string) => {
