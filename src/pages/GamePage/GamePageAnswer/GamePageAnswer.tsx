@@ -23,9 +23,10 @@ const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
   isLoading,
   contentStyle,
   style,
-  isDisabled,
+  isAnyQuestionLoading,
   isSelected,
   isCorrectAnswer,
+  isAnswerRevealed,
 }: GamePageAnswerProps) => {
   const handleAnswerClick = () => {
     onAnswerClick(id);
@@ -36,7 +37,7 @@ const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
       return successTheme;
     }
 
-    if (!isSelected || isDisabled) {
+    if (!isSelected || isAnyQuestionLoading) {
       return undefined;
     }
 
@@ -45,11 +46,14 @@ const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
 
   return (
     <Button
-      onPress={handleAnswerClick}
+      onPress={!isAnswerRevealed ? handleAnswerClick : undefined}
       style={style}
       contentStyle={contentStyle}
       mode="contained"
-      disabled={isDisabled}
+      disabled={
+        isAnyQuestionLoading ||
+        (isAnswerRevealed && !isSelected && !isCorrectAnswer)
+      }
       loading={isLoading}
       theme={getTheme()}
     >
@@ -68,7 +72,8 @@ interface GamePageAnswerProps {
   what: string;
   where: string;
   isLoading: boolean;
-  isDisabled: boolean;
+  isAnyQuestionLoading: boolean;
+  isAnswerRevealed: boolean;
   isSelected: boolean;
   isCorrectAnswer: boolean;
   style: StyleProp<ViewStyle>;

@@ -81,9 +81,10 @@ const GamePage: React.FC<GamePageProps> = ({
               style={styles.button}
               contentStyle={styles.buttonContent}
               isLoading={questionLoadingId === a.id}
-              isDisabled={questionLoadingId !== undefined}
+              isAnyQuestionLoading={questionLoadingId !== undefined}
               isSelected={selectedAnswerId === a.id}
               isCorrectAnswer={a.id === correctAnswerId}
+              isAnswerRevealed={isNextButtonVisible}
               {...a}
             />
           ))}
@@ -126,7 +127,7 @@ interface GamePageProps {
   questionLoadingId?: string;
   correctAnswerId?: string;
   selectedAnswerId?: string;
-  isNextButtonVisible?: boolean;
+  isNextButtonVisible: boolean;
   question?: Question | null;
   answers?:
     | {
