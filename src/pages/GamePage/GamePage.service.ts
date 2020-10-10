@@ -2,11 +2,11 @@ import { QuestionWithAnswers } from "../types";
 
 export const MOCK: QuestionWithAnswers[] = [
   {
+    id: "q-1",
     question: {
       what: "Babies were born",
       where: "2019",
       count: 2042,
-      id: "q-1",
     },
     answers: [
       {
@@ -27,37 +27,37 @@ export const MOCK: QuestionWithAnswers[] = [
       {
         what: "Criminal cases closed",
         where: "2010",
-        id: "71",
+        id: "4",
       },
     ],
   },
   {
+    id: "q-2",
     question: {
       what: "Water level was",
       where: "1993",
       count: 22,
-      id: "q-2",
     },
     answers: [
       {
         what: "Biggest bird weight",
         where: "ever",
-        id: "4",
+        id: "5",
       },
       {
         what: "Amount of pigs",
         where: "2001",
-        id: "5",
+        id: "6",
       },
       {
         what: "Girls were born",
         where: "2003",
-        id: "6",
+        id: "7",
       },
       {
         what: "COVID cases",
         where: "2019",
-        id: "7",
+        id: "8",
       },
     ],
   },
@@ -82,5 +82,5 @@ export const fetchQuestionByIndex = async (
 export const checkQuestion = async (
   questionId: string
 ): Promise<{ correctAnswerId: string }> => {
-  return { correctAnswerId: "1" };
+  return { correctAnswerId: questionId === "q-1" ? "1" : "5" };
 };
