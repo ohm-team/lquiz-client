@@ -1,1 +1,1 @@
-export { default } from "./GameOverPage";
+export { default } from "./GameOverPage.container";
