@@ -12,8 +12,8 @@ export default StyleSheet.create({
   },
   header: {
     fontSize: 30,
+    lineHeight: 30,
     marginBottom: 20,
-    color: "#fff",
     marginTop: 20,
   },
   text: {
