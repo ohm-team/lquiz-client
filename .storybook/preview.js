@@ -8,6 +8,7 @@ import {
   DefaultTheme,
   DarkTheme,
 } from "react-native-paper";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const IS_DARK_THEME = true;
 
@@ -37,10 +38,12 @@ export const globalTypes = {
 
 export const decorators = [
   (Story, { globals }) => (
-    <PaperProvider theme={IS_DARK_THEME ? DarkTheme : DefaultTheme}>
-      <TargemProvider locale={globals.locale} translations={translations}>
-        <Story />
-      </TargemProvider>
-    </PaperProvider>
+    <SafeAreaProvider>
+      <PaperProvider theme={IS_DARK_THEME ? DarkTheme : DefaultTheme}>
+        <TargemProvider locale={globals.locale} translations={translations}>
+          <Story />
+        </TargemProvider>
+      </PaperProvider>
+    </SafeAreaProvider>
   ),
 ];
