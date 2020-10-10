@@ -22,6 +22,12 @@ msgid "Share"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
+#: src/pages/RulesPage/RulesPage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Home"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Statistics"
 msgstr ""
 
@@ -34,7 +40,7 @@ msgid "pace"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "seconds"
+msgid "seconds per question"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
@@ -85,11 +91,6 @@ msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Download an app"
-msgstr ""
-
-#: src/pages/RulesPage/RulesPage.tsx:
-#: src/pages/SettingsPage/Settings.tsx:
-msgid "Home"
 msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:

@@ -2,7 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sat Oct 10 2020 20:33:39 GMT+0300 (Israel Daylight Time)\n"
+"POT-Creation-Date: Sat Oct 10 2020 20:24:04 GMT+0200 (Central European Summer "
+"Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -12,6 +13,12 @@ msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Share"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+#: src/pages/RulesPage/RulesPage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Home"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
@@ -27,7 +34,7 @@ msgid "pace"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "seconds"
+msgid "seconds per question"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
@@ -78,11 +85,6 @@ msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Download an app"
-msgstr ""
-
-#: src/pages/RulesPage/RulesPage.tsx:
-#: src/pages/SettingsPage/Settings.tsx:
-msgid "Home"
 msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:
