@@ -34,19 +34,19 @@ WithLoading.args = {
 
 export const WithQuestionLoading = Template.bind({});
 WithQuestionLoading.args = {
-  questionLoadingId: "71",
+  questionLoadingId: "1",
 };
 
 export const WithCorrectAnswer = Template.bind({});
 WithCorrectAnswer.args = {
-  correctAnswerId: "71",
-  selectedAnswerId: "71",
+  correctAnswerId: "1",
+  selectedAnswerId: "1",
   isNextButtonVisible: true,
 };
 
 export const WithIncorrectAnswer = Template.bind({});
 WithIncorrectAnswer.args = {
-  correctAnswerId: "68",
-  selectedAnswerId: "71",
+  correctAnswerId: "2",
+  selectedAnswerId: "1",
   isNextButtonVisible: true,
 };
