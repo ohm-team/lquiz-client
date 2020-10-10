@@ -11,7 +11,7 @@ import {
 const GamePageContainer: React.FC<GamePageContainerProps> = ({
   navigation,
 }: GamePageContainerProps) => {
-  const [currentQuestionNumber] = useState<number>(0);
+  const [currentQuestionNumber, setCurrentQuestionNumber] = useState<number>(0);
   const [
     currentQuestion,
     setCurrentQuestion,
@@ -45,10 +45,7 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
   };
 
   const handleAnswerClick = (id: string) => {
-    // eslint-disable-next-line no-console
-    console.log("Answer is clicked!", id);
     setSelectedAnswerId(id);
-    //const nextQuestionNumber = currentQuestionNumber + 1;
     checkAnswer();
     //if (nextQuestionNumber === QUESTIONS_COUNT) {
     //  navigation.navigate("Home");
@@ -56,6 +53,16 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
     //  setCurrentQuestion(null);
     //  setCurrentQuestionNumber(nextQuestionNumber);
     //}
+  };
+
+  const handleNextButtonClick = () => {
+    const nextQuestionNumber = currentQuestionNumber + 1;
+    if (nextQuestionNumber === QUESTIONS_COUNT) {
+      navigation.navigate("Home");
+      return;
+    }
+    setCurrentQuestion(null);
+    setCurrentQuestionNumber(nextQuestionNumber);
   };
 
   return (
@@ -70,6 +77,7 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
       onAnswerClick={handleAnswerClick}
       selectedAnswerId={selectedAnswerId}
       isNextButtonVisible={Boolean(correctAnswerId)}
+      onNextButtonClick={handleNextButtonClick}
     />
   );
 };
