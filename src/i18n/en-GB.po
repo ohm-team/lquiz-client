@@ -16,6 +16,14 @@ msgstr ""
 msgid "Choose language"
 msgstr "Choose language"
 
+#: src/components/ThemeToggler/ThemeToggler.tsx:
+msgid "Dark theme?"
+msgstr "Dark theme?"
+
+#: src/components/ThemeToggler/ThemeToggler.tsx:
+msgid "Toggle dark theme"
+msgstr "Toggle dark theme"
+
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Share"
 msgstr "Share"
@@ -27,16 +35,48 @@ msgid "Home"
 msgstr "Home"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "Statistics"
-msgstr "Statistics"
+msgid ""
+"Congratulations! You know literally EVERYTHING about Luxembourg! How did you "
+"achieve it? "
+msgstr ""
+"Congratulations! You know literally EVERYTHING about Luxembourg! How did you "
+"achieve it? "
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "accuracy"
-msgstr "accuracy"
+msgid ""
+"Wow! Looks like you have been reading datasets from https://data.public.lu for "
+"a long time!"
+msgstr ""
+"Wow! Looks like you have been reading datasets from https://data.public.lu for "
+"a long time!"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "pace"
-msgstr "pace"
+msgid ""
+"Great job! More then a half answers are correct! It's more than a luck, its "
+"your great erudition!"
+msgstr ""
+"Great job! More then a half answers are correct! It's more than a luck, its "
+"your great erudition!"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid ""
+"You know something about Luxembourg, and today you learned a bit more, isn't it "
+"great?"
+msgstr ""
+"You know something about Luxembourg, and today you learned a bit more, isn't it "
+"great?"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "Not your day :( Or maybe our alorithms created an extra-hard quiz? Try again!"
+msgstr "Not your day :( Or maybe our alorithms created an extra-hard quiz? Try again!"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "Accuracy"
+msgstr "Accuracy"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "Pace"
+msgstr "Pace"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "seconds per question"
@@ -80,11 +120,6 @@ msgid "Rules"
 msgstr "Rules"
 
 #: src/pages/HomePage/HomePage.tsx:
-#: src/pages/SettingsPage/Settings.tsx:
-msgid "Settings"
-msgstr "Settings"
-
-#: src/pages/HomePage/HomePage.tsx:
 msgid "Download an app"
 msgstr "Download an app"
 
@@ -101,9 +136,5 @@ msgid "After passing all the questions, the general stratistics of the user is f
 msgstr "After passing all the questions, the general stratistics of the user is formed."
 
 #: src/pages/SettingsPage/Settings.tsx:
-msgid "Dark theme?"
-msgstr "Dark theme?"
-
-#: src/pages/SettingsPage/Settings.tsx:
-msgid "Toggle dark theme"
-msgstr "Toggle dark theme"
+msgid "Settings"
+msgstr "Settings"
