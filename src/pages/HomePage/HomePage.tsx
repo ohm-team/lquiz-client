@@ -11,8 +11,11 @@ import styles from "./HomePage.styles";
 const MOBILE_APPLICATION_LINK = "https://expo.io/@ohm-team/lquiz-client";
 
 const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
-  const handleLinkButtonClick = (routeName: RootStackRoute) => () => {
-    navigation.navigate(routeName);
+  const handleLinkButtonClick = (
+    routeName: RootStackRoute,
+    args?: any
+  ) => () => {
+    navigation.navigate(routeName, args);
   };
 
   const handleDownloadButtonClick = () => {
@@ -44,6 +47,26 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
         >
           <T message="Rules" />
         </Button>
+        <Button
+          mode="outlined"
+          theme={DefaultTheme}
+          onPress={handleLinkButtonClick("Settings")}
+          style={styles.cardButton}
+        >
+          <T message="Settings" />
+        </Button>
+
+        <Button
+          mode="outlined"
+          theme={DefaultTheme}
+          onPress={handleLinkButtonClick("GameOver", {
+            gameResults: [true, false, true],
+          })}
+          style={styles.cardButton}
+        >
+          <T message="GameOver" />
+        </Button>
+
         {Platform.OS === "web" ? (
           <Button
             mode="outlined"
