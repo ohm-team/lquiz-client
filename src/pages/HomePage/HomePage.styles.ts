@@ -27,6 +27,7 @@ export default StyleSheet.create({
   cardTitle: {
     marginTop: 64,
     marginBottom: 64,
+    color: "#fff",
   },
   cardButton: {
     marginBottom: 32,
