@@ -22,9 +22,12 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
   const [selectedAnswerId, setSelectedAnswerId] = useState<
     string | undefined
   >();
+  const [isQuestionLoading, setIsQuestionLoading] = useState<boolean>(false);
 
   async function fetchData(questionNumber: number) {
+    setIsQuestionLoading(true);
     const question = await fetchQuestionByIndex(questionNumber);
+    setIsQuestionLoading(false);
     setCurrentQuestion(question);
   }
 
@@ -55,12 +58,12 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
     //}
   };
 
-  return currentQuestion ? (
+  return (
     <GamePage
       currentQuestionNumber={currentQuestionNumber + 1}
-      isQuestionLoading={true}
-      question={currentQuestion.question}
-      answers={currentQuestion.answers}
+      isQuestionLoading={isQuestionLoading}
+      question={currentQuestion?.question}
+      answers={currentQuestion?.answers}
       totalQuestionsCount={QUESTIONS_COUNT}
       correctAnswerId={correctAnswerId}
       onBackButtonClick={handleLinkButtonClick("Home")}
@@ -68,8 +71,6 @@ const GamePageContainer: React.FC<GamePageContainerProps> = ({
       selectedAnswerId={selectedAnswerId}
       isNextButtonVisible={Boolean(correctAnswerId)}
     />
-  ) : (
-    <></>
   );
 };
 
