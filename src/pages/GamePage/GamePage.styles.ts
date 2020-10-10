@@ -31,7 +31,18 @@ export default StyleSheet.create({
     paddingVertical: 10,
   },
   title: {
-    marginTop: 16,
+    marginTop: 5,
+    textAlign: "center",
     marginBottom: 0,
+  },
+  titleStatistics: {
+    marginTop: 16,
+    textAlign: "center",
+    fontStyle: "italic",
+    marginBottom: 0,
+  },
+  titleValue: {
+    fontWeight: "bold",
+    fontSize: 22
   },
 });
