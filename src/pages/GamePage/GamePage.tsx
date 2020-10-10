@@ -102,6 +102,7 @@ const GamePage: React.FC<GamePageProps> = ({
               key={a.id}
               onPress={handleAnswerClick(a.id)}
               style={styles.button}
+              contentStyle={styles.buttonContent}
               mode="contained"
               disabled={questionLoadingId !== undefined}
               loading={questionLoadingId === a.id}

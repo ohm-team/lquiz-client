@@ -15,12 +15,13 @@ export default StyleSheet.create({
   button: {
     marginTop: 16,
     marginBottom: 16,
-    paddingTop: 16,
-    paddingBottom: 16,
     minWidth: "90%",
     minHeight: 65,
-    flex: 1,
-    justifyContent: "center",
+  },
+  buttonContent: {
+    paddingTop: 16,
+    paddingBottom: 16,
+    minHeight: 65,
   },
   buttonSuccess: {
     backgroundColor: "green",
