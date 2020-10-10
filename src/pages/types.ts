@@ -5,6 +5,7 @@ export type RootStackRoutes = {
   GameOver: {
     gameResults: boolean[];
   };
+  Settings: undefined;
 };
 
 export type RootStackRoute = keyof RootStackRoutes;

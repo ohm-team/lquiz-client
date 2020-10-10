@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import random from "random-name";
 import { defaultThemeName, ThemeName } from "src/config/themes";
 import { Locale, locales } from "src/config/locales";
 import { getBrowserLocale } from "src/utils/locales";
@@ -9,6 +10,7 @@ const LOCAL_STORAGE_KEY = "settings";
 interface SettingsContextProviderState {
   locale: Locale;
   theme: ThemeName;
+  nickName: string;
 }
 
 export interface SettingsContext extends SettingsContextProviderState {
@@ -22,6 +24,7 @@ const getInitialValues = (): SettingsContextProviderState => ({
     locales.map((l) => l.key),
     locales[0].key
   ),
+  nickName: random.first(),
 });
 
 const SettingsContext = React.createContext<SettingsContext>({
@@ -41,7 +44,6 @@ export class SettingsContextProvider extends React.PureComponent<
     this.state = {
       ...getInitialValues(),
     };
-
     void this.updateSettingsWithPersistedValue();
   }
 
