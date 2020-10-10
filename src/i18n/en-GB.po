@@ -16,6 +16,59 @@ msgstr ""
 msgid "Choose language"
 msgstr "Choose language"
 
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "Share"
+msgstr "Share"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "Statistics"
+msgstr "Statistics"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "accuracy"
+msgstr "accuracy"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "coins"
+msgstr "coins"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "rang"
+msgstr "rang"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "pace"
+msgstr "pace"
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "streaks"
+msgstr "streaks"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Back"
+msgstr "Back"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Quiz question #"
+msgstr "Quiz question #"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "out of"
+msgstr "out of"
+
+#: src/pages/GamePage/GamePage.tsx:
+#: src/pages/GamePage/GamePageAnswer/GamePageAnswer.tsx:
+msgid "in"
+msgstr "in"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "What else do you think my contain number"
+msgstr "What else do you think my contain number"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Next question!"
+msgstr "Next question!"
+
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Letz quiz!"
 msgstr "Letz quiz!"
@@ -27,6 +80,23 @@ msgstr "Play"
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Rules"
 msgstr "Rules"
+
+#: src/pages/HomePage/HomePage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Settings"
+msgstr "Settings"
+
+#: src/pages/HomePage/HomePage.tsx:
+msgid "GameOver"
+msgstr "GameOver"
+
+#: src/pages/HomePage/HomePage.tsx:
+msgid "Download an app"
+msgstr "Download an app"
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid "Home"
+msgstr "Home"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "Within one game, the user is assigned 15 questions."
