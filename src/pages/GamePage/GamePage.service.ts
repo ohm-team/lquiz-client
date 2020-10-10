@@ -6,6 +6,7 @@ export const MOCK: QuestionWithAnswers[] = [
       what: "Babies were born",
       where: "2019",
       count: 2042,
+      id: "q-1",
     },
     answers: [
       {
@@ -35,6 +36,7 @@ export const MOCK: QuestionWithAnswers[] = [
       what: "Water level was",
       where: "1993",
       count: 22,
+      id: "q-2",
     },
     answers: [
       {
@@ -65,15 +67,20 @@ export const QUESTIONS_COUNT = 20;
 export const fetchQuestionByIndex = async (
   index: number
 ): Promise<QuestionWithAnswers> => {
-  if (index > QUESTIONS_COUNT) {
-    return Promise.reject("No such question");
-  }
-  return Promise.resolve(MOCK[index % MOCK.length]);
+  return new Promise((resolve, reject) => {
+    if (index > QUESTIONS_COUNT) {
+      reject("No such question");
+      return;
+    }
+    setTimeout(() => {
+      resolve(MOCK[index % MOCK.length]);
+    }, 1500);
+  });
 };
 
 // eslint-disable-next-line
 export const checkQuestion = async (
   questionId: string
-): Promise<{ correctAnswerId: string; incorrectAnswerId: string }> => {
+): Promise<{ correctAnswerId: string }> => {
   return { correctAnswerId: "1" };
 };

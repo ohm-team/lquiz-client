@@ -2,7 +2,8 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   card: {
-    height: "100%",
+    minHeight: "100%",
+    overflow: "visible",
     width: "100%",
     borderRadius: 0,
   },
