@@ -49,7 +49,7 @@ msgid "Back"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "Quiz question #"
+msgid "Quiz question"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:

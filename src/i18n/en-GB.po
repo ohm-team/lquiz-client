@@ -49,8 +49,8 @@ msgid "Back"
 msgstr "Back"
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "Quiz question #"
-msgstr "Quiz question #"
+msgid "Quiz question"
+msgstr "Quiz question"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "out of"
