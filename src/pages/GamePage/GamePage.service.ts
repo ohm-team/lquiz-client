@@ -1,61 +1,35 @@
 import { QuestionWithAnswers } from "../types";
 
-export const MOCK: QuestionWithAnswers[] = [
-  {
-    id: "q-1",
+const transformQuestion = (
+  q: {
     question: {
-      what: "{value} people died on road in 1991",
-      value: 2042,
-      imgSrc: `https://source.unsplash.com/random?quiz&version=1}`,
-    },
-    answers: [
-      {
-        what: "{value} people died on road in 1991",
-        id: "1",
-      },
-      {
-        what: "{value} Cyclists died on road in 2018",
-        id: "2",
-      },
-      {
-        what:
-          "{value} people were injuried from Other types of accidents in 1991",
-        id: "3",
-      },
-      {
-        what: "{value} 4 wheel passengers died on road in 2019",
-        id: "4",
-      },
-    ],
+      what: string;
+      value: number;
+      correctAnswerIndex: number;
+    };
+    answers: string[];
   },
-  {
-    id: "q-2",
+  i: number
+): QuestionWithAnswers => {
+  return {
     question: {
-      what: "{value} people died on road in 1991",
-      value: 22,
-      imgSrc: "https://source.unsplash.com/random?quiz&version=2",
+      what: q.question.what,
+      value: q.question.value,
+      imgSrc: `https://source.unsplash.com/random?quiz&version=${i}`,
+      correctAnswerId: q.question.correctAnswerIndex.toString(),
     },
-    answers: [
-      {
-        what: "{value} people died on road in 1991",
-        id: "1",
-      },
-      {
-        what: "{value} Cyclists died on road in 2018",
-        id: "2",
-      },
-      {
-        what:
-          "{value} people were injuried from Other types of accidents in 1991",
-        id: "3",
-      },
-      {
-        what: "{value} 4 wheel passengers died on road in 2019",
-        id: "4",
-      },
-    ],
-  },
-];
+    id: i.toString(),
+    answers: q.answers.map((a, id) => ({
+      what: a,
+      id: id.toString(),
+    })),
+  };
+};
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+export const MOCK: QuestionWithAnswers[] = require("./questions.json").questions.map(
+  transformQuestion
+);
 export const QUESTIONS_COUNT = 20;
 
 export const fetchQuestionByIndex = async (
@@ -76,5 +50,7 @@ export const fetchQuestionByIndex = async (
 export const checkQuestion = async (
   questionId: string
 ): Promise<{ correctAnswerId: string }> => {
-  return { correctAnswerId: questionId === "q-1" ? "1" : "5" };
+  return {
+    correctAnswerId: MOCK[parseInt(questionId)].question.correctAnswerId,
+  };
 };
