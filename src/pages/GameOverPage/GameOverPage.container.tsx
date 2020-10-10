@@ -11,15 +11,19 @@ const facebookShareURL = "https://ohm-team.github.io/lquiz-client/";
 const GameOverPageContainer: React.FC<GameOverPageContainerProps> = ({
   route: { params },
 }) => {
-  const { gameResults } = params;
+  const { gameResults, gamePace } = params;
 
   const { nickName: userName } = useSettings();
   const facebookShareMessage = `${userName} passeed the quiz with great result`;
   const userStatus = "Artificial intelligence";
+
   const rangCurrent = 1;
   const rangTotal = 10;
   const coins = 3210;
-  const pace = 16.9;
+
+  const pace =
+    Math.round((gamePace.reduce((v, a) => v + a, 0) / gamePace.length) * 10) /
+    10;
   const paceAvg = 20;
   const streaks = 2;
   const streaksMax = 3;
