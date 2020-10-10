@@ -50,6 +50,6 @@ export default StyleSheet.create({
   },
   titleValue: {
     fontWeight: "bold",
-    fontSize: 22
+    fontSize: 22,
   },
 });

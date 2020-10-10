@@ -12,7 +12,7 @@ export type RootStackRoute = keyof RootStackRoutes;
 
 export type Answer = {
   answerValue: string;
-  answerStatistics: string
+  answerStatistics: string;
   id: string;
 };
 
