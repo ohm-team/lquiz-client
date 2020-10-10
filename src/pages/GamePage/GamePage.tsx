@@ -1,10 +1,9 @@
 import React from "react";
-import { Linking, ScrollView, View } from "react-native";
+import { ScrollView, View } from "react-native";
 import {
   Avatar,
   Button,
   Card,
-  Paragraph,
   ProgressBar,
   Text,
   Title,
@@ -16,7 +15,7 @@ import styles from "./GamePage.styles";
 import GamePageAnswer from "./GamePageAnswer";
 
 const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
-  <Avatar.Text {...props} label="Q"/>
+  <Avatar.Text {...props} label="Q" />
 );
 
 interface CardTitleAddon {
@@ -24,22 +23,22 @@ interface CardTitleAddon {
 }
 
 const GamePage: React.FC<GamePageProps> = ({
-                                             totalQuestionsCount,
-                                             currentQuestionNumber,
-                                             question,
-                                             answers,
-                                             isQuestionLoading,
-                                             onBackButtonClick,
-                                             onAnswerClick,
-                                             questionLoadingId,
-                                             correctAnswerId,
-                                             selectedAnswerId,
-                                             isNextButtonVisible,
-                                             onNextButtonClick,
-                                           }: GamePageProps) => {
+  totalQuestionsCount,
+  currentQuestionNumber,
+  question,
+  answers,
+  isQuestionLoading,
+  onBackButtonClick,
+  onAnswerClick,
+  questionLoadingId,
+  correctAnswerId,
+  selectedAnswerId,
+  isNextButtonVisible,
+  onNextButtonClick,
+}: GamePageProps) => {
   const RightContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
     <Button onPress={onBackButtonClick}>
-      <T message="Back"/>
+      <T message="Back" />
     </Button>
   );
 
@@ -52,12 +51,12 @@ const GamePage: React.FC<GamePageProps> = ({
           <Card.Title
             title={
               <>
-                <T message={"Quiz question"}/>
+                <T message={"Quiz question"} />
               </>
             }
             subtitle={
               <>
-                {currentQuestionNumber} <T message="out of"/>{" "}
+                {currentQuestionNumber} <T message="out of" />{" "}
                 {totalQuestionsCount}
               </>
             }
@@ -65,7 +64,7 @@ const GamePage: React.FC<GamePageProps> = ({
             right={RightContent}
           />
 
-          {isQuestionLoading ? <ProgressBar indeterminate/> : null}
+          {isQuestionLoading ? <ProgressBar indeterminate /> : null}
           {question ? (
             <>
               <View style={styles.coverContainer}>
@@ -83,17 +82,25 @@ const GamePage: React.FC<GamePageProps> = ({
                       mode="contained"
                       onPress={onNextButtonClick}
                     >
-                      <T message="Next question!"/>
+                      <T message="Next question!" />
                     </Button>
                     <View style={styles.sourceLinksContainer}>
                       <Button>
-                        <Text accessibilityRole='link' target='_blank' href={"https://" + question?.url}>
-                          <T message="Question source"/>
+                        <Text
+                          accessibilityRole="link"
+                          target="_blank"
+                          href={"https://" + question?.url}
+                        >
+                          <T message="Question source" />
                         </Text>
                       </Button>
                       <Button>
-                        <Text accessibilityRole='link' target='_blank' href={"https://" + question?.answerUrl}>
-                          <T message="Answer source"/>
+                        <Text
+                          accessibilityRole="link"
+                          target="_blank"
+                          href={"https://" + question?.answerUrl}
+                        >
+                          <T message="Answer source" />
                         </Text>
                       </Button>
                     </View>
@@ -108,7 +115,7 @@ const GamePage: React.FC<GamePageProps> = ({
                   {whatStart}
                   <Text style={styles.titleValue}>{question.value}</Text>
                   {whatEnd}.{" "}
-                  <T message="What else do you think my contain number"/>{" "}
+                  <T message="What else do you think my contain number" />{" "}
                   <Text style={styles.titleValue}>
                     {question.value.toString()}
                   </Text>
