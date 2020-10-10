@@ -17,6 +17,34 @@ msgstr ""
 msgid "Choose language"
 msgstr ""
 
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "Share"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "Statistics"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "accuracy"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "coins"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "rang"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "pace"
+msgstr ""
+
+#: src/pages/GameOverPage/GameOverPage.tsx:
+msgid "streaks"
+msgstr ""
+
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Back"
 msgstr ""
@@ -52,6 +80,15 @@ msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Rules"
+msgstr ""
+
+#: src/pages/HomePage/HomePage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Settings"
+msgstr ""
+
+#: src/pages/HomePage/HomePage.tsx:
+msgid "GameOver"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
