@@ -10,13 +10,14 @@ import {
 } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { T } from "react-targem";
+import ThemeToggler from "../../components/ThemeToggler";
 import { Answer, Question } from "../types";
 import styles from "./GamePage.styles";
 import GamePageAnswer from "./GamePageAnswer";
 import { openLinkInNewTab } from "src/utils/native";
 
 const LeftContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
-  <Avatar.Text {...props} label="Q" />
+  <Avatar.Text {...props} label="Q"/>
 );
 
 interface CardTitleAddon {
@@ -24,23 +25,26 @@ interface CardTitleAddon {
 }
 
 const GamePage: React.FC<GamePageProps> = ({
-  totalQuestionsCount,
-  currentQuestionNumber,
-  question,
-  answers,
-  isQuestionLoading,
-  onBackButtonClick,
-  onAnswerClick,
-  questionLoadingId,
-  correctAnswerId,
-  selectedAnswerId,
-  isNextButtonVisible,
-  onNextButtonClick,
-}: GamePageProps) => {
+                                             totalQuestionsCount,
+                                             currentQuestionNumber,
+                                             question,
+                                             answers,
+                                             isQuestionLoading,
+                                             onBackButtonClick,
+                                             onAnswerClick,
+                                             questionLoadingId,
+                                             correctAnswerId,
+                                             selectedAnswerId,
+                                             isNextButtonVisible,
+                                             onNextButtonClick,
+                                           }: GamePageProps) => {
   const RightContent: React.FC<CardTitleAddon> = (props: CardTitleAddon) => (
-    <Button onPress={onBackButtonClick}>
-      <T message="Back" />
-    </Button>
+    <View style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
+      <ThemeToggler/>
+      <Button onPress={onBackButtonClick}>
+        <T message="Back"/>
+      </Button>
+    </View>
   );
 
   const handleQuestionSourceLinkClick = () => {
@@ -60,12 +64,12 @@ const GamePage: React.FC<GamePageProps> = ({
           <Card.Title
             title={
               <>
-                <T message={"Quiz question"} />
+                <T message={"Quiz question"}/>
               </>
             }
             subtitle={
               <>
-                {currentQuestionNumber} <T message="out of" />{" "}
+                {currentQuestionNumber} <T message="out of"/>{" "}
                 {totalQuestionsCount}
               </>
             }
@@ -73,7 +77,7 @@ const GamePage: React.FC<GamePageProps> = ({
             right={RightContent}
           />
 
-          {isQuestionLoading ? <ProgressBar indeterminate /> : null}
+          {isQuestionLoading ? <ProgressBar indeterminate/> : null}
           {question ? (
             <>
               <View style={styles.coverContainer}>
@@ -91,14 +95,14 @@ const GamePage: React.FC<GamePageProps> = ({
                       mode="contained"
                       onPress={onNextButtonClick}
                     >
-                      <T message="Next question!" />
+                      <T message="Next question!"/>
                     </Button>
                     <View style={styles.sourceLinksContainer}>
                       <Button onPress={handleQuestionSourceLinkClick}>
-                        <T message="Question source" />
+                        <T message="Question source"/>
                       </Button>
                       <Button onPress={handleAnswerSourceLinkClick}>
-                        <T message="Answer source" />
+                        <T message="Answer source"/>
                       </Button>
                     </View>
                   </View>
@@ -112,7 +116,7 @@ const GamePage: React.FC<GamePageProps> = ({
                   {whatStart}
                   <Text style={styles.titleValue}>{question.value}</Text>
                   {whatEnd}.{" "}
-                  <T message="What else do you think my contain number" />{" "}
+                  <T message="What else do you think my contain number"/>{" "}
                   <Text style={styles.titleValue}>
                     {question.value.toString()}
                   </Text>

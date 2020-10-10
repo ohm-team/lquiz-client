@@ -59,14 +59,6 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
             >
               <T message="Rules"/>
             </Button>
-            <Button
-              mode="outlined"
-              theme={BUTTON_THEME}
-              onPress={handleLinkButtonClick("Settings")}
-              style={styles.cardButton}
-            >
-              <T message="Settings"/>
-            </Button>
 
             {Platform.OS === "web" ? (
               <Button
