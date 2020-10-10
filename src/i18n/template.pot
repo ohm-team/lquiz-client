@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sat Oct 10 2020 11:51:52 GMT+0200 (Central European Summer "
+"POT-Creation-Date: Sat Oct 10 2020 11:54:30 GMT+0200 (Central European Summer "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -59,6 +59,14 @@ msgstr ""
 #: src/pages/HomePage/HomePage.tsx:
 #: src/pages/SettingsPage/Settings.tsx:
 msgid "Settings"
+msgstr ""
+
+#: src/pages/HomePage/HomePage.tsx:
+msgid "Download an app"
+msgstr ""
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid "Home"
 msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:
