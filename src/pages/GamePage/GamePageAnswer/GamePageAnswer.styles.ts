@@ -2,9 +2,10 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   button: {
-    marginTop: 16,
-    marginBottom: 16,
+    marginTop: 10,
+    marginBottom: 10,
     minWidth: "90%",
+    maxWidth: "100%",
   },
   buttonContent: {
     minHeight: 55,
