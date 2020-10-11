@@ -16,29 +16,29 @@ import styles from "./HomePage.styles";
 const MOBILE_APPLICATION_LINK = "https://expo.io/@ohm-team/lquiz-client";
 
 const getButtonTheme = (isDarkTheme: boolean) => {
-  return isDarkTheme ? {
-      colors: {
-        primary: "#a3d3cf",
-      },
-    } :
-    {
-      colors: {
-        primary: "#322c3c",
-      },
-    };
-
+  return isDarkTheme
+    ? {
+        colors: {
+          primary: "#a3d3cf",
+        },
+      }
+    : {
+        colors: {
+          primary: "#322c3c",
+        },
+      };
 };
 const getGradientColors = (isDarkTheme: boolean): string[] => {
-  return isDarkTheme ?
-    ["#625772", "#9585ae", "#322c3c"] :
-    ["#9585ae", "#c6b1e7", "#e3fff3"];
+  return isDarkTheme
+    ? ["#625772", "#9585ae", "#322c3c"]
+    : ["#9585ae", "#c6b1e7", "#e3fff3"];
 };
 const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
   const { theme } = useSettings();
   const isDarkTheme = theme === "dark";
   const handleLinkButtonClick = (
     routeName: RootStackRoute,
-    args?: any,
+    args?: any
   ) => () => {
     navigation.navigate(routeName, args);
   };
@@ -56,9 +56,12 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
       >
         <Card.Content style={styles.cardContent}>
           <View style={styles.cardImageContainer}>
-            <Image source={isDarkTheme ? logo:darkLogo} style={styles.cardImage}/>
+            <Image
+              source={isDarkTheme ? logo : darkLogo}
+              style={styles.cardImage}
+            />
             <View style={styles.themeToggler}>
-              <ThemeToggler withText={false}/>
+              <ThemeToggler withText={false} />
             </View>
           </View>
 
@@ -69,7 +72,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
               onPress={handleLinkButtonClick("Game")}
               style={styles.cardButton}
             >
-              <T message="Play"/>
+              <T message="Play" />
             </Button>
             <Button
               mode="outlined"
@@ -77,7 +80,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
               onPress={handleLinkButtonClick("Rules")}
               style={styles.cardButton}
             >
-              <T message="Rules"/>
+              <T message="Rules" />
             </Button>
 
             {Platform.OS === "web" ? (
@@ -87,10 +90,13 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
                 onPress={handleDownloadButtonClick}
                 style={styles.cardButton}
               >
-                <T message="Download an app"/>
+                <T message="Download an app" />
               </Button>
             ) : null}
-            <LocalSelector buttonStyle={styles.cardButton} theme={getButtonTheme(isDarkTheme)}/>
+            <LocalSelector
+              buttonStyle={styles.cardButton}
+              theme={getButtonTheme(isDarkTheme)}
+            />
           </View>
         </Card.Content>
       </LinearGradient>

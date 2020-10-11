@@ -3,11 +3,11 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
+    flexDirection: "row",
+    alignItems: "stretch",
     minHeight: "100%",
   },
   card: {
-    alignSelf: "center",
     minHeight: "100%",
     minWidth: "100%",
     padding: 20,

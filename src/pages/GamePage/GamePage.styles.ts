@@ -9,7 +9,8 @@ export default StyleSheet.create({
   },
   container: {
     flex: 1,
-    justifyContent: "center",
+    flexDirection: "row",
+    alignItems: "stretch",
     minHeight: "100%",
   },
   buttonsContainer: {
