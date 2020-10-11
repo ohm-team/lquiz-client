@@ -99,7 +99,7 @@ msgid "Answer source"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "What else do you think my contain number"
+msgid "What else do you think may contain number"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
