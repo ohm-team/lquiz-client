@@ -4,7 +4,6 @@ import HomePage from "./HomePage";
 import RulesPage from "./RulesPage";
 import GameOverPage from "./GameOverPage";
 import GamePage from "./GamePage";
-import SettingsPage from "./SettingsPage";
 import { useLocale } from "react-targem";
 
 const Stack = createStackNavigator();
@@ -38,11 +37,6 @@ const Pages: React.FC<HomePageProps> = () => {
         options={{ title: t("Letz quiz!") }}
         name="Game"
         component={GamePage}
-      />
-      <Stack.Screen
-        options={{ title: t("Game settings") }}
-        name="Settings"
-        component={SettingsPage}
       />
     </Stack.Navigator>
   );

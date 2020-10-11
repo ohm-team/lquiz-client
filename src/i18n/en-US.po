@@ -30,7 +30,6 @@ msgstr "Share"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 #: src/pages/RulesPage/RulesPage.tsx:
-#: src/pages/SettingsPage/Settings.tsx:
 msgid "Home"
 msgstr "Home"
 
@@ -139,10 +138,6 @@ msgstr "Game over"
 msgid "Letz quiz!"
 msgstr "Letz quiz!"
 
-#: src/pages/index.tsx:
-msgid "Game settings"
-msgstr "Game settings"
-
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""
 "Within one game, you are assigned few questions based on open Luxembourg "
@@ -160,7 +155,3 @@ msgstr ""
 "You can measure how well you and your friends know random facts! And maybe "
 "learn something new (we don't guarantee that this information would be useful "
 ":))"
-
-#: src/pages/SettingsPage/Settings.tsx:
-msgid "Settings"
-msgstr "Settings"
