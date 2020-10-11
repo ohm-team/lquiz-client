@@ -98,10 +98,16 @@ const GamePage: React.FC<GamePageProps> = ({
                       <T message="Next question!" />
                     </Button>
                     <View style={styles.sourceLinksContainer}>
-                      <Button onPress={handleQuestionSourceLinkClick}>
+                      <Button
+                        labelStyle={styles.sourceLink}
+                        onPress={handleQuestionSourceLinkClick}
+                      >
                         <T message="Question source" />
                       </Button>
-                      <Button onPress={handleAnswerSourceLinkClick}>
+                      <Button
+                        labelStyle={styles.sourceLink}
+                        onPress={handleAnswerSourceLinkClick}
+                      >
                         <T message="Answer source" />
                       </Button>
                     </View>
@@ -127,9 +133,10 @@ const GamePage: React.FC<GamePageProps> = ({
           ) : null}
           {answers ? (
             <Card.Actions style={styles.buttonsContainer}>
-              {answers.map((a) => (
+              {answers.map((a, i) => (
                 <GamePageAnswer
                   key={a.id}
+                  index={i}
                   onAnswerClick={onAnswerClick}
                   isLoading={questionLoadingId === a.id}
                   isAnyQuestionLoading={questionLoadingId !== undefined}
