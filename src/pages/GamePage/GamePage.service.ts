@@ -35,7 +35,7 @@ export const transformQuestion = (
   };
 };
 
-export const QUESTIONS_COUNT = 1;
+export const QUESTIONS_COUNT = 20;
 
 let questionsCache: QuestionWithAnswers[];
 
