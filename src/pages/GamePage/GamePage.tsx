@@ -133,9 +133,10 @@ const GamePage: React.FC<GamePageProps> = ({
           ) : null}
           {answers ? (
             <Card.Actions style={styles.buttonsContainer}>
-              {answers.map((a) => (
+              {answers.map((a, i) => (
                 <GamePageAnswer
                   key={a.id}
+                  index={i}
                   onAnswerClick={onAnswerClick}
                   isLoading={questionLoadingId === a.id}
                   isAnyQuestionLoading={questionLoadingId !== undefined}

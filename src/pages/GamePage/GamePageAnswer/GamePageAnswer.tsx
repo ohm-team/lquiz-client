@@ -15,6 +15,13 @@ const warningTheme = {
   },
 };
 
+const defaultColors = [
+  Colors.lime300,
+  Colors.purple200,
+  Colors.amber300,
+  Colors.lightBlue300,
+];
+
 const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
   onAnswerClick,
   id,
@@ -25,6 +32,7 @@ const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
   isSelected,
   isCorrectAnswer,
   isAnswerRevealed,
+  index,
 }: GamePageAnswerProps) => {
   const handleAnswerClick = () => {
     onAnswerClick(id);
@@ -36,7 +44,11 @@ const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
     }
 
     if (!isSelected || isAnyQuestionLoading) {
-      return undefined;
+      return {
+        colors: {
+          primary: defaultColors[index],
+        },
+      };
     }
 
     return warningTheme;
@@ -67,6 +79,7 @@ const GamePageAnswer: React.FC<GamePageAnswerProps> = ({
 
 interface GamePageAnswerProps {
   id: string;
+  index: number;
   onAnswerClick: (answerId: string) => void;
   answerStatistics: string;
   answerValue: string;
