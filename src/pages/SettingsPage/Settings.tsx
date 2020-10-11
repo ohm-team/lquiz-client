@@ -16,7 +16,6 @@ interface CardTitleAddon {
 }
 
 const Settings: React.FC<SettingsProps> = ({ navigation }: SettingsProps) => {
-
   const handleLinkButtonClick = (routeName: RootStackRoute) => () => {
     navigation.navigate(routeName);
   };
@@ -36,7 +35,7 @@ const Settings: React.FC<SettingsProps> = ({ navigation }: SettingsProps) => {
           right={RightAddon}
         />
         <Card.Content style={styles.content}>
-         <ThemeToggler/>
+          <ThemeToggler />
         </Card.Content>
       </SafeAreaView>
     </Card>

@@ -1,14 +1,14 @@
 import React from "react";
 import { locales, Locale } from "src/config/locales";
 import { useSettings } from "src/contexts/SettingsContext";
-import { Button, DefaultTheme, Menu } from "react-native-paper";
+import { Button, Menu } from "react-native-paper";
 import { StyleProp, ViewStyle } from "react-native";
 import { T } from "react-targem";
 
 const LocalSelector: React.FC<LocalSelectorProps> = ({
-                                                       buttonStyle,
-                                                       theme,
-                                                     }: LocalSelectorProps) => {
+  buttonStyle,
+  theme,
+}: LocalSelectorProps) => {
   const { setSettings } = useSettings();
   const handleLocaleChange = (localeKey: Locale) => () => {
     setSettings({
@@ -32,7 +32,7 @@ const LocalSelector: React.FC<LocalSelectorProps> = ({
           theme={theme}
           onPress={openMenu}
         >
-          <T message="Choose language"/>
+          <T message="Choose language" />
         </Button>
       }
     >
@@ -53,7 +53,7 @@ const LocalSelector: React.FC<LocalSelectorProps> = ({
 
 interface LocalSelectorProps {
   buttonStyle: StyleProp<ViewStyle>;
-  theme: Object
+  theme: Object;
 }
 
 export default LocalSelector;
