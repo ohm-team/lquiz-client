@@ -77,11 +77,7 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
           <T message="Accuracy" />: {accuracy * 100}% ({correctAnswered}/
           {totalAnswered})
         </Text>
-        <ProgressBar
-          style={styles.progressBar}
-          progress={accuracy}
-          color={Colors.red800}
-        />
+        <ProgressBar style={styles.progressBar} progress={accuracy} />
         <br />
         <Text style={styles.text}>
           <T message="Pace" />: {pace} <T message="seconds per question" />
