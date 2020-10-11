@@ -31,7 +31,7 @@ msgstr ""
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "Congratulations! You know literally EVERYTHING about Luxembourg! How did you "
-"achieve it? "
+"achieve it?"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
@@ -53,7 +53,7 @@ msgid ""
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "Not your day :( Or maybe our alorithms created an extra-hard quiz? Try again!"
+msgid "Not your day :( Or maybe our algorithms created an extra-hard quiz? Try again!"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
