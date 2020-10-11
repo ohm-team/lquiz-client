@@ -1,7 +1,7 @@
 import { StackNavigationProp } from "@react-navigation/stack";
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
-import { Image, Platform, View } from "react-native";
+import { Image, Platform, View, Text } from "react-native";
 import { Button, Card } from "react-native-paper";
 import { T } from "react-targem";
 import LocalSelector from "src/components/LocaleSelector";
@@ -36,6 +36,11 @@ const getGradientColors = (isDarkTheme: boolean): string[] => {
 const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
   const { theme } = useSettings();
   const isDarkTheme = theme === "dark";
+
+  const gitHubRibbonUrl = isDarkTheme
+    ? "https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149"
+    : "https://github.blog/wp-content/uploads/2008/12/forkme_right_gray_6d6d6d.png?resize=149%2C149";
+
   const handleLinkButtonClick = (
     routeName: RootStackRoute,
     args?: any
@@ -49,6 +54,25 @@ const HomePage: React.FC<HomePageProps> = ({ navigation }: HomePageProps) => {
 
   return (
     <Card style={styles.card}>
+      {Platform.OS === "web" ? (
+        <Text
+          /* @ts-ignore */
+          href="https://github.com/ohm-team/lquiz-client"
+          accessibilityL
+          accessibilityRole="link"
+          target="_blank"
+          style={styles.ribbon}
+        >
+          <img
+            loading="lazy"
+            width="149"
+            height="149"
+            src={gitHubRibbonUrl}
+            alt="Fork me on GitHub"
+            data-recalc-dims="1"
+          />
+        </Text>
+      ) : null}
       <LinearGradient
         colors={getGradientColors(isDarkTheme)}
         locations={[0, 0.18, 1]}
