@@ -27,7 +27,7 @@ export default StyleSheet.create({
     transform: [{ scaleX: 1 }, { scaleY: 4 }, { translateY: 3 }],
     opacity: 1,
     borderRadius: 10,
-    marginBottom: 20,
+    marginBottom: 30,
   },
   text: {
     fontSize: 20,

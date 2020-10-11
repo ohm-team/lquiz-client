@@ -140,6 +140,18 @@ msgstr "Letz quiz!"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""
+"This app allows to have fun quiz with friends or colleagues and at the same "
+"moment to learn something new and fun about Luxembourg. It can be interesting "
+"for everyone from school students to elderly people, mixing random facts you "
+"have never had idea about in a game format."
+msgstr ""
+"This app allows to have fun quiz with friends or colleagues and at the same "
+"moment to learn something new and fun about Luxembourg. It can be interesting "
+"for everyone from school students to elderly people, mixing random facts you "
+"have never had idea about in a game format."
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid ""
 "Within one game, you are assigned few questions based on open Luxembourg "
 "statistics from https://data.public.lu/"
 msgstr ""
@@ -155,6 +167,14 @@ msgstr ""
 "You can measure how well you and your friends know random facts! And maybe "
 "learn something new (we don't guarantee that this information would be useful "
 ":))"
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid ""
+"Every time the questions are different: the more you play, the better you know "
+"Luxembourg!"
+msgstr ""
+"Every time the questions are different: the more you play, the better you know "
+"Luxembourg!"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "How it works?"
@@ -162,8 +182,16 @@ msgstr "How it works?"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""
-"We have gathered a lot of different statistics about Luxembourg, e.g. "
-"demographics, real estate prices, "
+"We have gathered tons of different datasets about Luxembourg, e.g. "
+"demographics, real estate prices, transportation and many others."
 msgstr ""
-"We have gathered a lot of different statistics about Luxembourg, e.g. "
-"demographics, real estate prices, "
+"We have gathered tons of different datasets about Luxembourg, e.g. "
+"demographics, real estate prices, transportation and many others."
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid ""
+"Then we have processed those datasets, normalized them, and automatically "
+"generated hundreds of unique quiz questions about Luxembourg."
+msgstr ""
+"Then we have processed those datasets, normalized them, and automatically "
+"generated hundreds of unique quiz questions about Luxembourg."
