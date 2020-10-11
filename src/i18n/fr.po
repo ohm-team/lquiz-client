@@ -187,3 +187,9 @@ msgid ""
 "Then we have processed those datasets, normalized them, and automatically "
 "generated hundreds of unique quiz questions about Luxembourg."
 msgstr ""
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid ""
+"Data we are using is taken from official statistics sources, so it 100% "
+"trustworthy."
+msgstr ""

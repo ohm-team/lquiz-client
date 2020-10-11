@@ -39,10 +39,29 @@ const RulesPage: React.FC<RulesPageProps> = ({
           />
           <Card.Content style={styles.content}>
             <Paragraph style={styles.text}>
-              <T message="Within one game, you are assigned few questions based on open Luxembourg statistics from https://data.public.lu/" />
+              <T message="This app allows to have fun quiz with friends or colleagues and at the same moment to learn something new and fun about Luxembourg. It can be interesting for everyone from school students to elderly people, mixing random facts you have never had idea about in a game format." />
             </Paragraph>
-            <Paragraph>
+            <Paragraph style={styles.text}>
+              <T message="Within one game, you are assigned few questions based on open Luxembourg statistics from https://data.public.lu/" />
+              .
+            </Paragraph>
+            <Paragraph style={styles.text}>
               <T message="You can measure how well you and your friends know random facts! And maybe learn something new (we don't guarantee that this information would be useful :))" />
+            </Paragraph>
+            <Paragraph style={styles.text}>
+              <T message="Every time the questions are different: the more you play, the better you know Luxembourg!" />
+            </Paragraph>
+          </Card.Content>
+          <Card.Title title={<T message="How it works?" />} />
+          <Card.Content style={styles.content}>
+            <Paragraph style={styles.text}>
+              <T message="We have gathered tons of different datasets about Luxembourg, e.g. demographics, real estate prices, transportation and many others." />
+            </Paragraph>
+            <Paragraph style={styles.text}>
+              <T message="Then we have processed those datasets, normalized them, and automatically generated hundreds of unique quiz questions about Luxembourg." />
+            </Paragraph>
+            <Paragraph style={styles.text}>
+              <T message="Data we are using is taken from official statistics sources, so it 100% trustworthy." />
             </Paragraph>
           </Card.Content>
         </SafeAreaView>
