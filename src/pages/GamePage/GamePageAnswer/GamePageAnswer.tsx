@@ -1,17 +1,17 @@
 import React from "react";
 import { Text } from "react-native";
-import { Button } from "react-native-paper";
+import { Button, Colors } from "react-native-paper";
 import styles from "./GamePageAnswer.styles";
 
 const successTheme = {
   colors: {
-    primary: "#8BC34A",
+    primary: Colors.green300,
   },
 };
 
 const warningTheme = {
   colors: {
-    primary: "#FF5722",
+    primary: Colors.red300,
   },
 };
 
