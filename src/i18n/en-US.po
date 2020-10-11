@@ -155,3 +155,15 @@ msgstr ""
 "You can measure how well you and your friends know random facts! And maybe "
 "learn something new (we don't guarantee that this information would be useful "
 ":))"
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid "How it works?"
+msgstr "How it works?"
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid ""
+"We have gathered a lot of different statistics about Luxembourg, e.g. "
+"population, "
+msgstr ""
+"We have gathered a lot of different statistics about Luxembourg, e.g. "
+"population, "

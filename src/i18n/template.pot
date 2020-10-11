@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sun Oct 11 2020 07:36:30 GMT+0300 (Israel Daylight Time)\n"
+"POT-Creation-Date: Sun Oct 11 2020 07:48:41 GMT+0300 (Israel Daylight Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -135,4 +135,14 @@ msgid ""
 "You can measure how well you and your friends know random facts! And maybe "
 "learn something new (we don't guarantee that this information would be useful "
 ":))"
+msgstr ""
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid "How it works?"
+msgstr ""
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid ""
+"We have gathered a lot of different statistics about Luxembourg, e.g. "
+"population, "
 msgstr ""

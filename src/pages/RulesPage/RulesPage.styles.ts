@@ -9,7 +9,7 @@ export default StyleSheet.create({
   },
   card: {
     minHeight: "100%",
-    minWidth: "100%",
+    width: "100%",
     padding: 20,
     borderRadius: 0,
   },

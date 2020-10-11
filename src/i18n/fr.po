@@ -157,3 +157,13 @@ msgstr ""
 "Vous pouvez mesurer à quel point vous et vos amis connaissez des faits "
 "aléatoires! Et peut-être apprendre quelque chose de nouveau (nous ne "
 "garantissons pas que ces informations seront utiles :))"
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid "How it works?"
+msgstr ""
+
+#: src/pages/RulesPage/RulesPage.tsx:
+msgid ""
+"We have gathered a lot of different statistics about Luxembourg, e.g. "
+"population, "
+msgstr ""
