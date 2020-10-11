@@ -165,5 +165,5 @@ msgstr ""
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""
 "We have gathered a lot of different statistics about Luxembourg, e.g. "
-"population, "
+"demographics, real estate prices, "
 msgstr ""

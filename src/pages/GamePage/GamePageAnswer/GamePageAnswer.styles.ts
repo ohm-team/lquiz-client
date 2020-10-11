@@ -4,8 +4,7 @@ export default StyleSheet.create({
   button: {
     marginTop: 10,
     marginBottom: 10,
-    minWidth: "90%",
-    maxWidth: "100%",
+    width: "95%",
   },
   buttonContent: {
     minHeight: 55,
