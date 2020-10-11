@@ -62,9 +62,7 @@ export const fetchQuestionByIndex = async (
   index: number,
   locale = "en-EN"
 ): Promise<QuestionWithAnswers> => {
-  if (!questionsCache) {
-    questionsCache = await fetchAllQuizQuestions(QUESTIONS_COUNT, locale);
-  }
+  questionsCache = await fetchAllQuizQuestions(QUESTIONS_COUNT, locale);
   return new Promise((resolve, reject) => {
     if (index > QUESTIONS_COUNT) {
       reject("No such question");
