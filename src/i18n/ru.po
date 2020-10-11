@@ -38,8 +38,8 @@ msgstr "Домой"
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "Congratulations! You know literally EVERYTHING about Luxembourg! How did you "
-"achieve it? "
-msgstr "Поздравляем! Вы знаете буквально ВСЕ про Люксембург! Как вы этого достигли?"
+"achieve it?"
+msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
@@ -64,10 +64,8 @@ msgstr ""
 "это?"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "Not your day :( Or maybe our alorithms created an extra-hard quiz? Try again!"
+msgid "Not your day :( Or maybe our algorithms created an extra-hard quiz? Try again!"
 msgstr ""
-"Не ваш день :( Или надо алгоритмы создали экстра-сложный кваиз? Попробуйте еще "
-"раз!"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Accuracy"
@@ -126,14 +124,18 @@ msgstr "Скачать приложение"
 msgid ""
 "Within one game, you are assigned few questions based on open Luxembourg "
 "statistics from https://data.public.lu/"
-msgstr "В игре будет предложено ответить на несколько вопросов, основанных на Люксембургской статистике, взятой с сайта https://data.public.lu"
+msgstr ""
+"В игре будет предложено ответить на несколько вопросов, основанных на "
+"Люксембургской статистике, взятой с сайта https://data.public.lu"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""
 "You can measure how well you and your friends know random facts! And maybe "
 "learn something new (we don't guarantee that this information would be useful "
 ":))"
-msgstr "Можно оценить как хорошо вы и ваши друзья знаете случайные факты! И, может, узнаете что-то новое (мы не гарантируем, что эта информация будет полезной :))"
+msgstr ""
+"Можно оценить как хорошо вы и ваши друзья знаете случайные факты! И, может, "
+"узнаете что-то новое (мы не гарантируем, что эта информация будет полезной :))"
 
 #: src/pages/SettingsPage/Settings.tsx:
 msgid "Settings"

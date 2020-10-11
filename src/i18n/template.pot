@@ -2,7 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sat Oct 10 2020 23:36:49 GMT+0300 (Israel Daylight Time)\n"
+"POT-Creation-Date: Sun Oct 11 2020 05:36:00 GMT+0200 (Central European Summer "
+"Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -31,7 +32,7 @@ msgstr ""
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "Congratulations! You know literally EVERYTHING about Luxembourg! How did you "
-"achieve it? "
+"achieve it?"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
@@ -53,7 +54,7 @@ msgid ""
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "Not your day :( Or maybe our alorithms created an extra-hard quiz? Try again!"
+msgid "Not your day :( Or maybe our algorithms created an extra-hard quiz? Try again!"
 msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:

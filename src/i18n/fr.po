@@ -14,112 +14,124 @@ msgstr ""
 
 #: src/components/LocaleSelector/LocaleSelector.tsx:
 msgid "Choose language"
-msgstr ""
+msgstr "Choisir la langue"
 
 #: src/components/ThemeToggler/ThemeToggler.tsx:
 msgid "Dark theme?"
-msgstr ""
+msgstr "Thème sombre?"
 
 #: src/components/ThemeToggler/ThemeToggler.tsx:
 msgid "Toggle dark theme"
-msgstr ""
+msgstr "Basculer le thème sombre"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Share"
-msgstr ""
+msgstr "Partager"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 #: src/pages/RulesPage/RulesPage.tsx:
 #: src/pages/SettingsPage/Settings.tsx:
 msgid "Home"
-msgstr ""
+msgstr "Accueil"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "Congratulations! You know literally EVERYTHING about Luxembourg! How did you "
-"achieve it? "
+"achieve it?"
 msgstr ""
+"Toutes nos félicitations! Vous savez littéralement TOUT sur le Luxembourg! "
+"Comment avez-vous réussi?"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "Wow! Looks like you have been reading datasets from https://data.public.lu for "
 "a long time!"
 msgstr ""
+"Hou la la! On dirait que vous lisez des ensembles de données de "
+"https://data.public.lu depuis longtemps!"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "Great job! More then a half answers are correct! It's more than a luck, its "
 "your great erudition!"
 msgstr ""
+"Bon travail! Plus d'une demi-réponse est correcte! C'est plus qu'une chance, "
+"c'est votre grande érudition!"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "You know something about Luxembourg, and today you learned a bit more, isn't it "
 "great?"
 msgstr ""
+"Vous savez quelque chose sur le Luxembourg, et aujourd'hui vous en avez appris "
+"un peu plus, n'est-ce pas génial?"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "Not your day :( Or maybe our alorithms created an extra-hard quiz? Try again!"
+msgid "Not your day :( Or maybe our algorithms created an extra-hard quiz? Try again!"
 msgstr ""
+"Pas votre journée :( Ou peut-être que nos algorithmes ont créé un quiz "
+"extra-difficile? Réessayez!"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Accuracy"
-msgstr ""
+msgstr "Précision"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Pace"
-msgstr ""
+msgstr "Rythme"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "seconds per question"
-msgstr ""
+msgstr "secondes par question"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Back"
-msgstr ""
+msgstr "Arrière"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Quiz question"
-msgstr ""
+msgstr "Question de jeu"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "out of"
-msgstr ""
+msgstr "sur"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Next question!"
-msgstr ""
+msgstr "Question suivante!"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Question source"
-msgstr ""
+msgstr "Source de la question"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Answer source"
-msgstr ""
+msgstr "Source de la réponse"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "What else do you think my contain number"
-msgstr ""
+msgstr "Que pensez-vous que mon numéro contient"
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Play"
-msgstr ""
+msgstr "Jouer"
 
 #: src/pages/HomePage/HomePage.tsx:
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "Rules"
-msgstr ""
+msgstr "Règles"
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Download an app"
-msgstr ""
+msgstr "Téléchargez une application"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""
 "Within one game, you are assigned few questions based on open Luxembourg "
 "statistics from https://data.public.lu/"
 msgstr ""
+"Dans un jeu, vous êtes assigné quelques questions basées sur les statistiques "
+"ouvertes du Luxembourg de https://data.public.lu/"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""
@@ -127,7 +139,10 @@ msgid ""
 "learn something new (we don't guarantee that this information would be useful "
 ":))"
 msgstr ""
+"Vous pouvez mesurer à quel point vous et vos amis connaissez des faits "
+"aléatoires! Et peut-être apprendre quelque chose de nouveau (nous ne "
+"garantissons pas que ces informations seront utiles :))"
 
 #: src/pages/SettingsPage/Settings.tsx:
 msgid "Settings"
-msgstr ""
+msgstr "Réglages"
