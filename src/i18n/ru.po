@@ -64,10 +64,8 @@ msgstr ""
 "это?"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "Not your day :( Or maybe our alorithms created an extra-hard quiz? Try again!"
+msgid "Not your day :( Or maybe our algorithms created an extra-hard quiz? Try again!"
 msgstr ""
-"Не ваш день :( Или надо алгоритмы создали экстра-сложный кваиз? Попробуйте еще "
-"раз!"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Accuracy"
@@ -121,6 +119,26 @@ msgstr "Правила"
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Download an app"
 msgstr "Скачать приложение"
+
+#: src/pages/index.tsx:
+msgid "LQuiz - Letz quiz!"
+msgstr ""
+
+#: src/pages/index.tsx:
+msgid "How to play?"
+msgstr ""
+
+#: src/pages/index.tsx:
+msgid "Game over"
+msgstr ""
+
+#: src/pages/index.tsx:
+msgid "Letz quiz!"
+msgstr ""
+
+#: src/pages/index.tsx:
+msgid "Game settings"
+msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""

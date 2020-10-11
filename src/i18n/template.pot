@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sun Oct 11 2020 06:11:21 GMT+0300 (Israel Daylight Time)\n"
+"POT-Creation-Date: Sun Oct 11 2020 07:34:30 GMT+0300 (Israel Daylight Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -107,6 +107,26 @@ msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Download an app"
+msgstr ""
+
+#: src/pages/index.tsx:
+msgid "LQuiz - Letz quiz!"
+msgstr ""
+
+#: src/pages/index.tsx:
+msgid "How to play?"
+msgstr ""
+
+#: src/pages/index.tsx:
+msgid "Game over"
+msgstr ""
+
+#: src/pages/index.tsx:
+msgid "Letz quiz!"
+msgstr ""
+
+#: src/pages/index.tsx:
+msgid "Game settings"
 msgstr ""
 
 #: src/pages/RulesPage/RulesPage.tsx:

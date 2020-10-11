@@ -5,28 +5,42 @@ import RulesPage from "./RulesPage";
 import GameOverPage from "./GameOverPage";
 import GamePage from "./GamePage";
 import SettingsPage from "./SettingsPage";
+import { useLocale } from "react-targem";
 
 const Stack = createStackNavigator();
 
 const screenOptions = { animationEnabled: true };
 
 const Pages: React.FC<HomePageProps> = () => {
+  const { t } = useLocale();
   return (
-    <Stack.Navigator headerMode="none" initialRouteName="Home">
-      <Stack.Screen options={screenOptions} name="Home" component={HomePage} />
+    <Stack.Navigator
+      screenOptions={screenOptions}
+      headerMode="none"
+      initialRouteName="Home"
+    >
       <Stack.Screen
-        options={screenOptions}
+        options={{ title: t("LQuiz - Letz quiz!") }}
+        name="Home"
+        component={HomePage}
+      />
+      <Stack.Screen
+        options={{ title: t("How to play?") }}
         name="Rules"
         component={RulesPage}
       />
       <Stack.Screen
-        options={screenOptions}
+        options={{ title: t("Game over") }}
         name="GameOver"
         component={GameOverPage}
       />
-      <Stack.Screen options={screenOptions} name="Game" component={GamePage} />
       <Stack.Screen
-        options={screenOptions}
+        options={{ title: t("Letz quiz!") }}
+        name="Game"
+        component={GamePage}
+      />
+      <Stack.Screen
+        options={{ title: t("Game settings") }}
         name="Settings"
         component={SettingsPage}
       />
