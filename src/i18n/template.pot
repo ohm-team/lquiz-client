@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sun Oct 11 2020 08:14:49 GMT+0300 (Israel Daylight Time)\n"
+"POT-Creation-Date: Sun Oct 11 2020 08:28:03 GMT+0300 (Israel Daylight Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -24,6 +24,7 @@ msgstr ""
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 #: src/pages/RulesPage/RulesPage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
 msgid "Home"
 msgstr ""
 
@@ -171,4 +172,8 @@ msgstr ""
 msgid ""
 "Data we are using is taken from official statistics sources, so it 100% "
 "trustworthy."
+msgstr ""
+
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Settings"
 msgstr ""

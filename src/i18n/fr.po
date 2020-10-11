@@ -30,6 +30,7 @@ msgstr "Partager"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 #: src/pages/RulesPage/RulesPage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
 msgid "Home"
 msgstr "Accueil"
 
@@ -146,14 +147,20 @@ msgid ""
 "moment to learn something new and fun about Luxembourg. It can be interesting "
 "for everyone from school students to elderly people, mixing random facts you "
 "have never had idea about in a game format."
-msgstr "Cette application permet de s'amuser avec des quiz entre amis ou collègues et en même temps d'apprendre quelque chose de nouveau et d'amusant sur le Luxembourg. Cela peut être intéressant pour tout le monde, des élèves des écoles aux personnes âgées, en mélangeant des faits aléatoires dont vous n'avez jamais eu idée dans un format de jeu."
+msgstr ""
+"Cette application permet de s'amuser avec des quiz entre amis ou collègues et "
+"en même temps d'apprendre quelque chose de nouveau et d'amusant sur le "
+"Luxembourg. Cela peut être intéressant pour tout le monde, des élèves des "
+"écoles aux personnes âgées, en mélangeant des faits aléatoires dont vous n'avez "
+"jamais eu idée dans un format de jeu."
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""
 "Within one game, you are assigned few questions based on open Luxembourg "
 "statistics from https://data.public.lu/"
 msgstr ""
-"Dans un jeu, vous êtes assigné quelques questions basées sur les statistiques ouvertes du Luxembourg de https://data.public.lu/"
+"Dans un jeu, vous êtes assigné quelques questions basées sur les statistiques "
+"ouvertes du Luxembourg de https://data.public.lu/"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""
@@ -169,7 +176,9 @@ msgstr ""
 msgid ""
 "Every time the questions are different: the more you play, the better you know "
 "Luxembourg!"
-msgstr "Chaque fois que les questions sont différentes: plus vous jouez, mieux vous en savez Luxembourg!"
+msgstr ""
+"Chaque fois que les questions sont différentes: plus vous jouez, mieux vous en "
+"savez Luxembourg!"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "How it works?"
@@ -179,16 +188,28 @@ msgstr "Comment ça fonctionne?"
 msgid ""
 "We have gathered tons of different datasets about Luxembourg, e.g. "
 "demographics, real estate prices, transportation and many others."
-msgstr "Nous avons rassemblé des tonnes d'ensembles de données différents sur le Luxembourg, par ex démographie, prix de l'immobilier, transport et bien d'autres."
+msgstr ""
+"Nous avons rassemblé des tonnes d'ensembles de données différents sur le "
+"Luxembourg, par ex démographie, prix de l'immobilier, transport et bien "
+"d'autres."
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""
 "Then we have processed those datasets, normalized them, and automatically "
 "generated hundreds of unique quiz questions about Luxembourg."
-msgstr "Ensuite, nous avons traité ces ensembles de données, les avons normalisés et automatiquement a généré des centaines de questions de quiz uniques sur le Luxembourg."
+msgstr ""
+"Ensuite, nous avons traité ces ensembles de données, les avons normalisés et "
+"automatiquement a généré des centaines de questions de quiz uniques sur le "
+"Luxembourg."
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""
 "Data we are using is taken from official statistics sources, so it 100% "
 "trustworthy."
-msgstr "Les données que nous utilisons proviennent de sources statistiques officielles, elles sont donc à 100% digne de confiance."
+msgstr ""
+"Les données que nous utilisons proviennent de sources statistiques officielles, "
+"elles sont donc à 100% digne de confiance."
+
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Settings"
+msgstr ""

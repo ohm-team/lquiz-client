@@ -30,6 +30,7 @@ msgstr "Share"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 #: src/pages/RulesPage/RulesPage.tsx:
+#: src/pages/SettingsPage/Settings.tsx:
 msgid "Home"
 msgstr "Home"
 
@@ -203,3 +204,7 @@ msgid ""
 msgstr ""
 "Data we are using is taken from official statistics sources, so it 100% "
 "trustworthy."
+
+#: src/pages/SettingsPage/Settings.tsx:
+msgid "Settings"
+msgstr "Settings"

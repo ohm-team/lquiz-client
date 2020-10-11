@@ -11,6 +11,7 @@ export default StyleSheet.create({
   },
   statistics: {
     fontStyle: "italic",
+    fontSize: 12,
   },
   value: {},
 });
