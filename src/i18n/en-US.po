@@ -40,7 +40,7 @@ msgid ""
 "achieve it?"
 msgstr ""
 "Congratulations! You know literally EVERYTHING about Luxembourg! How did you "
-"achieve it? "
+"achieve it?"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
