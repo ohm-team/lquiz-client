@@ -5,7 +5,9 @@ import { T, useLocale } from "react-targem";
 import { useSettings } from "src/contexts/SettingsContext";
 import styles from "./ThemeToggler.styles";
 
-const ThemeToggler: React.FC<ThemeTogglerProps> = ({ withText = true }: ThemeTogglerProps) => {
+const ThemeToggler: React.FC<ThemeTogglerProps> = ({
+  withText = true,
+}: ThemeTogglerProps) => {
   const { theme, setSettings } = useSettings();
   const handleThemeChange = (isDark: boolean) => {
     setSettings({ theme: isDark ? "dark" : "default" });
@@ -15,10 +17,13 @@ const ThemeToggler: React.FC<ThemeTogglerProps> = ({ withText = true }: ThemeTog
 
   return (
     <View style={styles.switchContainer}>
-      {withText && <Paragraph style={styles.text}>
-        <T message="Dark theme?"/>
-      </Paragraph>}
+      {withText && (
+        <Paragraph style={styles.text}>
+          <T message="Dark theme?" />
+        </Paragraph>
+      )}
       <Switch
+        /* @ts-ignore */
         trackColor="#001100"
         accessibilityRole="switch"
         accessibilityLabel={t("Toggle dark theme")}
@@ -26,12 +31,11 @@ const ThemeToggler: React.FC<ThemeTogglerProps> = ({ withText = true }: ThemeTog
         onValueChange={handleThemeChange}
       />
     </View>
-
   );
 };
 
 interface ThemeTogglerProps {
-  withText?: boolean
+  withText?: boolean;
 }
 
 export default ThemeToggler;

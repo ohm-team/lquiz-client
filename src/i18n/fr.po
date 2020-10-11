@@ -109,8 +109,8 @@ msgid "Answer source"
 msgstr "Source de la réponse"
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "What else do you think my contain number"
-msgstr "Que pensez-vous que mon numéro contient"
+msgid "What else do you think may contain number"
+msgstr "Que pensez-vous que peut contenir le numéro"
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Play"

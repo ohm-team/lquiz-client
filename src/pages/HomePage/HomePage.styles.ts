@@ -1,12 +1,27 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "stretch",
+    minHeight: "100%",
+  },
+  ribbon: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    zIndex: 10,
+  },
   card: {
     width: "100%",
     height: "100%",
     borderRadius: 0,
     backgroundColor: "#625772",
     position: "relative",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "stretch",
   },
   cardContent: {
     alignItems: "center",

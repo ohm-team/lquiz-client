@@ -104,8 +104,8 @@ msgid "Answer source"
 msgstr "Источник ответа"
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "What else do you think my contain number"
-msgstr "Что еще может содержать число"
+msgid "What else do you think may contain number"
+msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Play"

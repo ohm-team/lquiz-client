@@ -36,12 +36,11 @@ export default StyleSheet.create({
   feedback: {
     fontSize: 30,
     textAlign: "center",
-    marginBottom: 50
+    marginBottom: 50,
   },
   content: {
     paddingTop: 50,
     paddingLeft: 50,
     paddingRight: 50,
   },
-})
-;
+});

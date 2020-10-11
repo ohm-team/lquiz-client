@@ -40,7 +40,7 @@ msgid ""
 "achieve it?"
 msgstr ""
 "Congratulations! You know literally EVERYTHING about Luxembourg! How did you "
-"achieve it?"
+"achieve it? "
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
@@ -67,8 +67,8 @@ msgstr ""
 "great?"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "Not your day :( Or maybe our algorithms created an extra-hard quiz? Try again!"
-msgstr "Not your day :( Or maybe our algorithms created an extra-hard quiz? Try again!"
+msgid "Not your day :( Or maybe our alorithms created an extra-hard quiz? Try again!"
+msgstr "Not your day :( Or maybe our alorithms created an extra-hard quiz? Try again!"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Accuracy"
@@ -107,8 +107,8 @@ msgid "Answer source"
 msgstr "Answer source"
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "What else do you think my contain number"
-msgstr "What else do you think my contain number"
+msgid "What else do you think may contain number"
+msgstr "What else do you think may contain number"
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Play"
