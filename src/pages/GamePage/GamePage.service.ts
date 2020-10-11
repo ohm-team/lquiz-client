@@ -43,8 +43,9 @@ const fetchAllQuizQuestions = async (
   questionsCount: number,
   locale: string
 ) => {
+  const backendLocale = locale === "fr" ? "fr" : "en-US";
   const response = await fetch(
-    `https://lquiz-backend.goooseman.ru/generate_questions?count=${questionsCount}&locale=${locale}`,
+    `https://lquiz-backend.goooseman.ru/generate_questions?count=${questionsCount}&locale=${backendLocale}`,
     {
       method: "GET",
       headers: {
