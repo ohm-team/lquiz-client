@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { Colors } from "react-native-paper";
 
 export default StyleSheet.create({
   card: {
@@ -60,6 +61,9 @@ export default StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 20,
+  },
+  sourceLink: {
+    color: Colors.black,
   },
   titleValue: {
     fontWeight: "bold",

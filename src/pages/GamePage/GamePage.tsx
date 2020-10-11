@@ -98,10 +98,16 @@ const GamePage: React.FC<GamePageProps> = ({
                       <T message="Next question!" />
                     </Button>
                     <View style={styles.sourceLinksContainer}>
-                      <Button onPress={handleQuestionSourceLinkClick}>
+                      <Button
+                        labelStyle={styles.sourceLink}
+                        onPress={handleQuestionSourceLinkClick}
+                      >
                         <T message="Question source" />
                       </Button>
-                      <Button onPress={handleAnswerSourceLinkClick}>
+                      <Button
+                        labelStyle={styles.sourceLink}
+                        onPress={handleAnswerSourceLinkClick}
+                      >
                         <T message="Answer source" />
                       </Button>
                     </View>
