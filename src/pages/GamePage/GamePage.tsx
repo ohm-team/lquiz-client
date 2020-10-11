@@ -116,7 +116,7 @@ const GamePage: React.FC<GamePageProps> = ({
                   {whatStart}
                   <Text style={styles.titleValue}>{question.value}</Text>
                   {whatEnd}.{" "}
-                  <T message="What else do you think my contain number" />{" "}
+                  <T message="What else do you think may contain number" />{" "}
                   <Text style={styles.titleValue}>
                     {question.value.toString()}
                   </Text>

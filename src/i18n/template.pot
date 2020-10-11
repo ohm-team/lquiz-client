@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lquiz-client undefined\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sat Oct 10 2020 23:36:49 GMT+0300 (Israel Daylight Time)\n"
+"POT-Creation-Date: Sun Oct 11 2020 06:11:21 GMT+0300 (Israel Daylight Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -93,7 +93,7 @@ msgid "Answer source"
 msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "What else do you think my contain number"
+msgid "What else do you think may contain number"
 msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:

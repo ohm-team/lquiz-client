@@ -14,112 +14,122 @@ msgstr ""
 
 #: src/components/LocaleSelector/LocaleSelector.tsx:
 msgid "Choose language"
-msgstr ""
+msgstr "Choose language"
 
 #: src/components/ThemeToggler/ThemeToggler.tsx:
 msgid "Dark theme?"
-msgstr ""
+msgstr "Dark theme?"
 
 #: src/components/ThemeToggler/ThemeToggler.tsx:
 msgid "Toggle dark theme"
-msgstr ""
+msgstr "Toggle dark theme"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Share"
-msgstr ""
+msgstr "Share"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 #: src/pages/RulesPage/RulesPage.tsx:
 #: src/pages/SettingsPage/Settings.tsx:
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "Congratulations! You know literally EVERYTHING about Luxembourg! How did you "
 "achieve it? "
 msgstr ""
+"Congratulations! You know literally EVERYTHING about Luxembourg! How did you "
+"achieve it? "
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "Wow! Looks like you have been reading datasets from https://data.public.lu for "
 "a long time!"
 msgstr ""
+"Wow! Looks like you have been reading datasets from https://data.public.lu for "
+"a long time!"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "Great job! More then a half answers are correct! It's more than a luck, its "
 "your great erudition!"
 msgstr ""
+"Great job! More then a half answers are correct! It's more than a luck, its "
+"your great erudition!"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "You know something about Luxembourg, and today you learned a bit more, isn't it "
 "great?"
 msgstr ""
+"You know something about Luxembourg, and today you learned a bit more, isn't it "
+"great?"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Not your day :( Or maybe our alorithms created an extra-hard quiz? Try again!"
-msgstr ""
+msgstr "Not your day :( Or maybe our alorithms created an extra-hard quiz? Try again!"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Accuracy"
-msgstr ""
+msgstr "Accuracy"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Pace"
-msgstr ""
+msgstr "Pace"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "seconds per question"
-msgstr ""
+msgstr "seconds per question"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Back"
-msgstr ""
+msgstr "Back"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Quiz question"
-msgstr ""
+msgstr "Quiz question"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "out of"
-msgstr ""
+msgstr "out of"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Next question!"
-msgstr ""
+msgstr "Next question!"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Question source"
-msgstr ""
+msgstr "Question source"
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Answer source"
-msgstr ""
+msgstr "Answer source"
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "What else do you think my contain number"
-msgstr ""
+msgid "What else do you think may contain number"
+msgstr "What else do you think may contain number"
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Play"
-msgstr ""
+msgstr "Play"
 
 #: src/pages/HomePage/HomePage.tsx:
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid "Rules"
-msgstr ""
+msgstr "Rules"
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Download an app"
-msgstr ""
+msgstr "Download an app"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""
 "Within one game, you are assigned few questions based on open Luxembourg "
 "statistics from https://data.public.lu/"
 msgstr ""
+"Within one game, you are assigned few questions based on open Luxembourg "
+"statistics from https://data.public.lu/"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""
@@ -127,7 +137,10 @@ msgid ""
 "learn something new (we don't guarantee that this information would be useful "
 ":))"
 msgstr ""
+"You can measure how well you and your friends know random facts! And maybe "
+"learn something new (we don't guarantee that this information would be useful "
+":))"
 
 #: src/pages/SettingsPage/Settings.tsx:
 msgid "Settings"
-msgstr ""
+msgstr "Settings"

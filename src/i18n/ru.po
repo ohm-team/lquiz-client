@@ -106,8 +106,8 @@ msgid "Answer source"
 msgstr "Источник ответа"
 
 #: src/pages/GamePage/GamePage.tsx:
-msgid "What else do you think my contain number"
-msgstr "Что еще может содержать число"
+msgid "What else do you think may contain number"
+msgstr ""
 
 #: src/pages/HomePage/HomePage.tsx:
 msgid "Play"
@@ -126,14 +126,18 @@ msgstr "Скачать приложение"
 msgid ""
 "Within one game, you are assigned few questions based on open Luxembourg "
 "statistics from https://data.public.lu/"
-msgstr "В игре будет предложено ответить на несколько вопросов, основанных на Люксембургской статистике, взятой с сайта https://data.public.lu"
+msgstr ""
+"В игре будет предложено ответить на несколько вопросов, основанных на "
+"Люксембургской статистике, взятой с сайта https://data.public.lu"
 
 #: src/pages/RulesPage/RulesPage.tsx:
 msgid ""
 "You can measure how well you and your friends know random facts! And maybe "
 "learn something new (we don't guarantee that this information would be useful "
 ":))"
-msgstr "Можно оценить как хорошо вы и ваши друзья знаете случайные факты! И, может, узнаете что-то новое (мы не гарантируем, что эта информация будет полезной :))"
+msgstr ""
+"Можно оценить как хорошо вы и ваши друзья знаете случайные факты! И, может, "
+"узнаете что-то новое (мы не гарантируем, что эта информация будет полезной :))"
 
 #: src/pages/SettingsPage/Settings.tsx:
 msgid "Settings"
