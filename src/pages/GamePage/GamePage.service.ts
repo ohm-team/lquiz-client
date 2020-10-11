@@ -60,7 +60,7 @@ const fetchAllQuizQuestions = async (
 
 export const fetchQuestionByIndex = async (
   index: number,
-  locale = "en-EN"
+  locale: string
 ): Promise<QuestionWithAnswers> => {
   questionsCache = await fetchAllQuizQuestions(QUESTIONS_COUNT, locale);
   return new Promise((resolve, reject) => {
