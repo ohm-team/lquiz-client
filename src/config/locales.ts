@@ -5,11 +5,6 @@ export const locales = [
     localName: "English (US)",
   },
   {
-    key: "ru",
-    internationalName: "Russian",
-    localName: "Русский",
-  },
-  {
     key: "fr",
     internationalName: "French",
     localName: "Française",

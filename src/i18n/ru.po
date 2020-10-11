@@ -38,7 +38,7 @@ msgstr "Домой"
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid ""
 "Congratulations! You know literally EVERYTHING about Luxembourg! How did you "
-"achieve it? "
+"achieve it?"
 msgstr "Поздравляем! Вы знаете буквально ВСЕ про Люксембург! Как вы этого достигли?"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:

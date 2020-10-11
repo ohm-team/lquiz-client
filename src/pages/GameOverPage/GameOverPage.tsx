@@ -58,7 +58,7 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
       <Card.Content style={styles.content}>
         <Text style={styles.feedback}>
           {accuracy === 1 && (
-            <T message="Congratulations! You know literally EVERYTHING about Luxembourg! How did you achieve it? " />
+            <T message="Congratulations! You know literally EVERYTHING about Luxembourg! How did you achieve it?" />
           )}
           {accuracy >= 0.8 && accuracy < 1 && (
             <T message="Wow! Looks like you have been reading datasets from https://data.public.lu for a long time!" />
@@ -70,7 +70,7 @@ const GameOverPage: React.FC<GameOverPageProps> = ({
             <T message="You know something about Luxembourg, and today you learned a bit more, isn't it great?" />
           )}
           {accuracy === 0 && (
-            <T message="Not your day :( Or maybe our alorithms created an extra-hard quiz? Try again!" />
+            <T message="Not your day :( Or maybe our algorithms created an extra-hard quiz? Try again!" />
           )}
         </Text>
         <Text style={styles.text}>
