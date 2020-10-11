@@ -7,6 +7,12 @@ export default StyleSheet.create({
     alignItems: "stretch",
     minHeight: "100%",
   },
+  ribbon: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    zIndex: 10,
+  },
   card: {
     width: "100%",
     height: "100%",
