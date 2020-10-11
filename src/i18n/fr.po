@@ -97,6 +97,10 @@ msgid "out of"
 msgstr "sur"
 
 #: src/pages/GamePage/GamePage.tsx:
+msgid "Finish!"
+msgstr "Terminer"
+
+#: src/pages/GamePage/GamePage.tsx:
 msgid "Next question!"
 msgstr "Question suivante!"
 

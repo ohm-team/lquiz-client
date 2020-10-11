@@ -95,7 +95,11 @@ const GamePage: React.FC<GamePageProps> = ({
                       mode="contained"
                       onPress={onNextButtonClick}
                     >
-                      <T message="Next question!" />
+                      {totalQuestionsCount === currentQuestionNumber ? (
+                        <T message="Finish!" />
+                      ) : (
+                        <T message="Next question!" />
+                      )}
                     </Button>
                     <View style={styles.sourceLinksContainer}>
                       <Button onPress={handleQuestionSourceLinkClick}>

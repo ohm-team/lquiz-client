@@ -64,10 +64,8 @@ msgstr ""
 "это?"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
-msgid "Not your day :( Or maybe our alorithms created an extra-hard quiz? Try again!"
+msgid "Not your day :( Or maybe our algorithms created an extra-hard quiz? Try again!"
 msgstr ""
-"Не ваш день :( Или надо алгоритмы создали экстра-сложный кваиз? Попробуйте еще "
-"раз!"
 
 #: src/pages/GameOverPage/GameOverPage.tsx:
 msgid "Accuracy"
@@ -92,6 +90,10 @@ msgstr "Вопросы"
 #: src/pages/GamePage/GamePage.tsx:
 msgid "out of"
 msgstr "из"
+
+#: src/pages/GamePage/GamePage.tsx:
+msgid "Finish!"
+msgstr ""
 
 #: src/pages/GamePage/GamePage.tsx:
 msgid "Next question!"
