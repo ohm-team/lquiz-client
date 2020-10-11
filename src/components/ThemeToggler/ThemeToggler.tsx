@@ -23,6 +23,7 @@ const ThemeToggler: React.FC<ThemeTogglerProps> = ({
         </Paragraph>
       )}
       <Switch
+        /* @ts-ignore */
         trackColor="#001100"
         accessibilityRole="switch"
         accessibilityLabel={t("Toggle dark theme")}
